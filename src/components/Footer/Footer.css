@@ -297,6 +297,18 @@ width: 100%;
     gap: 30px;
   }
 
+.footer-bottom-content {
+width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4.80px;
+}
+
+
   .contact-col {
     grid-column: span 2;
     /* Contact takes full width */
@@ -336,6 +348,18 @@ width: 100%;
     height: 60px;
     /* Scaled down significantly for mobile */
   }
+
+.footer-bottom-content {
+width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4.80px;
+}
+
 
   .footer-krishna-bg {
     width: 250px;

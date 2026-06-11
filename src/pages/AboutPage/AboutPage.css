@@ -753,6 +753,7 @@
 
 @media (max-width: 768px) {
   .alignment-content {
+    padding: 0px 19px;
     position: relative;
     flex-direction: column;
     align-items: center;
@@ -813,7 +814,7 @@
 
   .alignment-character-left {
     position: absolute;
-    left: -20px;
+    left: 0px;
     top: 50%;
     transform: translateY(-50%);
     height: 220px;
