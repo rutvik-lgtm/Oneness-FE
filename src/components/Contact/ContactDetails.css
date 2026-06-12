@@ -175,9 +175,28 @@
 @media (max-width: 768px) {
   .contact-details-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
   
   .contact-details-title {
     font-size: 36px;
+  }
+
+  .contact-detail-box {
+    padding: 25px 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .detail-value {
+    font-size: clamp(14px, 5.2vw, 18px);
+    word-break: break-all;
+    margin: 5px 0 8px;
+  }
+
+  .social-links-row {
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    font-size: 14px;
   }
 }

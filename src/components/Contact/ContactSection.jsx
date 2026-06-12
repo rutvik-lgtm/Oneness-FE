@@ -53,8 +53,8 @@ const ContactSection = () => {
         </div>
 
         {submitted ? (
-          <div className="contact-success-box" style={{ textAlign: 'center', padding: '40px 20px', color: '#fff' }}>
-            <h2 style={{ fontSize: '2rem', marginBottom: '15px' }}>Inquiry Received!</h2>
+          <div className="contact-success-box" style={{ textAlign: 'center', padding: '40px 20px', color: '#333' }}>
+            <h2 style={{ fontSize: '2rem', marginBottom: '15px', color: '#333' }}>Inquiry Received!</h2>
             <p>Thank you for reaching out. Our team will contact you shortly.</p>
             <button 
               onClick={() => { setSubmitted(false); setFormData({ fullName: '', email: '', phone: '', type: 'general', details: '' }); }}
