@@ -10,14 +10,15 @@
   text-align: center;
   background-color: #ffffff;
   overflow: hidden;
-  margin-top: -2px; /* Fix for 1px subpixel rendering gap at the top */
+  margin-top: -2px;
+  /* Fix for 1px subpixel rendering gap at the top */
 }
 
 .hero-bg-image {
   background-position: 50%;
   background-size: cover;
   width: 100%;
-  height: 146%;
+  height: 970px;
   position: absolute;
   top: -378px;
   left: 0;
@@ -132,11 +133,13 @@
   }
 
   .top-brush-edge {
-    height: 100px; /* Adjust top brush height slightly if needed, but keep z-index normal */
+    height: 100px;
+    /* Adjust top brush height slightly if needed, but keep z-index normal */
   }
 
   .bottom-brush-edge {
-    bottom: -3px; /* Pushed down more to hide any gap or artifact line */
+    bottom: -3px;
+    /* Pushed down more to hide any gap or artifact line */
     height: 75px;
     z-index: 10;
   }
