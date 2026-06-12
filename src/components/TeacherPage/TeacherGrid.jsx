@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './TeacherGrid.css';
+import { API_URL } from '../../config';
 
 import dummyImg from '../../assets/teacher page/Vector (19).png';
-import dividerImg from '../../assets/teacher page/Rectangle 44.png';
 import ornamentImg from '../../assets/Group 5.png';
 
 const categories = [
@@ -20,17 +20,38 @@ const categories = [
   'Social & Cultural Gatherings',
 ];
 
-// Dummy teacher data – same image & name repeated 18 times as per the design
-const teachers = Array.from({ length: 18 }, (_, i) => ({
-  id: i + 1,
-  name: 'Anna Vivadiya',
-  category: 'Yoga & Meditation',
-  location: 'India',
-  image: dummyImg,
-}));
-
 const TeacherGrid = () => {
+  const [teachers, setTeachers] = useState([]);
   const [activeFilter, setActiveFilter] = useState('All');
+
+  useEffect(() => {
+    const fetchTeachers = async () => {
+      try {
+        const res = await fetch(`${API_URL}/teachers`);
+        const data = await res.json();
+        if (data.success && data.data.length > 0) {
+          setTeachers(data.data);
+        } else {
+          // Fallback to static mock data
+          setTeachers(Array.from({ length: 6 }, (_, i) => ({
+            id: i + 1,
+            name: 'Swami Dhyan Saraswati',
+            category: 'Yoga & Meditation',
+            title: 'Vedic Meditation Guru',
+            image: dummyImg,
+            location: 'India'
+          })));
+        }
+      } catch (err) {
+        console.error('Failed to fetch teachers', err);
+      }
+    };
+    fetchTeachers();
+  }, []);
+
+  const filteredTeachers = activeFilter === 'All' 
+    ? teachers 
+    : teachers.filter(t => t.title?.toLowerCase().includes(activeFilter.toLowerCase()) || t.category === activeFilter);
 
   return (
     <section className="teacher-grid-section">
@@ -61,14 +82,14 @@ const TeacherGrid = () => {
 
       {/* Cards Grid */}
       <div className="teacher-cards-grid">
-        {teachers.map((t) => (
-          <Link to="/teacher-inner" className="teacher-card-link" key={t.id}>
+        {filteredTeachers.map((t) => (
+          <Link to={`/teacher-inner?id=${t._id || t.id}`} className="teacher-card-link" key={t._id || t.id}>
             <div className="teacher-card">
-              <img src={t.image} alt={t.name} className="teacher-card-img" />
+              <img src={t.image || dummyImg} alt={t.name} className="teacher-card-img" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div className="teacher-card-overlay">
                 <h3 className="teacher-card-name">{t.name}</h3>
-                <p className="teacher-card-category">{t.category}</p>
-                <p className="teacher-card-location">{t.location}</p>
+                <p className="teacher-card-category">{t.title || t.category || 'Teacher'}</p>
+                <p className="teacher-card-location">{t.location || 'India'}</p>
               </div>
             </div>
           </Link>

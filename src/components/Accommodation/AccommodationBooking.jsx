@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './AccommodationBooking.css';
 import logo from '../../assets/Logo.png';
 import vectorOuter from '../../assets/Vector (1).png';
 import vectorInner from '../../assets/Vector.png';
+import { API_URL } from '../../config';
 
 const AccommodationBooking = () => {
+  const [accommodations, setAccommodations] = useState([]);
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
     phone: '',
-    stayOption: 'Select accommodation option',
+    accommodationId: '',
     checkIn: '',
     checkOut: '',
     guests: '1',
@@ -17,6 +19,27 @@ const AccommodationBooking = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+  const [bookingDetails, setBookingDetails] = useState(null);
+
+  useEffect(() => {
+    const fetchAccommodations = async () => {
+      try {
+        const res = await fetch(`${API_URL}/accommodations`);
+        const data = await res.json();
+        if (data.success) {
+          setAccommodations(data.data);
+          if (data.data.length > 0) {
+            setFormData(prev => ({ ...prev, accommodationId: data.data[0]._id }));
+          }
+        }
+      } catch (err) {
+        console.error('Failed to load accommodations', err);
+      }
+    };
+    fetchAccommodations();
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,10 +49,36 @@ const AccommodationBooking = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate premium submission
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMsg('');
+    try {
+      const res = await fetch(`${API_URL}/accommodations/book`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          accommodationId: formData.accommodationId,
+          checkIn: formData.checkIn,
+          checkOut: formData.checkOut,
+          specialNotes: formData.specialNotes
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setBookingDetails(data.data);
+        setSubmitted(true);
+      } else {
+        setErrorMsg(data.message || 'Failed to complete stay booking.');
+      }
+    } catch (err) {
+      setErrorMsg('Failed to connect to backend server.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -77,12 +126,24 @@ const AccommodationBooking = () => {
               {submitted ? (
                 <div className="booking-success-message">
                   <div className="success-icon">✾</div>
-                  <h4>Thank You!</h4>
+                  <h4>Booking Confirmed!</h4>
                   <p>Your stay inquiry has been successfully sent. A personal Oneness booking host will contact you within 24 hours to secure your reservations.</p>
+                  {bookingDetails && (
+                    <div style={{ marginTop: '15px', padding: '12px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', textAlign: 'left', fontSize: '0.9rem', color: '#fff' }}>
+                      <p style={{ margin: '0 0 5px 0' }}><strong>Inquiry Details:</strong></p>
+                      <p style={{ margin: '0 0 4px 0' }}>Name: {bookingDetails.fullName}</p>
+                      <p style={{ margin: '0 0 4px 0' }}>Total Price: ${bookingDetails.totalPrice}</p>
+                    </div>
+                  )}
                   <button className="inquire-again-btn" onClick={() => setSubmitted(false)}>Send Another Inquiry</button>
                 </div>
               ) : (
                 <form className="booking-form-element" onSubmit={handleSubmit}>
+                  {errorMsg && (
+                    <div style={{ color: '#ff4d4d', marginBottom: '15px', fontWeight: 'bold' }}>
+                      {errorMsg}
+                    </div>
+                  )}
                   <div className="booking-group">
                     <label htmlFor="fullName">Full Name</label>
                     <input 
@@ -128,15 +189,17 @@ const AccommodationBooking = () => {
                       <label htmlFor="accomm-select">Accommodation Type</label>
                       <select 
                         id="accomm-select"
-                        name="stayOption"
-                        value={formData.stayOption}
+                        name="accommodationId"
+                        value={formData.accommodationId}
                         onChange={handleChange}
                         required
                       >
                         <option value="" disabled>Select stay option</option>
-                        <option value="Royal Palace Suite">Royal Palace Suite</option>
-                        <option value="Oasis Premium Room">Oasis Premium Room</option>
-                        <option value="Oneness Glamping Camp">Oneness Glamping Camp</option>
+                        {accommodations.map(acc => (
+                          <option key={acc._id} value={acc._id}>
+                            {acc.name} (${acc.price}/night) - {acc.availableCount} available
+                          </option>
+                        ))}
                       </select>
                     </div>
                     <div className="booking-group">
@@ -192,7 +255,9 @@ const AccommodationBooking = () => {
                   </div>
 
                   <div className="booking-btn-container">
-                    <button type="submit" className="booking-submit-btn">SUBMIT STAY INQUIRY</button>
+                    <button type="submit" className="booking-submit-btn" disabled={loading}>
+                      {loading ? 'BOOKING...' : 'SUBMIT STAY INQUIRY'}
+                    </button>
                   </div>
                 </form>
               )}

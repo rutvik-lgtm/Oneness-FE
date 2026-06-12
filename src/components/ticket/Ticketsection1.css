@@ -44,7 +44,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  color: #65463E; /* Warm dark brown */
+  color: #65463E;
+  /* Warm dark brown */
   font-family: 'Arial', sans-serif;
   font-weight: 900;
   text-transform: uppercase;
@@ -496,10 +497,12 @@
     max-width: 60%;
   }
 
-  .jaipur-text, .oneness-text, .festival-text {
+  .jaipur-text,
+  .oneness-text,
+  .festival-text {
     font-size: 36px;
   }
-  
+
   .krishna-i {
     height: 40px;
     margin: 0 2px;
@@ -512,7 +515,9 @@
     max-width: 80%;
   }
 
-  .jaipur-text, .oneness-text, .festival-text {
+  .jaipur-text,
+  .oneness-text,
+  .festival-text {
     font-size: 24px;
   }
 
@@ -534,7 +539,7 @@
   .coming-soon-card {
     padding: 30px 15px;
   }
-  
+
   .card-frame-inner {
     top: 15px;
     left: 15px;
@@ -697,4 +702,4 @@
   font-weight: bold;
   margin-bottom: 15px;
   text-align: center;
-}
+}

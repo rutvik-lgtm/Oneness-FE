@@ -5,6 +5,7 @@ import boyImg from '../../assets/image.png';
 import vectorOuter from '../../assets/Vector (1).png';
 import vectorInner from '../../assets/Vector.png';
 import dividerImg from '../../assets/pkg-btn/Group 5.png';
+import { API_URL } from '../../config';
 
 const AccommodationRegistration = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,8 @@ const AccommodationRegistration = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,9 +30,34 @@ const AccommodationRegistration = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMsg('');
+    try {
+      const detailsText = `Preferred Hotel: ${formData.stayOption}, Nights: ${formData.nights}, Rooms: ${formData.rooms}. Notes: ${formData.specialNotes || 'None'}`;
+      const res = await fetch(`${API_URL}/inquiries`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'Accommodation',
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          details: detailsText
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setErrorMsg(data.message || 'Failed to submit stay inquiry.');
+      }
+    } catch (err) {
+      setErrorMsg('Failed to connect to backend server.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const scrollToForm = () => {
@@ -111,6 +139,11 @@ const AccommodationRegistration = () => {
                 </div>
               ) : (
                 <form className="accomm-reg-form-v2" onSubmit={handleSubmit}>
+                  {errorMsg && (
+                    <div style={{ color: '#ff4d4d', marginBottom: '15px', fontWeight: 'bold' }}>
+                      {errorMsg}
+                    </div>
+                  )}
                   <div className="accomm-reg-group">
                     <label htmlFor="fullName">Full Name</label>
                     <input
@@ -216,7 +249,9 @@ const AccommodationRegistration = () => {
                   </div>
 
                   <div className="accomm-reg-btn-container">
-                    <button type="submit" className="accomm-reg-submit-btn">BOOK NOW</button>
+                    <button type="submit" className="accomm-reg-submit-btn" disabled={loading}>
+                      {loading ? 'SUBMITTING...' : 'BOOK NOW'}
+                    </button>
                   </div>
                 </form>
               )}

@@ -19,12 +19,12 @@ const TicketCard = ({ ticket, onSelect }) => {
         <p style={{ fontSize: '13px', color: '#666', marginBottom: '15px', fontWeight: 'bold' }}>
           {ticket.stock > 0 ? `Stock: ${ticket.stock} left` : 'Sold Out!'}
         </p>
-        <button 
-          className="select-btn" 
+        <button
+          className="select-btn"
           onClick={() => onSelect(ticket)}
           disabled={ticket.stock <= 0}
-          style={{ 
-            opacity: ticket.stock <= 0 ? 0.5 : 1, 
+          style={{
+            opacity: ticket.stock <= 0 ? 0.5 : 1,
             cursor: ticket.stock <= 0 ? 'not-allowed' : 'pointer',
             backgroundColor: ticket.stock <= 0 ? '#999' : '#49366e'
           }}
@@ -73,6 +73,22 @@ const TicketsSection = () => {
         setLoading(false);
       });
   }, []);
+
+  // Lock page scrolling when the booking modal is open
+  React.useEffect(() => {
+    if (selectedTicket) {
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    }
+    // Cleanup
+    return () => {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    };
+  }, [selectedTicket]);
 
   const totalPages = Math.ceil(tickets.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -278,7 +294,7 @@ const TicketsSection = () => {
           <div className="booking-modal-content">
             <button className="modal-close-btn" onClick={() => setSelectedTicket(null)}>×</button>
             <h3 className="booking-modal-title">Book your {selectedTicket.title}</h3>
-            
+
             {bookingStatus && (
               <div className={bookingStatus.success ? 'message-success' : 'message-error'}>
                 {bookingStatus.message}
@@ -288,48 +304,48 @@ const TicketsSection = () => {
             <form onSubmit={handleBookingSubmit} className="booking-form">
               <div className="booking-form-group">
                 <label>Full Name</label>
-                <input 
-                  type="text" 
-                  name="fullName" 
-                  value={bookingForm.fullName} 
-                  onChange={handleInputChange} 
-                  required 
+                <input
+                  type="text"
+                  name="fullName"
+                  value={bookingForm.fullName}
+                  onChange={handleInputChange}
+                  required
                   placeholder="Enter your full name"
                 />
               </div>
 
               <div className="booking-form-group">
                 <label>Email Address</label>
-                <input 
-                  type="email" 
-                  name="email" 
-                  value={bookingForm.email} 
-                  onChange={handleInputChange} 
-                  required 
+                <input
+                  type="email"
+                  name="email"
+                  value={bookingForm.email}
+                  onChange={handleInputChange}
+                  required
                   placeholder="Enter your email"
                 />
               </div>
 
               <div className="booking-form-group">
                 <label>Phone Number</label>
-                <input 
-                  type="tel" 
-                  name="phone" 
-                  value={bookingForm.phone} 
-                  onChange={handleInputChange} 
-                  required 
+                <input
+                  type="tel"
+                  name="phone"
+                  value={bookingForm.phone}
+                  onChange={handleInputChange}
+                  required
                   placeholder="Enter your phone number"
                 />
               </div>
 
               <div className="booking-form-group">
                 <label>Quantity</label>
-                <input 
-                  type="number" 
-                  name="quantity" 
-                  value={bookingForm.quantity} 
-                  onChange={handleInputChange} 
-                  min="1" 
+                <input
+                  type="number"
+                  name="quantity"
+                  value={bookingForm.quantity}
+                  onChange={handleInputChange}
+                  min="1"
                   max={selectedTicket.stock}
                   required
                 />
@@ -344,16 +360,16 @@ const TicketsSection = () => {
               </div>
 
               <div className="booking-actions">
-                <button 
-                  type="button" 
-                  className="booking-btn-cancel" 
+                <button
+                  type="button"
+                  className="booking-btn-cancel"
                   onClick={() => setSelectedTicket(null)}
                   disabled={submitting}
                 >
                   Cancel
                 </button>
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className="booking-btn-submit"
                   disabled={submitting}
                 >
