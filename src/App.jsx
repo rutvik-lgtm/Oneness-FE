@@ -58,6 +58,7 @@ function App() {
           <Route path="/tickets" element={<TicketsPage />} />
           <Route path="/location" element={<Location />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogInner />} />
           <Route path="/blog-inner" element={<BlogInner />} />
           <Route path="/bazaar" element={<BazaarPage />} />
           <Route path="/gallery" element={<GalleryPage />} />

@@ -1,27 +1,71 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import './TeacherInnerDetails.css';
 import ornamentDivider from '../../assets/Group 5.png'; 
+import { API_URL } from '../../config';
 
 const TeacherInnerDetails = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [searchParams] = useSearchParams();
+  const teacherId = searchParams.get('id');
+  const [teacher, setTeacher] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchTeacher = async () => {
+      if (!teacherId) {
+        setLoading(false);
+        return;
+      }
+      try {
+        const res = await fetch(`${API_URL}/teachers/${teacherId}`);
+        const data = await res.json();
+        if (data.success) {
+          setTeacher(data.data);
+        }
+      } catch (err) {
+        console.error('Failed to load teacher details', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchTeacher();
+  }, [teacherId]);
+
+  if (loading) {
+    return (
+      <div style={{ textAlign: 'center', padding: '100px 20px', color: '#fff' }}>
+        <h2>Loading Teacher Profile...</h2>
+      </div>
+    );
+  }
+
+  // Fallback to static mock data if no teacher is loaded or found
+  const displayTeacher = teacher || {
+    name: 'ANNA VIVADIYA',
+    title: 'Fit Arts - Body Mobility & Mechanics',
+    bio: 'Swami Ji has dedicated his life to teaching Vedic scriptures, mindfulness, and the ancient art of silence. She teaches yoga as a holistic path toward physical strength, mental clarity, and spiritual alignment.',
+    details: 'Anna Vivadiya is a certified E-RYT 500 instructor. She will guide the daily flow sessions and alignment clinics. She focuses on breath-driven movements and customized pose adjustments for all practice levels.',
+    socials: {
+      youtube: '@annavivadiya',
+      instagram: '@annavivadiya',
+      facebook: 'https://facebook.com/annavivadiya'
+    }
+  };
+
   return (
     <div className="teacher-inner-details">
       <div className="tid-header">
-        <h2 className="tid-title">ANNA VIVADIYA</h2>
-        <p className="tid-subtitle">Fit Arts - Body Mobility &amp; Mechanics<br/>India</p>
+        <h2 className="tid-title" style={{ textTransform: 'uppercase' }}>{displayTeacher.name}</h2>
+        <p className="tid-subtitle">{displayTeacher.title}<br/>India</p>
         <img src={ornamentDivider} alt="divider" className="tid-divider" />
       </div>
 
-      <div className="tid-content">
-        <p>Lorem ipsum dolor sit amet consectetur. Sed imperdiet eget habitant elementum odio pharetra libero. Neque quis in sed risus vitae turpis tincidunt nunc. Tellus aenean tellus ultrices pharetra viverra. Massa ultricies a donec ipsum. Sit tempus auctor nulla ipsum eu et. Dapibus non a amet urna condimentum. Gravida posuere suscipit elementum donec eget integer. Tempus sit consectetur integer nulla vel.</p>
-        
-        <p>Vestibulum pretium bibendum egestas arcu tellus neque. In at leo facilisis pulvinar interdum. Imperdiet leo sed feugiat arcu massa nascetur. Interdum euismod purus penatibus nulla fames et feugiat elementum ac. Egestas nisi phasellus et et orci scelerisque diam. Sed ante egestas enim sit orci sit dui massa aliquam. Felis ante purus sed morbi gravida amet tristique sed sociis. Vitae ipsum porta nulla ultricies venenatis quis tristique id et. Laoreet urna neque ullamcorper arcu malesuada habitant <span className="tid-highlight">commodo commodo. Proin magna sed</span> pellentesque turpis posuere. Enim eros convallis odio vehicula. Phasellus arcu at justo bibendum ut nec mi. Amet consectetur faucibus sodales orci dictumst pharetra vel. Fringilla sed nec et convallis dolor turpis. Leo pellentesque justo fermentum tristique morbi nibh tellus.</p>
-        
-        <p>Tempor in consequat egestas non mattis viverra dictum dui. Elementum integer a morbi euismod semper lectus nam duis magna. Nibh auctor scelerisque tincidunt amet vulputate. Varius volutpat risus nulla faucibus facilisis ultrices pellentesque ullamcorper feugiat. Eu venenatis venenatis sed cras morbi suspendisse enim. Diam donec in accumsan turpis vel suspendisse. Gravida enim vitae imperdiet habitasse platea. Pharetra fringilla amet augue velit faucibus morbi. Aliquam blandit in etiam vestibulum mauris enim enim consequat. Etiam facilisi tortor et pellentesque sagittis. Nisi nisi sit nunc enim. Mauris vel vulputate risus habitant sit pretium at elementum.</p>
-
-        <h3 className="tid-quote">"Quis amet velit porta morbi orci magnis congue faucibus egestas."</h3>
-
-        <p>Et porta tincidunt sapien diam ante aenean mattis. Porttitor fringilla morbi ut elementum adipiscing tempus. Adipiscing eget est nunc sed. Sed donec amet vel imperdiet egestas in convallis nulla porta. Id urna fames vel urna. Quam platea tellus cras cras interdum. Molestie non id purus morbi in adipiscing risus consectetur. Lacinia orci dui sed sit risus sed nullam. Est elementum eget molestie viverra posuere convallis cursus sapien. Enim scelerisque tortor odio id commodo augue diam. Odio amet morbi faucibus tincidunt massa adipiscing in sit. Leo risus mi lectus quam. Lacinia mattis turpis vulputate non.</p>
+      <div className="tid-content" style={{ fontSize: '1.05rem', lineHeight: '1.75' }}>
+        <p>{displayTeacher.bio}</p>
+        {displayTeacher.details && (
+          <p style={{ marginTop: '15px' }}>{displayTeacher.details}</p>
+        )}
       </div>
 
       <div className="tid-video-section">
@@ -85,11 +129,19 @@ const TeacherInnerDetails = () => {
       <div className="tid-contact-bar">
         <p className="tid-contact-title">Contact Information:</p>
         <div className="tid-contact-links">
-          <span><strong className="tid-highlight-orange">Youtube:</strong> <a className='link' href="https://www.youtube.com/@fitmusic">@fitmusic</a></span>
-          <span className="tid-contact-separator">|</span>
-          <span><strong className="tid-highlight-orange">Instagram:</strong> <a className='link' href="https://www.instagram.com/@fitmusic">@fitmusic</a></span>
-          <span className="tid-contact-separator">|</span>
-          <span><strong className="tid-highlight-orange">website:</strong> <a className='link' href="https://fitmusic.vcn.tv/">https://fitmusic.vcn.tv/ </a></span>
+          {displayTeacher.socials?.youtube && (
+            <>
+              <span><strong className="tid-highlight-orange">Youtube:</strong> <a className='link' href={`https://www.youtube.com/${displayTeacher.socials.youtube}`}>{displayTeacher.socials.youtube}</a></span>
+              <span className="tid-contact-separator">|</span>
+            </>
+          )}
+          {displayTeacher.socials?.instagram && (
+            <>
+              <span><strong className="tid-highlight-orange">Instagram:</strong> <a className='link' href={`https://www.instagram.com/${displayTeacher.socials.instagram}`}>{displayTeacher.socials.instagram}</a></span>
+              <span className="tid-contact-separator">|</span>
+            </>
+          )}
+          <span><strong className="tid-highlight-orange">Facebook:</strong> <a className='link' href={displayTeacher.socials?.facebook || 'https://facebook.com'}>Profile Link</a></span>
         </div>
       </div>
     </div>

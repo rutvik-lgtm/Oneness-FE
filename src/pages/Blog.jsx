@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Blog.css';
+import { API_URL } from '../config';
 
 // Images
 import heroBg from '../assets/blog/image 46.png';
@@ -10,16 +12,33 @@ import cardImg from '../assets/blog/Rectangle 37 (2).png';
 import did from '../assets/blog/Group 5 (7).png';
 
 const Blog = () => {
+  const [blogPosts, setBlogPosts] = useState([]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
 
-  const blogPosts = Array(9).fill({
-    source: 'The Times of India',
-    title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में दुनियाभर से जुटेंगे 500 स्पीकर,.....',
-    excerpt: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत \'मॉर्निंग म्यूजिक नाद बिल्विंग साउंड एंड साइलेंस\' से होगी, इस सत्र में कर्नाटक संगीत की प्रस्तुति के जरिए ध्वनि और मौन के बीच के संतुलन को प्रस्तुत किया जाएगा......',
-    link: '#'
-  });
+    const fetchBlogs = async () => {
+      try {
+        const res = await fetch(`${API_URL}/blogs`);
+        const data = await res.json();
+        if (data.success && data.data.length > 0) {
+          setBlogPosts(data.data);
+        } else {
+          // Fallback to static mock blogs
+          setBlogPosts(Array(6).fill({
+            author: 'The Times of India',
+            title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में दुनियाभर से जुटेंगे 500 स्पीकर,.....',
+            excerpt: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत \'मॉर्निंग म्यूजिक नाद बिल्विंग SOUND & SILENCE\' से होगी...',
+            slug: 'meditation-transform-daily-routine',
+            coverImage: cardImg
+          }));
+        }
+      } catch (err) {
+        console.error('Failed to fetch blogs', err);
+      }
+    };
+    fetchBlogs();
+  }, []);
 
   return (
     <div className="blog-page">
@@ -55,18 +74,18 @@ const Blog = () => {
 
         <div className="blog-grid">
           {blogPosts.map((post, index) => (
-            <div className="blog-card" key={index}>
+            <div className="blog-card" key={post._id || index}>
               <div className="blog-card-img">
-                <img src={cardImg} alt="Blog Cover" />
+                <img src={post.coverImage || cardImg} alt="Blog Cover" />
               </div>
               <div className="blog-card-content">
                 <div className="blog-source">
                   <span className="source-icon"><img src={flourishImg} alt="icon" style={{ width: '26px', height: '23px', objectFit: 'contain' }} /></span>
-                  <span className="source-name">{post.source}</span>
+                  <span className="source-name">{post.author || 'The Times of India'}</span>
                 </div>
                 <h4 className="blog-title">{post.title}</h4>
                 <p className="blog-excerpt">{post.excerpt}</p>
-                <a href={post.link} className="read-more">READ MORE &rarr;</a>
+                <Link to={`/blog/${post.slug}`} className="read-more">READ MORE &rarr;</Link>
               </div>
             </div>
           ))}
