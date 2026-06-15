@@ -25,7 +25,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(80, 20, 40, 0.4);
+  background: rgb(12 5 0 / 68%);
   /* Slight overlay just in case the image is too bright, based on mock */
   z-index: 1;
 }
@@ -356,41 +356,299 @@ width: 460px;
   text-align: justify;
 }
 
-/* Responsive */
+/* ============================= */
+/* ===== RESPONSIVE STYLES ===== */
+/* ============================= */
+
+/* --- Tablet: ≤ 1024px --- */
+@media (max-width: 1024px) {
+  .bazaar-teal-section {
+    padding: 80px 5% 120px;
+  }
+
+  .teal-section-container {
+    gap: 40px;
+  }
+
+  .artisan-frame-container {
+    width: 380px;
+    height: 455px;
+  }
+
+  .bazaar-top-left-frame-wrapper {
+    width: 380px;
+    height: 455px;
+  }
+}
+
+/* --- Tablet: ≤ 992px --- */
 @media (max-width: 992px) {
+  /* Stack teal section vertically */
   .teal-section-container {
     flex-direction: column;
+    align-items: center;
+    gap: 40px;
   }
 
+  .teal-section-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .artisan-frame-container {
+    width: 340px;
+    height: 410px;
+  }
+
+  .bazaar-top-left-frame-wrapper {
+    width: 340px;
+    height: 410px;
+    position: relative;
+  }
+
+  /* Vendor grid: 1 column on tablet */
   .vendors-grid {
     grid-template-columns: 1fr;
-  }
-
-  .flower-icon-top-left {
-    top: 30px;
-    left: 20px;
+    max-width: 600px;
   }
 
   .flower-icon-bottom-right {
     bottom: 40px;
     right: 20px;
+    width: 48px;
   }
 }
 
+/* --- Mobile Landscape: ≤ 768px --- */
 @media (max-width: 768px) {
+  /* Hero */
+  .bazaar-hero {
+    height: 75vh;
+    min-height: 480px;
+  }
+
+  .bazaar-hero-divider{
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .dividing{
+    width: 0%;
+    height: 0%;
+  }
 
   .hero-title-oneness,
   .hero-title-year {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
   }
 
   .hero-title-bazaar {
-    font-size: 3rem;
+    font-size: 2.4rem;
+    margin: 24px 0;
+  }
+
+  .bazaar-hero-divider img {
+    width: 240px;
+  }
+
+  /* Teal section */
+  .bazaar-teal-section {
+    padding: 60px 5% 100px;
+  }
+
+  .teal-section-text p {
+    font-size: 0.95rem;
+  }
+
+  .artisan-frame-container {
+    width: 290px;
+    height: 348px;
+  }
+
+  .bazaar-top-left-frame-wrapper {
+    width: 290px;
+    height: 348px;
+    position: relative;
+  }
+
+  .flower-icon-bottom-right {
+    bottom: 30px;
+    right: 16px;
+    width: 40px;
+  }
+
+  /* Vendors section */
+  .bazaar-vendors-section {
+    padding: 60px 5% 80px;
+  }
+
+  .vendors-header {
+    margin-bottom: 40px;
+  }
+
+  .vendors-header h4 {
+    font-size: 1.2rem;
+  }
+
+  .vendors-header h2 {
+    font-size: 2rem;
+  }
+
+  .vendors-divider {
+    width: min(300px, 80%);
+  }
+
+  /* Vendor card */
+  .vendor-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .vendor-title-row h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* --- Mobile Portrait: ≤ 576px --- */
+@media (max-width: 576px) {
+  /* Hero */
+  .bazaar-hero {
+    height: 70vh;
+    min-height: 420px;
+  }
+
+  .hero-title-oneness,
+  .hero-title-year {
+    font-size: 1.8rem;
+  }
+
+  .hero-title-bazaar {
+    font-size: 2rem;
+    margin: 18px 0;
+  }
+
+  .bazaar-hero-divider img {
+    width: 180px;
+  }
+
+  /* Teal section */
+  .bazaar-teal-section {
+    padding: 50px 4% 90px;
+  }
+
+  .teal-section-text p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .artisan-frame-container {
+    width: min(260px, 80vw);
+    height: calc(min(260px, 80vw) * 1.196);
+  }
+
+  .bazaar-top-left-frame-wrapper {
+    width: min(260px, 80vw);
+    height: calc(min(260px, 80vw) * 1.196);
+    position: relative;
+  }
+
+  .lower-icon-top-left {
+    width: 100%;
+    height: 100%;
+  }
+
+  .flower-icon-bottom-right {
+    bottom: 25px;
+    right: 12px;
+    width: 62px;
+  }
+
+  /* Vendors section */
+  .bazaar-vendors-section {
+    padding: 50px 4% 60px;
+  }
+
+  .vendors-header h4 {
+    font-size: 1.1rem;
+  }
+
+  .vendors-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .vendors-divider {
+    width: min(220px, 70%);
+  }
+
+  /* Vendor card */
+  .vendor-card {
+    padding: 16px;
+  }
+
+  .vendor-card-img {
+    height: 180px;
+    margin-bottom: 14px;
   }
 
   .vendor-title-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 8px;
+  }
+
+  .vendor-title-row h3 {
+    font-size: 1.15rem;
+    letter-spacing: 1px;
+  }
+
+  .vendor-rating {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .rating-text {
+    font-size: 0.95rem;
+  }
+
+  .rating-stars img {
+    height: 15px;
+  }
+
+  .vendor-card-info p {
+    font-size: 0.82rem;
+  }
+}
+
+/* --- Extra Small: ≤ 400px --- */
+@media (max-width: 400px) {
+  .hero-title-oneness,
+  .hero-title-year {
+    font-size: 1.5rem;
+  }
+
+  .hero-title-bazaar {
+    font-size: 1.7rem;
+  }
+
+  .bazaar-teal-section {
+    padding: 40px 4% 80px;
+  }
+
+  .artisan-frame-container {
+    width: min(220px, 85vw);
+    height: calc(min(220px, 85vw) * 1.196);
+  }
+
+  .bazaar-top-left-frame-wrapper {
+    width: min(220px, 85vw);
+    height: calc(min(220px, 85vw) * 1.196);
+    position: relative;
   }
 }

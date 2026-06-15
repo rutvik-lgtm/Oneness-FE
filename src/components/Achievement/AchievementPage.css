@@ -302,6 +302,15 @@
     font-size: 9px;
     max-width: 90px;
   }
+
+.ach-hero-title {
+  font-size: 24px !important;
+  /* line-height: 0; */
+  }
+
+.ach-hero-bg-award {
+  height: 650px;
+}
 }
 
 @media (max-width: 480px) {
