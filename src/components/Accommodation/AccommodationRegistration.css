@@ -557,6 +557,19 @@
     line-height: 16px;
     margin-bottom: 5px;
   }
+
+  .accomm-reg-reserve-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .accomm-reg-reserve-btn {
+    /* font-size: 12px !important; */
+    min-height: 40px !important;
+    min-width: 150px !important;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -590,12 +603,24 @@
   }
 
   .accomm-reg-boy {
-    height: 180px;
+    margin-top: 6px;
+        height: 180px;
+        position: absolute;
+        margin-left: 260px;
+  }
+
+  .info-list-v2 {
+  list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
   }
 
   .accomm-info-box {
     padding: 15px 10px 15px 20px;
-    margin-left: -15px;
+    margin-left: 0px;
   }
 
   .info-title-v2 {
@@ -614,6 +639,7 @@
   }
 
   .accomm-reg-submit-btn {
+    background-size: 50% 50%;
     width: 40%;
     padding: 12px 20px;
     font-size: 14px;

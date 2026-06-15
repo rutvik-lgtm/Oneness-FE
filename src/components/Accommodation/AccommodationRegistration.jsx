@@ -94,7 +94,7 @@ const AccommodationRegistration = () => {
             </div>
           </div>
 
-          <div className="accomm-reg-guide-wrapper">
+           <div className="accomm-reg-guide-wrapper">
             <div className="boy-img-container">
               <img src={boyImg} className="accomm-reg-boy" alt="Rajasthani Turban Guide" />
             </div>

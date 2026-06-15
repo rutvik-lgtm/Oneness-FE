@@ -167,9 +167,9 @@ const Accommodations = () => {
           <div className="accomm-btn-wrapper">
             <button className="accomm-reserve-btn" onClick={handleScrollToStays}>
               <div className="accomm-btn-inner">
-                <FlowerIcon className="flower-left-bottom" />
+                {/* <FlowerIcon className="flower-left-bottom" /> */}
                 <span className="accomm-btn-text">RESERVE YOUR ACCOMMODATION</span>
-                <FlowerIcon className="flower-right-top" />
+                {/* <FlowerIcon className="flower-right-top" /> */}
               </div>
             </button>
           </div>

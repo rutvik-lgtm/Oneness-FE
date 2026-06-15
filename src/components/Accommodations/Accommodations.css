@@ -445,9 +445,11 @@
 @media (max-width: 480px) {
   .accomm-starburst-left {
     left: 2%;
+    display: none;
   }
 
   .accomm-starburst-right {
+    display: none;
     right: 2%;
   }
 }
@@ -591,15 +593,12 @@
     width: 100%;
     box-sizing: border-box;
     scroll-padding: 0 20px;
-    scrollbar-width: none;
-    /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none;
-    /* Hide scrollbar for IE/Edge */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
   }
 
   .accomm-hotels-grid::-webkit-scrollbar {
-    display: none;
-    /* Hide scrollbar for Chrome/Safari */
+    display: none; /* Hide scrollbar for Chrome/Safari */
   }
 
   .accomm-hotel-card {
@@ -887,8 +886,8 @@
   }
 
   .accomm-arch-content {
-    width: 65%;
-    top: 70%;
+           width: 34%;
+        top: 73%;
   }
 
   .accomm-arch-section {
@@ -917,9 +916,9 @@
   }
 
   .accomm-arch-btn-text {
-    font-size: 9px;
-    letter-spacing: 0.8px;
-    margin: 0 4px;
+        font-size: 8px;
+        letter-spacing: 0.8px;
+        margin: 0 0px;
   }
 
   .arch-flower-left,
@@ -935,18 +934,25 @@
   .arch-flower-right {
     right: -8px;
   }
+
+.reg-submit-btn {
+    background-size: 45% 59%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    font-family: 'Irish Grover', cursive;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: none;
+    min-width: 280px;
+    min-height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
 }
 
-.arch-flower-left,
-.arch-flower-right {
-  width: 10px;
-  height: 10px;
-}
-
-.arch-flower-left {
-  left: -8px;
-}
-
-.arch-flower-right {
-  right: -8px;
 }
