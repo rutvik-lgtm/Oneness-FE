@@ -35,8 +35,8 @@ const AboutUs = () => {
 
           <div className="about-us-actions">
             <button className="btn-stay-informed">
-              <span className="corner top-left"></span>
-              <span className="corner bottom-left"></span>
+              {/* <span className=" corner top-left"></span> */}
+              {/* <span className="corner bottom-left"></span> */}
               STAY INFORMED
             </button>
             <button className="btn-contact-us">CONTACT US</button>

@@ -296,8 +296,12 @@
   }
 
   .gi-section {
-    padding: 36px 0 calc(160px + min(28vw, 140px));
+    padding: 36px 0 calc(160px + min(-20vw, 140px));
   }
+
+.gi-header-image {
+width: min(240px, 92vw);
+}
 
   .gi-field-row {
     grid-template-columns: 1fr;

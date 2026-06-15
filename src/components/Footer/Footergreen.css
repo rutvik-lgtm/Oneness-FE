@@ -327,6 +327,7 @@ width: 100%;
   .green-footer-bottom-content {
     flex-direction: column;
     align-items: center;
+    gap: 10px;
     text-align: center;
   }
 }

@@ -231,111 +231,19 @@
   height: 100%;
 }
 
-.frame-box {
+.direct-card-img {
   width: 100%;
   max-width: 320px;
-  aspect-ratio: 0.85;
-  position: relative;
-  margin-bottom: 25px;
-}
-
-.main-img {
-  width: 93%;
-  height: 95%;
-  object-fit: cover;
-  position: absolute;
-  top: 12px;
-  left: 11px;
-  z-index: 5;
-}
-
-/* Separate clip-path classes for each card image */
-.clip-card-0 {
-  clip-path: polygon(41% 0%, 65% 2%, 79% 12%, 83% 27%, 88% 28%, 100% 42%, 96% 52%, 118% 54%, 43% 80%, 98% 56%, 96% 95%, 81% 100%, 7% 98%, -23% 38%, 147% 100%, 7% 71%, -143% 29%, 44% 38%, 125% 84%, 13% 45%, 6% 37%, 16% 25%, 18% 12%)
-}
-
-.clip-card-1 {
-  clip-path: polygon(41% 0%, 65% 2%, 79% 12%, 83% 27%, 88% 28%, 100% 42%, 96% 52%, 118% 54%, 43% 80%, 98% 56%, 96% 95%, 81% 100%, 7% 98%, -23% 38%, 157% 103%, 0% 72%, -60% 34%, 37% 38%, 127% 84%, 13% 45%, 6% 37%, 16% 25%, 18% 12%)
-}
-
-.clip-card-2 {
-  clip-path: polygon(41% 0%, 65% 2%, 79% 12%, 83% 27%, 88% 28%, 100% 42%, 96% 52%, 118% 54%, 43% 80%, 98% 56%, 96% 95%, 81% 100%, 7% 98%, -22% 38%, 150% 102%, 5% 69%, -125% 29%, 37% 36%, 127% 84%, 13% 45%, 6% 37%, 16% 25%, 18% 12%)
-}
-
-.clip-card-3 {
-  clip-path: polygon(41% 0%, 65% 2%, 79% 8%, 83% 27%, 88% 28%, 100% 42%, 96% 48%, 118% 54%, 73% 65%, 98% 53%, 98% 94.3%, 81% 100%, 7% 98%, -23% 38%, 149% 103%, 13% 73%, -93% 29%, 45% 39%, 125% 84%, -2% 52%, 4% 35%, 16% 25%, 18% 12%);
-}
-
-.frame-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.card-title {
-  font-family: "Irish Grover", cursive;
-  font-size: 24px;
-  color: #1a1a1a;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-
-.card-desc {
-  font-family: "Roboto Serif", serif;
-  font-size: 11px;
-  color: #141414;
-  line-height: 1.4;
-  margin-bottom: 12px;
-  max-width: 250px;
-}
-
-.card-desc1 {
-  font-family: "Roboto Serif", serif;
-  font-size: 11px;
-  color: #141414;
-  line-height: 1.4;
-  margin-bottom: 5px;
-  min-height: 45px;
-  max-width: 250px;
-}
-
-.btn-purple {
-  background-image: url('../../assets/pkg-btn/Group 58.png');
-  background-size: 100% 85%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  color: #fff;
-  padding: 12px 30px;
-  font-family: "Irish Grover", cursive;
-  font-size: 14px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: all 0.3s ease;
-  border: none;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
   cursor: pointer;
-  position: relative;
-  text-transform: uppercase;
-  margin-top: auto;
-  min-width: 220px;
-  min-height: 48px;
+  border-radius: 16px;
 }
 
-.btn-purple:hover {
-  transform: translateY(-2px);
-}
-
-
-.btn-deco-icon {
-  font-size: 10px;
-  opacity: 0.8;
+.direct-card-img:hover {
+  transform: translateY(-8px);
+  filter: brightness(1.04) drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
 }
 
 .nav-arrows {
@@ -419,59 +327,24 @@
   }
 
   .card-item {
-    display: none; /* Hide cards by default on mobile */
-    width: 175px; /* Compact width to fit 2 side-by-side */
+    display: flex;
+    width: 175px;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .card-item.mobile-visible {
-    display: flex; /* Show only the active slide pair */
     animation: fadeInStay 0.5s ease-out forwards;
   }
 
-  .frame-box {
-    width: 145px;
-    height: 160px;
-    margin-bottom: 12px;
-  }
-
-  .main-img {
-    top: 9px;
-    left: 8px;
-    width: 90%;
-    height: 92%;
-  }
-
-  .card-title {
-    font-size: 14px;
-    margin-bottom: 6px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 100%;
-  }
-
-  .card-desc {
-    font-size: 9.5px;
-    line-height: 1.3;
-    max-width: 100%;
-    margin-bottom: 8px;
-    min-height: 38px;
-  }
-
-  .btn-purple {
-    min-width: 130px;
-    min-height: 38px;
-    font-size: 10px;
-    padding: 6px 15px;
+  .direct-card-img {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
   }
 
   /* Crimson red circular arrow buttons matching mockup */
   .nav-arrows {
     position: absolute;
-    top: 120px; /* Centered next to card frames on mobile */
+    top: 95px; /* Centered next to card frames on mobile */
     left: 0;
     width: 100%;
     display: flex;
@@ -483,9 +356,10 @@
   }
 
   .nav-arrow {
+    margin-top: 25px;
     pointer-events: auto;
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     background-color: #a81c3c !important; /* Crimson red */
     color: #ffffff !important;
     border: none;
@@ -569,13 +443,12 @@
     width: 155px;
   }
 
-  .frame-box {
-    width: 130px;
-    height: 145px;
+  .direct-card-img {
+    max-width: 140px;
   }
 
   .nav-arrows {
-    top: 112px; /* Adjusted relative to new frame box size */
+    top: 85px; /* Adjusted relative to new card size */
     padding: 0 4px;
   }
 }

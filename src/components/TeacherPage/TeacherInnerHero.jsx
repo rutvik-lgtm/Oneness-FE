@@ -39,8 +39,8 @@ const TeacherInnerHero = () => {
             <Link to="/tickets">
               <button className="teacher-inner-btn">
                 BOOK TICKET NOW
-                <img src={buttonDecor} alt="" className="btn-decor-tl" />
-                <img src={buttonDecor} alt="" className="btn-decor-br" />
+                {/* <img src={buttonDecor} alt="" className="btn-decor-tl" />
+                <img src={buttonDecor} alt="" className="btn-decor-br" /> */}
               </button>
             </Link>
           </div>

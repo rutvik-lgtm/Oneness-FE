@@ -259,20 +259,34 @@
 }
 
 .load-more-btn {
-  background-color: #4A55A2;
-  /* Blue button */
+  background-image: url('../assets/blog/Subtract.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
   color: white;
   border: none;
-  padding: 12px 30px;
-  font-size: 1rem;
+  width: 290px;
+  height: 60px;
+  font-size: 1.05rem;
   font-weight: 700;
-  border-radius: 8px;
+  font-family: 'Irish Grover', 'Inter', sans-serif;
   cursor: pointer;
-  transition: background-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+  padding: 0;
+  line-height: 1;
 }
 
 .load-more-btn:hover {
-  background-color: #3b4485;
+  transform: scale(1.03);
+  filter: brightness(1.08);
+}
+
+.load-more-btn:active {
+  transform: scale(0.97);
 }
 
 /* Media Section */

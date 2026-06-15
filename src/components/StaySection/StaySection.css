@@ -187,10 +187,14 @@
 
 .stay-explore-btn {
   position: relative;
-  background: linear-gradient(135deg, #e8a030 0%, #d4912a 50%, #c07e22 100%);
-  color: #1a1510;
-  border: 2px solid #c8872a;
-  padding: 14px 40px;
+  background-image: url('../../assets/homepage/button/Group 231.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 14px 20px;
   font-family: 'Irish Grover', 'Georgia', serif;
   font-size: 14px;
   font-weight: 700;
@@ -201,20 +205,12 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease, filter 0.3s ease;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  text-shadow: none;
+  box-shadow: none;
 }
 
 /* Corner ornaments on button */
-.stay-explore-btn::before,
-.stay-explore-btn::after {
-  content: '✦';
-  position: absolute;
-  color: #4B3A70;
-  font-size: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-}
+
 
 .stay-explore-btn::before {
   left: 12px;

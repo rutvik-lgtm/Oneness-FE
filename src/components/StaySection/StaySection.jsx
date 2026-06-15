@@ -163,7 +163,7 @@ const StaySection = () => {
         {/* CTA Button */}
         <div className="stay-cta-container">
           <button className="stay-explore-btn" onClick={handleExploreStays}>
-            EXPLORE STAYS
+            Explore Accommodation Options
           </button>
         </div>
 

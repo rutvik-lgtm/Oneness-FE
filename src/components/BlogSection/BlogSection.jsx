@@ -66,9 +66,9 @@ const BlogSection = () => {
         {/* Footer Button Block */}
         <div className="blog-footer-btn-container">
           <button className="blog-explore-button">
-            <span className="btn-star">★</span>
+            {/* <span className="btn-star">★</span> */}
             EXPLORE MORE OUR LATEST BLOGS
-            <span className="btn-star">★</span>
+            {/* <span className="btn-star">★</span> */}
           </button>
         </div>
       </div>

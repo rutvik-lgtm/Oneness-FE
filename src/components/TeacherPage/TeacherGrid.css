@@ -191,21 +191,23 @@
   font-family: 'Irish Grover', cursive;
   font-size: 16px;
   color: #fff;
-  background: linear-gradient(135deg, #e74c3c, #8e2222);
+  background-image: url('../../assets/homepage/button/Group 232.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
   border: none;
-  padding: 14px 40px;
-  border-radius: 30px;
+  padding: 10px 30px;
   cursor: pointer;
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.35);
+  box-shadow: none;
 }
 
 .teacher-view-more-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 22px rgba(231, 76, 60, 0.5);
-  background: linear-gradient(135deg, #c0392b, #6e1919);
+  box-shadow: none;
 }
 
 /* ===== Responsive ===== */
@@ -276,7 +278,7 @@
   
   .teacher-card-overlay {
     padding: 6px 8px;
-    height: 45%;
+    height: 30%;
   }
 
   .teacher-card-name {

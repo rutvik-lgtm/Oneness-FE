@@ -6,7 +6,7 @@ import './DiscoverJaipur.css';
 import palaceImg from '../../assets/homepage/Group 89.png';
 import rickshawIcon from '../../assets/homepage/i1.png';
 import dividerImg from '../../assets/homepage/Group 5.png';
-import btnBg from '../../assets/pkg-btn/Group 58.png';
+import btnBg from '../../assets/homepage/button/Group 232.png';
 import djTop from '../../assets/homepage/apati.png';
 
 const DiscoverJaipur = () => {

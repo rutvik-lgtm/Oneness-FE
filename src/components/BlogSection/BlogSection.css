@@ -202,36 +202,37 @@
 
 /* Premium Button styled exactly like the mockup */
 .blog-explore-button {
-  background-color: #3e356c;
-  /* Deep purple/indigo background */
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
-  outline: 1.5px solid #3e356c;
-  outline-offset: 4px;
+  background-image: url('../../assets/homepage/button/Group 229 (1).png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  outline: none;
   color: #ffffff;
   font-family: 'Irish Grover', 'Georgia', serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  padding: 18px 45px;
+font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 15px 20px;
   border-radius: 4px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 15px;
-  box-shadow: 0 10px 25px rgba(62, 53, 108, 0.3);
-  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.25s, box-shadow 0.25s;
+  box-shadow: none;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .blog-explore-button:hover {
   transform: translateY(-3px) scale(1.02);
-  background-color: #493f7c;
-  box-shadow: 0 15px 30px rgba(62, 53, 108, 0.45);
+  box-shadow: none;
 }
 
 .blog-explore-button:active {
   transform: translateY(0) scale(0.98);
-  box-shadow: 0 5px 15px rgba(62, 53, 108, 0.3);
+  box-shadow: none;
 }
 
 .btn-star {

@@ -106,8 +106,12 @@
   font-size: 20px;
   font-weight: 700;
   color: #1a1a1a;
-  background: #ffffff;
-  border: 2px solid #1a1a1a;
+  background-image: url('../../assets/homepage/button/Group 60 (8).png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
   padding: 14px 40px;
   cursor: pointer;
   letter-spacing: 2px;
@@ -118,10 +122,8 @@
 }
 
 .teacher-book-btn:hover {
-  background: #1a1a1a;
-  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: none;
 }
 
 /* Decorative element near button */

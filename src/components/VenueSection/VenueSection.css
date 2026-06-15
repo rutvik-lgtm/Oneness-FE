@@ -69,9 +69,13 @@
 /* Explore Venue Button */
 .venue-explore-btn {
   position: relative;
-  background-color: #4B3A70;
+  background-image: url('../../assets/homepage/button/Group 58 (3).png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
   color: #ffffff;
-  border: 1px dashed rgba(255, 255, 255, 0.3);
+  border: none;
   padding: 13px 30px;
   font-family: 'Irish Grover', 'Georgia', serif;
   font-size: 14px;
@@ -79,11 +83,7 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   cursor: pointer;
-  border-radius: 4px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: inset 0 0 0 2px #4B3A70;
+  box-shadow: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 

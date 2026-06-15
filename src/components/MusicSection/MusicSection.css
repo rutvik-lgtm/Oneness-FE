@@ -189,23 +189,26 @@
 
 /* --- Explore button --- */
 .music-explore-btn {
-  background-color: #5d4a82;
+  background-image: url('../../assets/homepage/button/Group 58 (3).png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
   color: #ffffff;
   border: none;
-  border-radius: 6px;
   padding: 14px 36px;
   font-family: 'Irish Grover', 'Georgia', serif;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(93, 74, 130, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: none;
+  transition: transform 0.2s ease;
   letter-spacing: 2px;
   z-index: 3;
 }
 
 .music-explore-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(93, 74, 130, 0.45);
+  box-shadow: none;
 }
 
 /* --- Grass at bottom --- */

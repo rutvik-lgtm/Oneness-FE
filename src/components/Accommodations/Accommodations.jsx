@@ -292,9 +292,9 @@ const Accommodations = () => {
             <img src={dividerImg} alt="Teal Divider" className="accomm-arch-divider" />
             <button className="accomm-arch-btn" onClick={handleScrollToStays}>
               <div className="accomm-arch-btn-inner">
-                <FlowerIcon className="arch-flower-left" />
+                {/* <FlowerIcon className="arch-flower-left" /> */}
                 <span className="accomm-arch-btn-text">RESERVE YOUR ACCOMMODATION →</span>
-                <FlowerIcon className="arch-flower-right" />
+                {/* <FlowerIcon className="arch-flower-right" /> */}
               </div>
             </button>
           </div>

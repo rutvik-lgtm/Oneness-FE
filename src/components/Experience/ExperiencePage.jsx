@@ -7,41 +7,47 @@ import group5 from '../../assets/exp page img/Group 5.png';
 import textureBg from '../../assets/exp page img/image 34 (1).png';
 
 // New images for the cards section
-import card1 from '../../assets/exp2 page img/program 1 (1).png';
-import card2 from '../../assets/exp2 page img/2 29.png';
-import card3 from '../../assets/exp2 page img/Good_image,_but_202604151101 1.png';
-import card4 from '../../assets/exp2 page img/award page 1.png';
-
-// Frame vector
-import cardFrame from '../../assets/exp2 page img/Group 38 (1).png';
+import group218 from '../../assets/exp2 page img/Group 218.png';
+import group219 from '../../assets/exp2 page img/Group 219.png';
+import group220 from '../../assets/exp2 page img/Group 220.png';
+import group221 from '../../assets/exp2 page img/Group 221.png';
 
 import './ExperiencePage.css';
 
 export default function ExperiencePage() {
   const [startIndex, setStartIndex] = React.useState(0);
+  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const cards = [
-    {
-      img: card1,
-      title: "PROGRAM",
-      desc: "Workshops, performances, and immersive experiences"
-    },
-    {
-      img: card2,
-      title: "TEACHERS & ARTISTS",
-      desc: "Facilitators, performers, and inspiring voices"
-    },
-    {
-      img: card3,
-      title: "BAZAAR",
-      desc: "Marketplace of soulful, conscious creations"
-    },
-    {
-      img: card4,
-      title: "LIFETIME ACHIEVEMENT AWARD",
-      desc: "Recognizing enduring impact and devotion"
-    }
+    { img: group218 },
+    { img: group219 },
+    { img: group220 },
+    { img: group221 }
   ];
+
+  const getVisibleCount = () => {
+    if (windowWidth <= 768) return 2;
+    if (windowWidth <= 1200) return 2;
+    return 4;
+  };
+
+  const visibleCount = getVisibleCount();
+
+  const getVisibleIndices = () => {
+    const indices = [];
+    for (let i = 0; i < visibleCount; i++) {
+      indices.push((startIndex + i) % cards.length);
+    }
+    return indices;
+  };
+
+  const visibleIndices = getVisibleIndices();
 
   const handlePrev = () => {
     setStartIndex((prev) => (prev - 1 + cards.length) % cards.length);
@@ -50,6 +56,14 @@ export default function ExperiencePage() {
   const handleNext = () => {
     setStartIndex((prev) => (prev + 1) % cards.length);
   };
+
+  React.useEffect(() => {
+    if (visibleCount >= cards.length) return;
+    const timer = setInterval(() => {
+      setStartIndex((prev) => (prev + 1) % cards.length);
+    }, 4000); // rotate every 4 seconds
+    return () => clearInterval(timer);
+  }, [cards.length, visibleCount]);
 
   return (
     <div style={{ width: '100%', minHeight: '100vh', backgroundColor: '#fff', fontFamily: 'Roboto, sans-serif' }}>
@@ -107,37 +121,28 @@ export default function ExperiencePage() {
       {/* ── CARDS SECTION ── */}
       <section className="cards-section">
         <div className="cards-container">
-          {cards.map((card, idx) => {
-            const firstVisibleIndex = startIndex;
-            const secondVisibleIndex = (startIndex + 1) % cards.length;
-            const isFirst = idx === firstVisibleIndex;
-            const isSecond = idx === secondVisibleIndex;
-            const isVisible = isFirst || isSecond;
+          {visibleIndices.map((cardIdx) => {
+            const card = cards[cardIdx];
+            const isFirst = cardIdx === startIndex;
+            const isSecond = cardIdx === (startIndex + 1) % cards.length;
 
             return (
               <div 
-                key={idx} 
-                className={`card-item ${isVisible ? 'mobile-visible' : ''} ${isFirst ? 'mobile-first' : ''} ${isSecond ? 'mobile-second' : ''}`}
+                key={cardIdx} 
+                className={`card-item mobile-visible ${isFirst ? 'mobile-first' : ''} ${isSecond ? 'mobile-second' : ''}`}
               >
-                <div className="frame-box">
-                  <img className={`main-img clip-card-${idx}`} src={card.img} alt={card.title} />
-                  <img className="frame-overlay" src={cardFrame} alt="" />
-                </div>
-                <h3 className="card-title">{card.title}</h3>
-                <p className="card-desc">{card.desc}</p>
-
-                <button className="btn-purple">
-                  EXPLORE PROGRAM
-                </button>
+                <img className="direct-card-img" src={card.img} alt={`Card ${cardIdx + 1}`} />
               </div>
             );
           })}
         </div>
 
-        <div className="nav-arrows">
-          <div className="nav-arrow arrow-left" onClick={handlePrev}><span>‹</span></div>
-          <div className="nav-arrow arrow-right" onClick={handleNext}><span>›</span></div>
-        </div>
+        {cards.length > 1 && (
+          <div className="nav-arrows">
+            <div className="nav-arrow arrow-left" onClick={handlePrev}><span>‹</span></div>
+            <div className="nav-arrow arrow-right" onClick={handleNext}><span>›</span></div>
+          </div>
+        )}
       </section>
       <svg width="0" height="0" style={{ position: 'absolute' }}>
         <defs>

@@ -591,12 +591,15 @@
     width: 100%;
     box-sizing: border-box;
     scroll-padding: 0 20px;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE/Edge */
   }
 
   .accomm-hotels-grid::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome/Safari */
+    display: none;
+    /* Hide scrollbar for Chrome/Safari */
   }
 
   .accomm-hotel-card {
@@ -932,4 +935,18 @@
   .arch-flower-right {
     right: -8px;
   }
+}
+
+.arch-flower-left,
+.arch-flower-right {
+  width: 10px;
+  height: 10px;
+}
+
+.arch-flower-left {
+  left: -8px;
+}
+
+.arch-flower-right {
+  right: -8px;
 }
