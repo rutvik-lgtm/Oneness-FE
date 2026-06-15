@@ -147,6 +147,7 @@
 
 /* Learn more button styling matching mockup */
 .dj-explore-btn {
+  text-decoration: none;
   background-color: transparent;
   color: #ffffff;
   border: none;

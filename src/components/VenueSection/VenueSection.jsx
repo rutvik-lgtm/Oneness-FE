@@ -18,8 +18,8 @@ const VenueSection = () => {
             Full venue details will be shared with registered participants
           </p>
           <button className="venue-explore-btn">
-            <span className="corner top-left"></span>
-            <span className="corner bottom-left"></span>
+            {/* <span className="corner top-left"></span> */}
+            {/* <span className="corner bottom-left"></span> */}
             EXPLORE VENUE
           </button>
         </div>

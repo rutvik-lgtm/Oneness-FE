@@ -369,6 +369,12 @@
     grid-template-columns: 1fr;
   }
 
+  .did-icon{
+  width: 75%;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
   .blog-hero-content h2 {
     font-size: 1.8rem;
   }

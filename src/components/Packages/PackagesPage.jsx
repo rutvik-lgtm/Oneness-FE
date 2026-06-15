@@ -48,7 +48,7 @@ export default function PackagesPage() {
             GET YOUR ACCOMMODATION
           </Link>
 
-          <Link to="/tour" className="pkg-btn-outline">
+          <Link to="/tour-package" className="pkg-btn-outline">
             GET YOUR TOUR PACKAGE
           </Link>
         </div>

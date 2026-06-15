@@ -1,6 +1,6 @@
 import React from 'react';
 import './BlogSection.css';
-
+import { Link } from 'react-router-dom';
 // Importing the assets specified by the user
 import btnBg from '../../assets/homepage/Rectangle 35.png';
 import publisherLogo from '../../assets/homepage/Group 79 (1).png';
@@ -65,11 +65,11 @@ const BlogSection = () => {
 
         {/* Footer Button Block */}
         <div className="blog-footer-btn-container">
-          <button className="blog-explore-button">
+          <Link className="blog-explore-button" to="/blog">
             {/* <span className="btn-star">★</span> */}
             EXPLORE MORE OUR LATEST BLOGS
             {/* <span className="btn-star">★</span> */}
-          </button>
+          </Link>
         </div>
       </div>
     </section>

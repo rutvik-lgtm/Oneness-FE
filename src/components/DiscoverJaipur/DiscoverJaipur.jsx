@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './DiscoverJaipur.css';
+import { Link } from 'react-router-dom';
 
 // Assets
 import palaceImg from '../../assets/homepage/Group 89.png';
@@ -56,13 +57,13 @@ const DiscoverJaipur = () => {
 
           {/* CTA Button */}
           <div className="dj-btn-container">
-            <button
+            <Link
               className="dj-explore-btn"
-              onClick={handleLearnMore}
+              to="/tour"
               style={{ backgroundImage: `url(${btnBg})` }}
             >
               LEARN MORE ABOUT JAIPUR TOURS
-            </button>
+            </Link>
           </div>
         </div>
       </div>

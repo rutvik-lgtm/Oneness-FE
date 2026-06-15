@@ -45,9 +45,9 @@ export default function TourPackages() {
             HERITAGE, PALACES, MARKETS, AND CULTURAL TRADITIONS.
           </h1>
           <button className="tp-hero-btn">
-            <span className="btn-icon">❁</span>
+            {/* <span className="btn-icon">❁</span> */}
             RESERVE YOUR TOUR SPOT
-            <span className="btn-icon">❁</span>
+            {/* <span className="btn-icon">❁</span> */}
           </button>
         </div>
       </section>

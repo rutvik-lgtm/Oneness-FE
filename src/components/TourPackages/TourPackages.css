@@ -100,9 +100,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-image: url('../../assets/homepage/button/Group 60 (8).png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
   color: #191919;
-  padding: 16px 45px;
+  padding: 16px 20px;
   font-family: "Georgia", serif;
   font-size: 20px;
   font-weight: 700;
@@ -114,19 +118,18 @@
   position: relative;
   border: none;
   cursor: pointer;
-  clip-path: polygon(
+  /* clip-path: polygon(
     2% 0%, 98% 0%, 100% 5%, 98% 10%, 100% 15%, 98% 20%, 100% 25%, 98% 30%, 
     100% 35%, 98% 40%, 100% 45%, 98% 50%, 100% 55%, 98% 60%, 100% 65%, 
     98% 70%, 100% 75%, 98% 80%, 100% 85%, 98% 90%, 100% 95%, 98% 100%, 
     2% 100%, 0% 95%, 2% 90%, 0% 85%, 2% 80%, 0% 75%, 2% 70%, 0% 65%, 
     2% 60%, 0% 55%, 2% 50%, 0% 45%, 2% 40%, 0% 35%, 2% 30%, 0% 25%, 
     2% 20%, 0% 15%, 2% 10%, 0% 5%
-  );
+  ); */
 }
 
 .tp-hero-btn:hover {
   transform: translateY(-3px);
-  background-color: #f9f9f9;
 }
 
 .btn-icon {
@@ -245,11 +248,11 @@
 
 .tp-upcoming .tp-section-year,
 .tp-upcoming .tp-section-title {
-  text-align: left;
+  text-align: center;
 }
 
 .tp-upcoming .tp-divider {
-  margin: 0 0 22px;
+  margin: 0 69px 22px;
 }
 
 .tp-upcoming .tp-section-text {
@@ -340,7 +343,11 @@
 
 .tp-cta-btn {
   display: inline-block;
-  background-color: #E8872B;
+  background-image: url('../../assets/homepage/button/Group 231.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
   color: #fff;
   padding: 12px 32px;
   font-family: "Irish Grover", cursive;
@@ -349,13 +356,11 @@
   text-transform: uppercase;
   letter-spacing: 0.8px;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .tp-cta-btn:hover {
-  background-color: #d47720;
   transform: translateY(-2px);
 }
 
@@ -655,6 +660,7 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  margin-bottom: 50px;
 }
 
 .tp-contact-container {
@@ -752,7 +758,7 @@
 .tp-reserve-btn {
   margin-top: 50px;
   width: 380px;
-  height: 65px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -870,6 +876,18 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.02);
   }
 
+.tp-upcoming .tp-divider {
+  margin: 0 107px 22px;
+}
+
+.tp-package-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
   .tp-tip-row:nth-child(odd) .tp-tip-card::after,
   .tp-tip-row:nth-child(even) .tp-tip-card::after {
     top: 0;
@@ -880,6 +898,15 @@
     width: auto;
     border-radius: 8px 8px 0 0;
   }
+
+.tp-hero-btn {
+font-size: 14px;
+padding: 12px 4px;
+}
+
+.tp-section-title{
+  text-align: center;
+}
 
   .tp-elephant {
     display: none;
@@ -923,32 +950,62 @@
 
   /* Contact & Reserve Section Mobile Override */
   .tp-contact-reserve {
-    padding: 50px 16px;
+    padding: 40px 16px;
+    margin-bottom: 30px;
   }
 
   .tp-contact-container {
     padding: 35px 20px;
     min-height: auto;
-    border-radius: 20px;
+    border-radius: 24px;
+    background-size: cover; /* use cover to avoid distortion on mobile */
+  }
+
+  .tp-contact-title {
+    font-size: clamp(18px, 5vw, 26px);
+    margin-bottom: 12px;
+  }
+
+  .tp-contact-description {
+    font-size: 13px;
+    margin-bottom: 20px;
   }
 
   .tp-contact-info-row {
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    margin-bottom: 20px;
   }
 
   .tp-contact-pill {
     width: 100%;
-    max-width: 340px;
-    padding: 10px 20px;
+    max-width: 320px;
+    padding: 10px 16px;
+    font-size: 13px;
     box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .tp-contact-footer-text {
+    font-size: 11px;
   }
 
   .tp-reserve-btn {
-    margin-top: 35px;
-    width: 300px;
-    height: 52px;
-    font-size: 16px;
+    margin-top: 30px;
+    width: min(300px, 90vw);
+    height: auto;
+    aspect-ratio: 300 / 52;
+    font-size: clamp(14px, 4.5vw, 16px);
   }
 }
+
+/* --- Tablet: ≤ 1024px --- */
+@media (max-width: 1024px) {
+  .tp-contact-container {
+    padding: 75px 35px;
+  }
+}
+

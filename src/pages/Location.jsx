@@ -102,7 +102,7 @@ const Location = () => {
 
       {/* Gallery Section */}
       <section className="location-gallery-section">
-        <div className="gallery-grid">
+        <div className="loc-grid">
           <div className="gallery-item">
             <img src={galleryImg1} alt="Clarks Amer View 1" />
           </div>

@@ -31,6 +31,16 @@ const GallerySection = () => {
     setStartIndex((prev) => (prev + 1) % galleryItems.length);
   };
 
+  // Generate an ordered list of items starting from the current startIndex to loop infinitely
+  const getOrderedItems = () => {
+    const items = [];
+    for (let i = 0; i < galleryItems.length; i++) {
+      const index = (startIndex + i) % galleryItems.length;
+      items.push({ ...galleryItems[index], originalIndex: index });
+    }
+    return items;
+  };
+
   return (
     <section className="gallery-section">
       <div className="gallery-container">
@@ -47,11 +57,9 @@ const GallerySection = () => {
 
         {/* Images */}
         <div className="gallery-images">
-          {galleryItems.map((item, index) => {
-            const firstVisibleIndex = startIndex;
-            const secondVisibleIndex = (startIndex + 1) % galleryItems.length;
-            const isFirst = index === firstVisibleIndex;
-            const isSecond = index === secondVisibleIndex;
+          {getOrderedItems().map((item, orderIndex) => {
+            const isFirst = orderIndex === 0;
+            const isSecond = orderIndex === 1;
             const isVisible = isFirst || isSecond;
 
             return (

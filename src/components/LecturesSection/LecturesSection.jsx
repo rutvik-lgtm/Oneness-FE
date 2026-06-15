@@ -1,6 +1,6 @@
 import React from 'react';
 import './LecturesSection.css';
-
+import { Link } from 'react-router-dom';
 import bgIllustration from '../../assets/homepage/bg image.png';
 import dividerImg from '../../assets/homepage/Group 5.png';
 import topBrush from '../../assets/homepage/dvider_20 2.png';
@@ -26,7 +26,7 @@ const LecturesSection = () => {
             values.
           </p>
           
-          <button className="lectures-explore-btn">EXPLORE TEACHERS</button>
+          <Link className="lectures-explore-btn" to="/teacher">EXPLORE TEACHERS</Link>
         </div>
       </div>
       

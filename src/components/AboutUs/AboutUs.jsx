@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './AboutUs.css';
 
 import dividerImg from '../../assets/homepage/Group 5.png';
@@ -35,12 +36,10 @@ const AboutUs = () => {
 
           <div className="about-us-actions">
             <button className="btn-stay-informed">
-              {/* <span className=" corner top-left"></span> */}
-              {/* <span className="corner bottom-left"></span> */}
               STAY INFORMED
             </button>
-            <button className="btn-contact-us">CONTACT US</button>
-          </div>
+            <Link className="btn-contact-us" to="/contact">CONTACT US</Link>
+          </div> 
 
           <div className="about-us-sketch-container">
             <img src={colorfulArt} alt="Fort Sketch" className="about-us-sketch" />

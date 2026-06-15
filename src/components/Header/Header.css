@@ -21,6 +21,7 @@
 }
 
 .site-header.header-visible {
+  z-index: 999999 !important;
   transform: translateY(0);
   opacity: 1;
   pointer-events: auto;
