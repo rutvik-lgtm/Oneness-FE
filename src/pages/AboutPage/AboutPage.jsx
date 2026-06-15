@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './AboutPage.css';
 
 import bgImage from '../../assets/about us/image 32.png';
@@ -23,6 +23,15 @@ import yoga3 from '../../assets/about us/yoga pose (2).png';
 import yoga4 from '../../assets/about us/yoga pose (3).png';
 
 const AboutPage = () => {
+  const [activeCardIndex, setActiveCardIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveCardIndex((prevIndex) => (prevIndex + 1) % 4);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [activeCardIndex]);
+
   return (
     <div className="about-page">
       {/* Hero Section */}
@@ -145,33 +154,67 @@ const AboutPage = () => {
         </div>
 
         <div className="approach-grid">
-          <div className="approach-card card-workshops">
+          <div className={`approach-card card-workshops ${activeCardIndex === 0 ? 'active' : ''}`}>
             <h3>WORKSHOPS<br />AND<br />EXPERIENCES</h3>
             <p>
               Guided sessions that support self-exploration, inner alignment, and authentic expression.
             </p>
           </div>
-          <div className="approach-card card-community">
+          <div className={`approach-card card-community ${activeCardIndex === 1 ? 'active' : ''}`}>
             <h3>COMMUNITY<br />AND<br />CO-CREATION</h3>
             <p>
               Each participant actively contributes to the shared field of unity and harmony.
             </p>
           </div>
 
-          <div className="approach-card card-art">
+          <div className={`approach-card card-art ${activeCardIndex === 2 ? 'active' : ''}`}>
             <h3>ART<br />AND<br />EXPRESSION</h3>
             <p>
               Artists and performers cultivate an environment of inspiration and reflection.
             </p>
           </div>
 
-          <div className="approach-card card-facilitators">
+          <div className={`approach-card card-facilitators ${activeCardIndex === 3 ? 'active' : ''}`}>
             <h3>FACILITATORS<br />AND<br />GUIDES</h3>
             <p>
               Experienced facilitators hold space for deep engagement, learning, and transformation.
             </p>
           </div>
         </div>
+
+        {/* Carousel indicators/dots for mobile only */}
+        <div className="approach-carousel-dots">
+          {[0, 1, 2, 3].map((index) => (
+            <span 
+              key={index} 
+              className={`carousel-dot ${activeCardIndex === index ? 'active' : ''}`}
+              onClick={() => setActiveCardIndex(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        <button 
+          className="approach-toggle-btn"
+          onClick={() => setActiveCardIndex((prev) => (prev + 1) % 4)}
+          aria-label="Next Card"
+        >
+          <svg 
+            width="10" 
+            height="16" 
+            viewBox="0 0 10 16" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              d="M1.5 1.5L8 8L1.5 14.5" 
+              stroke="currentColor" 
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
 
         {/* Landscape hills overlay at bottom */}
         <img src={approachDivider} alt="" className="approach-landscape" />

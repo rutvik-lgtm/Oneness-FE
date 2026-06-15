@@ -505,7 +505,7 @@
 
 .approach-intro-desc {
   font-family: 'Georgia', serif;
-  font-size: clamp(0.78rem, 1vw, 1rem);
+  font-size: 18px;
   color: #7a746f;
   line-height: 1.35;
   max-width: 1080px;
@@ -680,7 +680,7 @@
 
   /* Unity responsive */
   .about-unity {
-    background-image: none;
+    background-image: none !important;
     background-color: #C02A3D;
     /* Crimson Red for mobile */
     height: auto;
@@ -741,13 +741,7 @@
   }
 
   .approach-palace-right {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin: 20px auto 0;
-    display: block;
-    width: 200px;
-    height: auto;
+    display: none !important;
   }
 }
 
@@ -847,6 +841,10 @@
     margin-right: 0;
   }
 
+  .unity-content {
+    gap: 15px;
+  }
+
   .unity-image {
     margin-top: -50px;
   }
@@ -854,12 +852,127 @@
   .unity-image img {
     max-width: 350px;
     width: 90%;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+  }
+
+  .unity-divider-wrapper {
+    margin-bottom: 12px;
+  }
+
+  .unity-text h2 {
+    font-size: 1.85rem;
+    margin-bottom: 8px;
+  }
+
+  .unity-text p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
   }
 
   .approach-header h2 {
     font-size: 2rem;
   }
+
+  /* Approach mobile toggle and card styling */
+  .approach-grid {
+    padding: 0 0 20px !important;
+  }
+
+  .approach-grid .approach-card:not(.active) {
+    display: none;
+  }
+
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .approach-card.active {
+    animation: fadeSlideIn 0.5s ease-out forwards;
+  }
+
+  .approach-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    z-index: 10;
+    position: relative;
+  }
+
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(180, 70, 52, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .carousel-dot.active {
+    background-color: #B44634;
+    transform: scale(1.25);
+  }
+
+  .approach-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #B44634;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    position: relative;
+    margin: 20px auto 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .approach-toggle-btn:hover {
+    background-color: #9c3625;
+    transform: scale(1.05);
+  }
+
+  .approach-toggle-btn:active {
+    transform: scale(0.95);
+  }
+
+  .approach-card {
+    padding: 26% 12% 10% 12% !important;
+    /* Adjusted padding to fit larger text inside the arch border */
+  }
+
+  .approach-card h3 {
+    font-size: 1.35rem !important;
+    margin-bottom: 14px !important;
+  }
+
+  .approach-card p {
+    font-size: 1.65rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .approach-landscape {
+    bottom: -5px !important;
+  }
+}
+
+.approach-toggle-btn,
+.approach-carousel-dots {
+  display: none;
 }
 
 @media (max-width: 1024px) {
