@@ -27,9 +27,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -60px;
-  /* gap: 30px; */
   margin-bottom: 40px;
+}
+
+.custom-logo-img {
+  max-width: 100%;
+  height: auto;
+  width: 600px;
 }
 
 .lotus-logo-img {
@@ -487,6 +491,10 @@
     margin-left: 0;
   }
 
+  .custom-logo-img {
+    width: 400px;
+  }
+
   .logo-text-wrapper {
     margin-left: 0;
     align-items: center;
@@ -510,6 +518,10 @@
 }
 
 @media (max-width: 480px) {
+  .custom-logo-img {
+    width: 280px;
+  }
+
   .lotus-logo-img {
     width: 120px;
     max-width: 80%;

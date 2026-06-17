@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Ticketsection1.css';
-import lotusLogo from '../../assets/LOGOORG.png';
-import krishnaVector from '../../assets/Vector (6).png';
+import logoFile from '../../assets/logo/logo-file.png';
 import vector1 from '../../assets/Vector.png';
 import vector2 from '../../assets/Vector (1).png';
 import sunsetImg from '../../assets/Mask group(1).png';
@@ -177,14 +176,7 @@ const TicketsSection = () => {
         {/* Header Info */}
         <div className="festival-info-header">
           <div className="custom-logo-container">
-            <img src={lotusLogo} alt="Lotus Logo" className="lotus-logo-img" />
-            <div className="logo-text-wrapper">
-              <div className="jaipur-text">
-                JA<img src={krishnaVector} alt="I" className="krishna-i" />PUR
-              </div>
-              <div className="oneness-text">ONENESS</div>
-              <div className="festival-text">FESTIVAL</div>
-            </div>
+            <img src={logoFile} alt="Jaipur Oneness Festival Logo" className="custom-logo-img" />
           </div>
           <div className="info-bar">
             <div className="info-item">
