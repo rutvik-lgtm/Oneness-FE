@@ -10,10 +10,10 @@ const LecturesSection = () => {
     <section className="lectures-section">
       {/* <img src={topBrush} alt="" className="lectures-brush-top1" /> */}
       
+      {/* Main Illustration covering bottom and right */}
+      <img src={bgIllustration} alt="Lectures and Reflection" className="lectures-illustration" />
+
       <div className="lectures-container">
-        {/* Main Illustration covering bottom and right */}
-        <img src={bgIllustration} alt="Lectures and Reflection" className="lectures-illustration" />
-        
         {/* Text Content in top left */}
         <div className="lectures-text-content">
           <h3 className="lectures-year">2026</h3>

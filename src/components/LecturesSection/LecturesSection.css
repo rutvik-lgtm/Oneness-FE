@@ -54,16 +54,17 @@
   right: 0;
   width: 100%;
   height: auto;
-  max-height: 127%;
+  max-height: 145%;
   object-fit: contain;
   object-position: bottom right;
   z-index: 1;
+  pointer-events: none;
 }
 
 .lectures-text-content {
   position: relative;
   z-index: 2;
-  margin-top: 150px;
+  margin-top: 260px;
   margin-left: 10%;
   max-width: 600px;
   text-align: center;
@@ -149,8 +150,8 @@
 
 
   .lectures-illustration {
-    max-height: 75%;
-    bottom: -20px;
+    max-height: 95%;
+    bottom: -10px;
     /* Shifted down to hide white bottom area and reduce gap */
   }
 
@@ -170,8 +171,8 @@
   }
 
   .lectures-illustration {
-    max-height: 70%;
-    bottom: -20px;
+    max-height: 90%;
+    bottom: -10px;
     /* Shifted down to hide white bottom area */
   }
 }
