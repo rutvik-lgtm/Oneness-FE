@@ -119,6 +119,12 @@
   margin-bottom: 30px;
 }
 
+.music-gallery-pair {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
 /* --- Drummer (left character) --- */
 .music-drummer {
   width: 220px;
@@ -263,15 +269,24 @@
 
 @media (max-width: 768px) {
   .music-gallery-row {
-    flex-wrap: wrap;
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .music-gallery-pair {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
+    gap: 15px;
+    width: 100%;
   }
 
   .music-drummer {
     width: 130px;
     margin-right: 0;
-    order: 1;
   }
 
   .music-frame-wrapper {
@@ -279,7 +294,6 @@
     height: 310px;
     transform: none;
     margin: 0;
-    order: 2;
   }
 
   .music-brush-top-img-grassup {
@@ -289,7 +303,6 @@
   .music-guitarist {
     width: 110px;
     margin-left: 0;
-    order: 3;
   }
 
   .music-title {
@@ -299,5 +312,24 @@
   .music-notes-left,
   .music-notes-right {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .music-gallery-pair {
+    gap: 10px;
+  }
+
+  .music-frame-wrapper {
+    width: 190px;
+    height: 235px;
+  }
+
+  .music-drummer {
+    width: 95px;
+  }
+
+  .music-guitarist {
+    width: 85px;
   }
 }

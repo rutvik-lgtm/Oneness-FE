@@ -40,23 +40,27 @@ const MusicSection = () => {
 
         {/* Gallery row: drummer - frame1 - frame2 - guitarist */}
         <div className="music-gallery-row">
-          <img src={drummer} alt="Drummer" className="music-drummer" />
+          <div className="music-gallery-pair music-gallery-pair-left">
+            <img src={drummer} alt="Drummer" className="music-drummer" />
 
-          <div className="music-frame-wrapper">
-            <div className="frame">
-              <img src={photoLeft} alt="Devotional Arts" />
+            <div className="music-frame-wrapper">
+              <div className="frame">
+                <img src={photoLeft} alt="Devotional Arts" />
+              </div>
+              <img src={frameRed} alt="" className="music-frame-border" />
             </div>
-            <img src={frameRed} alt="" className="music-frame-border" />
           </div>
 
-          <div className="music-frame-wrapper">
-            <div className="frame">
-              <img src={photoRight} alt="Sacred Music" />
+          <div className="music-gallery-pair music-gallery-pair-right">
+            <div className="music-frame-wrapper">
+              <div className="frame">
+                <img src={photoRight} alt="Sacred Music" />
+              </div>
+              <img src={frameGreen} alt="" className="music-frame-border" />
             </div>
-            <img src={frameGreen} alt="" className="music-frame-border" />
-          </div>
 
-          <img src={guitarist} alt="Guitarist" className="music-guitarist" />
+            <img src={guitarist} alt="Guitarist" className="music-guitarist" />
+          </div>
         </div>
 
         <button className="music-explore-btn">EXPLORE ARTIST</button>
