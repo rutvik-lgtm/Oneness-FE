@@ -353,40 +353,40 @@ bottom: 21%;
   }
 
   .label-blog {
-    top: -25px;
+    top: -13px;
     left: 50%;
     transform: translateX(-50%);
     /* Only keep center transform for top blog label */
   }
 
   .label-experience {
-    top: 5%;
-    left: 12%;
+        top: 2%;
+        left: 12%;
   }
 
   .label-packages {
-    top: 5%;
+    top: 2%;
     right: 12%;
   }
 
   .label-about {
-    top: 35%;
-    left: -8%;
+    top: 26%;
+    left: 5%;
   }
 
   .label-contact {
-    top: 35%;
-    right: -8%;
+    top: 26%;
+    right: 5%;
   }
 
   .label-home-bottom {
-    bottom: 12%;
-    left: -5%;
+    bottom: 22%;
+    left: 5%;
   }
 
   .label-tickets {
-    bottom: 12%;
-    right: -5%;
+    bottom: 22%;
+    right: 5%;
   }
 
   .home-hero-text {
