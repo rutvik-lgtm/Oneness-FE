@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './AboutPage.css';
 
-import bgImage from '../../assets/about us/image 32.png';
+import bgImage from '../../assets/about us/About Page.png';
 import topMask from '../../assets/about us/Mask group (27).png';
 import bottomMask from '../../assets/about us/Mask group (26).png';
 import flowerIcon from '../../assets/about us/Group 55.png';
@@ -35,18 +35,19 @@ const AboutPage = () => {
   return (
     <div className="about-page">
       {/* Hero Section */}
-      <section className="about-hero" style={{ backgroundImage: `url("${bgImage}")` }}>
+      <section className="about-hero">
+        <div className="about-hero-bg" style={{ backgroundImage: `url("${bgImage}")` }} />
         <img src={topMask} alt="Top Torn Edge" className="about-mask-top mask-overlay" />
-        
+
         <div className="about-hero-content">
           <h1>ABOUT<br />JAIPUR ONENESS<br />FESTIVAL</h1>
           <p className="about-hero-date">00 January - 00 January<br />2026</p>
-          
+
           {/* Floating Flowers */}
           <img src={flowerIcon} alt="flower" className="about-flower about-flower-1" />
           <img src={flowerIcon} alt="flower" className="about-flower about-flower-2" />
         </div>
-        
+
         <img src={bottomMask} alt="Bottom Torn Edge" className="about-mask-bottom mask-overlay" />
       </section>
 
@@ -54,15 +55,15 @@ const AboutPage = () => {
       <section className="about-intro">
         <div className="about-text-wrapper">
           <p>
-            Jaipur Oneness Festival is a cultural and spiritual gathering celebrating oneness and 
-            connection in India. It is a space to reconnect with your own essence, experience 
-            wholeness within yourself, and explore life from your true self. When we live 
-            authentically, others can see us clearly, and we naturally attract people and 
+            Jaipur Oneness Festival is a cultural and spiritual gathering celebrating oneness and
+            connection in India. It is a space to reconnect with your own essence, experience
+            wholeness within yourself, and explore life from your true self. When we live
+            authentically, others can see us clearly, and we naturally attract people and
             circumstances that resonate with our path.
           </p>
           <img src={flowerIcon} alt="flower" className="about-flower about-flower-3" />
           <p className="about-text-second">
-            The festival brings together people who wish to live, move, and relate from their true 
+            The festival brings together people who wish to live, move, and relate from their true
             selves, sharing a sense of unity,<br />
             harmony, and purpose with others.
           </p>
@@ -74,7 +75,7 @@ const AboutPage = () => {
       <section className="about-vision">
         <img src={topMask} alt="Top Torn Edge" className="about-vision-mask-top mask-overlay" />
         <img src={peacockFeather} alt="Peacock feather" className="peacock-feather-about" />
-        
+
         <div className="vision-content">
           <div className="vision-text">
             <h2>OUR VISION</h2>
@@ -84,7 +85,7 @@ const AboutPage = () => {
           </div>
           <div className="vision-frame-wrapper">
             {/* <div className="vision-frame"> */}
-              {/* <img src={aboutVisionImg} alt="Group discussion" /> */}
+            {/* <img src={aboutVisionImg} alt="Group discussion" /> */}
             {/* </div> */}
             <img src={frameImg} alt="" className="vision-frame-border" />
           </div>
@@ -105,10 +106,10 @@ const AboutPage = () => {
           <h2>LIVING IN ALIGNMENT</h2>
           <img src={dividerIcon} alt="Divider" className="section-divider" />
         </div>
-        
+
         <div className="alignment-content">
           <img src={turbanMan} alt="Man" className="alignment-character-left" />
-          
+
           <div className="alignment-boxes">
             <div className="alignment-box">
               Each of us leads our own lives, often focused on our families or personal goals. At the festival, we explore what it means to live, move, and be in alignment with ourselves, each other, and the larger community.
@@ -125,7 +126,7 @@ const AboutPage = () => {
       <section className="about-unity" style={{ backgroundImage: `url("${unityBg}")` }}>
         <div className="unity-content">
           <div className="unity-image">
-             <img src={unityCircleImg} alt="People at Hawa Mahal" />
+            <img src={unityCircleImg} alt="People at Hawa Mahal" />
           </div>
           <div className="unity-text">
             <h2>CARRIED IN UNITY AND WHOLENESS</h2>
@@ -185,8 +186,8 @@ const AboutPage = () => {
         {/* Carousel indicators/dots for mobile only */}
         <div className="approach-carousel-dots">
           {[0, 1, 2, 3].map((index) => (
-            <span 
-              key={index} 
+            <span
+              key={index}
               className={`carousel-dot ${activeCardIndex === index ? 'active' : ''}`}
               onClick={() => setActiveCardIndex(index)}
               aria-label={`Go to slide ${index + 1}`}
@@ -194,23 +195,23 @@ const AboutPage = () => {
           ))}
         </div>
 
-        <button 
+        <button
           className="approach-toggle-btn"
           onClick={() => setActiveCardIndex((prev) => (prev + 1) % 4)}
           aria-label="Next Card"
         >
-          <svg 
-            width="10" 
-            height="16" 
-            viewBox="0 0 10 16" 
-            fill="none" 
+          <svg
+            width="10"
+            height="16"
+            viewBox="0 0 10 16"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path 
-              d="M1.5 1.5L8 8L1.5 14.5" 
-              stroke="currentColor" 
-              strokeWidth="2.5" 
-              strokeLinecap="round" 
+            <path
+              d="M1.5 1.5L8 8L1.5 14.5"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>

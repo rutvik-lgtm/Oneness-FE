@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Ticketsection1.css';
-import logoFile from '../../assets/logo/logo-file.png';
+import logoFile from '../../assets/logo/logo_123.png';
 import vector1 from '../../assets/Vector.png';
 import vector2 from '../../assets/Vector (1).png';
 import sunsetImg from '../../assets/Mask group(1).png';

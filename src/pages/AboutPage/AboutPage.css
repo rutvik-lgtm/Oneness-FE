@@ -20,14 +20,30 @@
   position: relative;
   width: 100%;
   min-height: 86vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   overflow: hidden;
+}
+
+.about-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* filter: blur(4px); */
+  /* transform: scale(1.05); */
+  z-index: 1;
+}
+
+.about-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(38, 27, 8, 0.55);
+  z-index: 2;
 }
 
 .about-mask-top {
