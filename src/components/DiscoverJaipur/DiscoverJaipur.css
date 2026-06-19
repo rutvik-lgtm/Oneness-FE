@@ -240,12 +240,12 @@
 
   .dj-palace-img {
     width: 125% !important;
-    max-width: 122% !important;
-    margin-left: auto !important;
+    max-width: 100% !important;
+    margin-left: 165px !important;
     margin-right: auto !important;
     display: block;
     transform: scale(1.35);
-    margin-top: -44px;
+    margin-top: -45px;
   }
 
   .dj-rickshaw-icon {

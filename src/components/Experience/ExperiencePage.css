@@ -82,6 +82,7 @@
   line-height: 1;
   letter-spacing: 0px;
   text-align: center;
+  color: #ffffff;
 }
 
 .exp-hero-text-large {
@@ -92,6 +93,7 @@
   line-height: 1;
   letter-spacing: 0px;
   text-align: center;
+  color: #ffffff;
 }
 
 .exp-btn-container {
@@ -246,6 +248,73 @@
   filter: brightness(1.04) drop-shadow(0 12px 24px rgba(0, 0, 0, 0.15));
 }
 
+.card-item-title {
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: clamp(20px, 2.2vw, 25px);
+  font-weight: 700;
+  color: #2F302D;
+  margin: 20px 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-item-desc {
+  font-family: 'Roboto Serif', 'Georgia', serif;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  max-width: 280px;
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-item-btn-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.card-explore-btn {
+  background-image: url('../../assets/homepage/button/Group 58 (3).png');
+  text-decoration: none;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  padding: 0 35px;
+  font-family: 'Irish Grover', 'Georgia', serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  min-width: 250px;
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.card-explore-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.card-explore-btn:active {
+  transform: translateY(0);
+}
+
 .nav-arrows {
   display: flex;
   justify-content: center;
@@ -339,6 +408,35 @@
     width: 100%;
     max-width: 160px;
     height: auto;
+  }
+
+  .card-item-title {
+    font-size: 16px;
+    margin: 12px 0 6px;
+    letter-spacing: 0.5px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-item-desc {
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 0 0 10px;
+    max-width: 160px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-explore-btn {
+    font-size: 10px;
+    letter-spacing: 1px;
+    min-width: 140px;
+    min-height: 32px;
+    padding: 0 15px;
   }
 
   /* Crimson red circular arrow buttons matching mockup */
@@ -445,6 +543,32 @@
 
   .direct-card-img {
     max-width: 140px;
+  }
+
+  .card-item-title {
+    font-size: 14px;
+    margin: 10px 0 4px;
+    min-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-item-desc {
+    font-size: 10px;
+    margin: 0 0 8px;
+    max-width: 140px;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-explore-btn {
+    font-size: 9px;
+    min-width: 120px;
+    min-height: 28px;
+    padding: 0 10px;
   }
 
   .nav-arrows {

@@ -12,6 +12,7 @@ import group219 from '../../assets/exp2 page img/Group 219.png';
 import group220 from '../../assets/exp2 page img/Group 220.png';
 import group221 from '../../assets/exp2 page img/Group 221.png';
 
+
 import './ExperiencePage.css';
 
 export default function ExperiencePage() {
@@ -25,10 +26,30 @@ export default function ExperiencePage() {
   }, []);
 
   const cards = [
-    { img: group218 },
-    { img: group219 },
-    { img: group220 },
-    { img: group221 }
+    { 
+      img: group218, 
+      title: 'PROGRAM', 
+      description: 'Workshops, performances, and immersive experiences', 
+      link: '/explore' 
+    },
+    { 
+      img: group219, 
+      title: 'TEACHERS & ARTISTS', 
+      description: 'Facilitators, performers, and inspiring voices', 
+      link: '/teacher' 
+    },
+    { 
+      img: group220, 
+      title: 'BAZAAR', 
+      description: 'Marketplace of soulful, conscious creations', 
+      link: '/bazaar' 
+    },
+    { 
+      img: group221, 
+      title: 'LIFETIME ACHIEVEMENT AWARD', 
+      description: 'Recognizing enduring impact and devotion', 
+      link: '/achievement' 
+    }
   ];
 
   const getVisibleCount = () => {
@@ -131,12 +152,22 @@ export default function ExperiencePage() {
                 key={cardIdx} 
                 className={`card-item mobile-visible ${isFirst ? 'mobile-first' : ''} ${isSecond ? 'mobile-second' : ''}`}
               >
-                <img className="direct-card-img" src={card.img} alt={`Card ${cardIdx + 1}`} />
+                <img className="direct-card-img" src={card.img} alt={card.title} />
+                <h3 className="card-item-title">{card.title}</h3>
+                <p className="card-item-desc">{card.description}</p>
+                <div className="card-item-btn-wrap">
+                  <Link 
+                    to={card.link} 
+                    className="card-explore-btn"
+                  >
+                    EXPLORE PROGRAM
+                  </Link>
+                </div>
               </div>
             );
           })}
         </div>
-
+ 
         {cards.length > 1 && (
           <div className="nav-arrows">
             <div className="nav-arrow arrow-left" onClick={handlePrev}><span>‹</span></div>
