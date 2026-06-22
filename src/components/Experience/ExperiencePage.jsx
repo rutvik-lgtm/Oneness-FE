@@ -30,25 +30,29 @@ export default function ExperiencePage() {
       img: group218, 
       title: 'PROGRAM', 
       description: 'Workshops, performances, and immersive experiences', 
-      link: '/explore' 
+      link: '/explore',
+      btnText: 'EXPLORE PROGRAM'
     },
     { 
       img: group219, 
       title: 'TEACHERS & ARTISTS', 
       description: 'Facilitators, performers, and inspiring voices', 
-      link: '/teacher' 
+      link: '/teacher',
+      btnText: 'EXPLORE TEACHERS & ARTISTS'
     },
     { 
       img: group220, 
       title: 'BAZAAR', 
       description: 'Marketplace of soulful, conscious creations', 
-      link: '/bazaar' 
+      link: '/bazaar',
+      btnText: 'EXPLORE BAZAAR'
     },
     { 
       img: group221, 
       title: 'LIFETIME ACHIEVEMENT AWARD', 
       description: 'Recognizing enduring impact and devotion', 
-      link: '/achievement' 
+      link: '/achievement',
+      btnText: 'EXPLORE AWARD'
     }
   ];
 
@@ -160,7 +164,7 @@ export default function ExperiencePage() {
                     to={card.link} 
                     className="card-explore-btn"
                   >
-                    EXPLORE PROGRAM
+                    {card.btnText}
                   </Link>
                 </div>
               </div>

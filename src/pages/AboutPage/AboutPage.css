@@ -564,6 +564,10 @@
   margin: 0;
 }
 
+.approach-card {
+  /* padding: 26% 20% 10% 20% !important; */
+}
+
 .approach-card:hover {
   transform: translateY(-8px);
   filter: drop-shadow(0 15px 25px rgba(180, 70, 52, 0.15));
@@ -734,11 +738,11 @@
   }
 
   .approach-card {
-    width: 90vw;
-    max-width: 405px;
+    width: 95vw;
+    max-width: 455px;
     height: auto;
     aspect-ratio: 465 / 534;
-    padding: 28% 11% 8%;
+    padding: 28% 20% 8%;
     background-image: url('../../assets/about us/Group 39.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -968,7 +972,8 @@
   }
 
   .approach-card {
-    padding: 26% 12% 10% 12% !important;
+    padding: 26% 20% 10% 20% !important;
+    margin-bottom: 25px;
     /* Adjusted padding to fit larger text inside the arch border */
   }
 
@@ -984,6 +989,12 @@
 
   .approach-landscape {
     bottom: -5px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .approach-card {
+    padding: 26% 20% 10% !important;
   }
 }
 

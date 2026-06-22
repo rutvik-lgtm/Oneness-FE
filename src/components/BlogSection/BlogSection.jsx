@@ -67,7 +67,7 @@ const BlogSection = () => {
         <div className="blog-footer-btn-container">
           <Link className="blog-explore-button" to="/blog">
             {/* <span className="btn-star">★</span> */}
-            EXPLORE MORE OUR LATEST BLOGS
+            EXPLORE OUR LATEST BLOGS
             {/* <span className="btn-star">★</span> */}
           </Link>
         </div>

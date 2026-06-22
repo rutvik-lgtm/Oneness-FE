@@ -63,7 +63,7 @@ const MusicSection = () => {
           </div>
         </div>
 
-        <button className="music-explore-btn">EXPLORE ARTIST</button>
+        <button className="music-explore-btn">EXPLORE ARTISTS</button>
       </div>
 
       {/* Grass at very bottom */}
