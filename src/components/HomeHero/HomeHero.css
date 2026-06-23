@@ -476,47 +476,6 @@ bottom: 21%;
     width: 45px;
   }
 
-  .lotus-graphic-wrapper {
-    max-width: 250px;
-  }
-
-  .lotus-label {
-    font-size: 9px;
-  }
-
-  .label-blog {
-    top: -20px;
-  }
-
-  .label-experience {
-    top: 5%;
-    left: 8%;
-  }
-
-  .label-packages {
-    top: 5%;
-    right: 8%;
-  }
-
-  .label-about {
-    top: 35%;
-    left: -5%;
-  }
-
-  .label-contact {
-    top: 35%;
-    right: -5%;
-  }
-
-  .label-home-bottom {
-    bottom: 12%;
-    left: -2%;
-  }
-
-  .label-tickets {
-    bottom: 12%;
-    right: -2%;
-  }
 
   .oneness-title {
     font-size: 32px;
