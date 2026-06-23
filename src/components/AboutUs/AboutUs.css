@@ -11,27 +11,28 @@
 
 .about-us-bg-text {
   position: absolute;
-  top: -43px;
+  top: -27px;
   right: 16px;
   display: flex;
   align-items: flex-start;
   font-family: 'Irish Grover', 'Georgia', serif;
   font-weight: 900;
-  color: #E3D8C4;
+  color: #FAF4E5;
   z-index: 9999 !important;
   letter-spacing: 5px;
   white-space: nowrap;
   /* transform: rotate(-2deg); */
   pointer-events: none;
+  /* font-style: re; */
 }
 
 .about-us-bg-text .about {
-  font-size: 100px;
+  font-size: 150px;
   transform: translateY(40px);
 }
 
 .about-us-bg-text .us {
-  font-size: 100px;
+  font-size: 150px;
   transform: translateY(0px);
   margin-left: -10px;
 }
@@ -320,18 +321,19 @@
   }
 
   .about-us-bg-text {
-    top: 20px;
-    right: 20px;
+    top: -35px;
+    right: 15px;
   }
 
-  .about-us-bg-text .about,
-  .about-us-bg-text .us {
-    font-size: 60px;
-    transform: none;
+  .about-us-bg-text .about {
+    font-size: 85px;
+    transform: translateY(25px);
   }
 
   .about-us-bg-text .us {
-    margin-left: 8px;
+    font-size: 85px;
+    transform: translateY(0px);
+    margin-left: -5px;
   }
 
   .about-us-right {
@@ -341,12 +343,18 @@
 
 @media (max-width: 480px) {
   .about-us-bg-text {
-    top: 15px;
-    right: 15px;
+    top: 2px;
+    right: 8px;
   }
 
-  .about-us-bg-text .about,
+  .about-us-bg-text .about {
+    font-size: 70px;
+    transform: translateY(20px);
+  }
+
   .about-us-bg-text .us {
-    font-size: 42px;
+    font-size: 70px;
+    transform: translateY(0px);
+    margin-left: -5px;
   }
 }
