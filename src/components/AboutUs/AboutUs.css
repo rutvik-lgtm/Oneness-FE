@@ -322,7 +322,9 @@
 
   .about-us-bg-text {
     top: -35px;
-    right: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
   }
 
   .about-us-bg-text .about {
@@ -343,8 +345,10 @@
 
 @media (max-width: 480px) {
   .about-us-bg-text {
-    top: 2px;
-    right: 8px;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
   }
 
   .about-us-bg-text .about {
