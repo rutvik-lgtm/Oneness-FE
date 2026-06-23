@@ -365,23 +365,23 @@ bottom: 21%;
   }
 
   .label-packages {
-    top: 2%;
-    right: 12%;
+    top: 5%;
+    right: 18%;
   }
 
   .label-about {
     top: 26%;
-    left: 5%;
+    left: 12%;
   }
 
   .label-contact {
     top: 26%;
-    right: 5%;
+    right: 8%;
   }
 
   .label-home-bottom {
     bottom: 22%;
-    left: 5%;
+    left: 10%;
   }
 
   .label-tickets {
