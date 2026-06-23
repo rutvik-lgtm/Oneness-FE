@@ -55,7 +55,7 @@
 }
 
 .pkg-hero-subtitle {
-  color: #fff;
+  color: #fff !important;
   font-size: 31px;
   font-family: "Roboto Serif", serif;
   font-weight: 600;
