@@ -26,6 +26,7 @@ import Blog from './pages/Blog'
 import BlogInner from './pages/BlogInner'
 import BazaarPage from './pages/BazaarPage/BazaarPage'
 import GalleryPage from './pages/GalleryPage/GalleryPage'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const location = useLocation()
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Header />
       <main style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', minHeight: '60vh' }}>
         <Routes>

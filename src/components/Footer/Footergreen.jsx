@@ -32,11 +32,11 @@ const Footergreen = () => {
           <div className="green-footer-col">
             <h3>Explore</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About the Festival</a></li>
-              <li><a href="#">Location</a></li>
-              <li><a href="#">Team</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About the Festival</Link></li>
+              <li><Link to="/location">Location</Link></li>
+              <li><Link to="/team">Team</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 
@@ -44,11 +44,11 @@ const Footergreen = () => {
           <div className="green-footer-col">
             <h3>Experience</h3>
             <ul>
-              <li><a href="#">Program</a></li>
-              <li><a href="#">Teachers</a></li>
-              <li><a href="#">Artists</a></li>
-              <li><a href="#">Bazaar</a></li>
-              <li><a href="#">Oneness Award</a></li>
+              <li><Link to="/explore">Program</Link></li>
+              <li><Link to="/teacher">Teachers</Link></li>
+              <li><Link to="/teacher">Artists</Link></li>
+              <li><Link to="/bazaar">Bazaar</Link></li>
+              <li><Link to="/achievement">Oneness Award</Link></li>
             </ul>
           </div>
 
@@ -56,8 +56,8 @@ const Footergreen = () => {
           <div className="green-footer-col">
             <h3>Blog & Media</h3>
             <ul>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Media</a></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/gallery">Media</Link></li>
             </ul>
           </div>
 
@@ -74,15 +74,15 @@ const Footergreen = () => {
               <div className="green-sub-col">
                 <h3>Get Involved</h3>
                 <ul>
-                  <li><a href="#">Volunteer</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><Link to="/get-involved">Volunteer</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
                 </ul>
               </div>
               <div className="green-sub-col">
                 <h3>Tickets</h3>
                 <ul>
-                  <li><a href="#">Buy Tickets</a></li>
-                  <li><a href="#">Ticketing Terms & Conditions</a></li>
+                  <li><Link to="/tickets">Buy Tickets</Link></li>
+                  <li><Link to="/tickets">Ticketing Terms & Conditions</Link></li>
                 </ul>
               </div>
             </div>
