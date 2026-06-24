@@ -45,12 +45,12 @@ export default function PackagesPage() {
 
         <div className="pkg-buttons">
           <Link to="/accommodation" className="pkg-btn-filled">
-            GET YOUR ACCOMMODATION
+            BOOK YOUR ACCOMMODATION 
           </Link>
 
-          <Link to="/tour-package" className="pkg-btn-outline">
-            GET YOUR TOUR PACKAGE
-          </Link>
+          <Link to="/tour-packages" className="pkg-btn-outline">
+            BOOK YOUR TOUR PACKAGE 
+          </Link> 
         </div>
       </section>
     </div>

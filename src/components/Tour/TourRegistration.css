@@ -344,11 +344,11 @@
   }
 
   .layered-frame {
-    width: 92%;
+    width: 100%;
     /* Slightly narrower on mobile */
     max-width: 450px;
     /* Cap width for better mobile look */
-    padding: 80px 20px 80px 20px;
+    padding: 80px 35px 80px 35px;
     min-height: auto;
   }
 

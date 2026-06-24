@@ -377,6 +377,9 @@
   height: 90px;
   resize: none;
 }
+.accomm-reg-group input, .accomm-reg-group select, .accomm-reg-group textarea{
+  padding-bottom: 6px;
+}
 
 .accomm-reg-btn-container {
   display: flex;
@@ -578,9 +581,9 @@
   }
 
   .accomm-layered-frame {
-    width: 92%;
+    width: 100%;
     max-width: 450px;
-    padding: 80px 20px 80px 20px;
+    padding: 80px 35px 80px 35px;
     min-height: auto;
   }
 
