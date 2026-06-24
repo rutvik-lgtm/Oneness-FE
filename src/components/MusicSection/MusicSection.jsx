@@ -15,6 +15,7 @@ import grass from '../../assets/homepage/pngwing.com (1) 1.png';
 import musicNotesLeft from '../../assets/homepage/mu 2.png';
 import musicNotesRight from '../../assets/homepage/mu 3.png';
 import dividerImg from '../../assets/Group 5.png';
+import { Link } from 'react-router-dom';
 
 const MusicSection = () => {
   return (
@@ -63,7 +64,7 @@ const MusicSection = () => {
           </div>
         </div>
 
-        <button className="music-explore-btn">EXPLORE ARTISTS</button>
+        <Link className="music-explore-btn" to="/teacher">EXPLORE ARTISTS</Link>
       </div>
 
       {/* Grass at very bottom */}

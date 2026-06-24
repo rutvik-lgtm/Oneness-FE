@@ -35,9 +35,9 @@ const AboutUs = () => {
           </p>
 
           <div className="about-us-actions">
-            <button className="btn-stay-informed">
+            <Link className="btn-stay-informed" to="/get-involved" >
               STAY INFORMED
-            </button>
+            </Link>
             <Link className="btn-contact-us" to="/contact">CONTACT US</Link>
           </div> 
 

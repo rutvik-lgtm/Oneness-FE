@@ -13,6 +13,7 @@ import chakraFloat3 from '../../assets/homepage/image 21.png';
 import chakraFloat4 from '../../assets/homepage/image 22.png';
 import chakraFloat5 from '../../assets/homepage/image 19.png';
 import dividerImg from '../../assets/homepage/Group 5.png';
+import { Link } from 'react-router-dom';
 
 const YogaSection = () => {
   return (
@@ -46,7 +47,7 @@ const YogaSection = () => {
               Traditional and mindful guided meditation and movement practices<br/>
               for balance and clarity.
             </p>
-            <button className="yoga-explore-btn">EXPLORE MORE</button>
+            <Link className="yoga-explore-btn" to="/explore" >EXPLORE MORE</Link>
           </div>
         </div>
       </div>
