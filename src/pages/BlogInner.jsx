@@ -67,7 +67,7 @@ const BlogInner = () => {
       try {
         const res = await fetch(`${API_URL}/blogs`);
         const data = await res.json();
-        if (data.success) {
+        if (data.success && data.data.length > 0) {
           setLatestPosts(data.data.slice(0, 5));
         } else {
           setLatestPosts(Array(3).fill({
@@ -80,6 +80,13 @@ const BlogInner = () => {
         }
       } catch (err) {
         console.error('Error fetching latest blogs', err);
+        setLatestPosts(Array(3).fill({
+          author: 'The Times of India',
+          title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में...',
+          excerpt: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत...',
+          slug: 'meditation-transform-daily-routine',
+          createdAt: new Date().toLocaleDateString()
+        }));
       }
     };
 
@@ -264,7 +271,7 @@ const BlogInner = () => {
               <h3>LATEST BLOGS</h3>
               <div className="latest-blogs-list">
                 {latestPosts.map((post, index) => (
-                  <Link to={`/blog/${post.slug}`} className="latest-blog-item" key={post._id || index} style={{ textDecoration: 'none', color: 'inherit', display: 'flex' }}>
+                  <Link to={`/blog-inner/${post.slug}`} className="latest-blog-item" key={post._id || index} style={{ textDecoration: 'none', color: 'inherit', display: 'flex' }}>
                     <div className="latest-blog-img">
                       <img src={post.coverImage || cardImg} alt="Blog Cover" />
                     </div>

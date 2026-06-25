@@ -85,7 +85,7 @@ const Blog = () => {
                 </div>
                 <h4 className="blog-title">{post.title}</h4>
                 <p className="blog-excerpt">{post.excerpt}</p>
-                <Link to={`/blog/${post.slug}`} className="read-more">READ MORE &rarr;</Link>
+                <Link to={`/blog-inner/${post.slug}`} className="read-more">READ MORE &rarr;</Link>
               </div>
             </div>
           ))}
