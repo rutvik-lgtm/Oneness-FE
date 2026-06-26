@@ -267,7 +267,7 @@ const TicketsSection = () => {
 
                 <p>Sign up to receive updates and be among the first to secure your spot at this unique festival.</p>
 
-                <p><span className="highlight-green">Sign up below</span> to receive early access and updates.</p>
+                <p><span className="highlight-green">Sign up below</span> to the newsletter below to receive early access and updates about Oneness Festival.</p>
 
                 {/* Sunset Image */}
                 <div className="sunset-placeholder">

@@ -24,7 +24,7 @@ const TourHero = () => {
           <h1 className="tour-main-title">TOURS REGISTRATION</h1>
 
           <div className="tour-btn-wrapper">         
-            <button className="tour-reserve-btn">RESERVE YOUR TOUR SPOT</button>                        
+            <button className="tour-reserve-btn">BOOK YOUR TOUR NOW</button>                        
           </div>
         </div>
 

@@ -89,7 +89,7 @@ const TourPackages = () => {
             <div className="tp-btn-wrapper">
               <span className="tp-btn-ornament tp-orn-tl" />
               <span className="tp-btn-ornament tp-orn-tr" />
-              <button className="tp-reserve-btn" onClick={scrollToReg}>RESERVE YOUR TOUR SPOT</button>
+              <button className="tp-reserve-btn" onClick={scrollToReg}>BOOK YOUR TOUR NOW</button>
               <span className="tp-btn-ornament tp-orn-bl" />
               <span className="tp-btn-ornament tp-orn-br" />
             </div>

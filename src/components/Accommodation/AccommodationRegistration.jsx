@@ -89,7 +89,7 @@ const AccommodationRegistration = () => {
 
             <div className="accomm-btn-reserve-container">
               <button className="accomm-reg-reserve-btn" onClick={scrollToForm}>
-                RESERVE YOUR ROOM NOW
+                RESERVE YOUR ACCOMMODATION NOW
               </button>
             </div>
           </div>
