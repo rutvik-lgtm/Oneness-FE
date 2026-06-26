@@ -26,7 +26,7 @@ const ContactSection = () => {
     setLoading(true);
     setErrorMsg('');
     try {
-      const res = await fetch(`${API_URL}/inquiries`, {
+      const res = await fetch(`${API_URL}/contacts`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

@@ -1,8 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Footergreen.css';
+import { API_URL } from '../../config';
 
 const Footergreen = () => {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState({ success: false, message: '' });
+  const [loading, setLoading] = useState(false);
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+    setLoading(true);
+    setStatus({ success: false, message: '' });
+
+    try {
+      const res = await fetch(`${API_URL}/inquiries`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'general',
+          fullName: 'Newsletter Subscriber',
+          email: email,
+          phone: '0000000000',
+          details: 'Newsletter Subscription request from Green Footer section.'
+        })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus({ success: true, message: 'Thank you for subscribing!' });
+        setEmail('');
+      } else {
+        setStatus({ success: false, message: data.message || 'Subscription failed.' });
+      }
+    } catch (err) {
+      setStatus({ success: false, message: 'Failed to connect to server.' });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer className="green-site-footer">
       {/* Background image added via CSS class */}
@@ -89,10 +126,29 @@ const Footergreen = () => {
 
             <div className="green-newsletter-section">
               <h3>Newsletter</h3>
-              <form className="green-newsletter-form">
-                <input type="email" placeholder="Email address" required />
-                <button type="submit">Join</button>
+              <form className="green-newsletter-form" onSubmit={handleSubscribe}>
+                <input 
+                  type="email" 
+                  placeholder="Email address" 
+                  required 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={loading}
+                />
+                <button type="submit" disabled={loading}>
+                  {loading ? '...' : 'Join'}
+                </button>
               </form>
+              {status.message && (
+                <p style={{ 
+                  color: status.success ? '#2ecc71' : '#e74c3c', 
+                  fontSize: '0.85rem', 
+                  marginTop: '5px',
+                  fontWeight: '500'
+                }}>
+                  {status.message}
+                </p>
+              )}
               <p className="green-newsletter-note">Receive festival updates, program announcements, and early ticket access.</p>
               <p className="green-newsletter-note">Join the Jaipur Oneness Festival community.</p>
             </div>
