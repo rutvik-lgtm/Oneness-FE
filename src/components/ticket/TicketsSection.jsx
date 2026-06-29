@@ -90,7 +90,7 @@ const TicketsSection = () => {
                 <path d="M4.58 19.42C4.22 19.07 5.05 17.9 6.81 16.13C8.58 14.36 9.24 14.06 9.59 14.41C9.94 14.76 9.64 15.42 7.87 17.19C6.1 18.95 4.93 19.78 4.58 19.42Z" />
                 <path d="M19.42 4.58C19.78 4.93 18.95 6.1 17.19 7.87C15.42 9.64 14.76 9.94 14.41 9.59C14.06 9.24 14.36 8.58 16.13 6.81C17.9 5.05 19.07 4.22 19.42 4.58Z" />
               </svg>
-              <span className="tickets-button-text">BOOK YORE PASSAGE - UPI/CARDS</span>
+              <span className="tickets-button-text">BOOK YOUR TICKET - UPI/CARDS</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="tickets-button-flower-icon">
                 <circle cx="12" cy="12" r="2.5" />
                 <path d="M12 1.5C12.5 1.5 13 3 13 5.5C13 8 12.5 9 12 9C11.5 9 11 8 11 5.5C11 3 11.5 1.5 12 1.5Z" />

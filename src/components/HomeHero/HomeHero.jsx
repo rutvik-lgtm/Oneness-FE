@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HomeHero.css';
 
 import bgImage from '../../assets/homepage/Backgtound.png';
@@ -35,13 +36,13 @@ const HomeHero = () => {
           <div className="lotus-graphic-wrapper">
             <img src={centerLotus} alt="Oneness Lotus" className="lotus-img" />
 
-            <div className="lotus-label label-blog" ><a href="/blog" style={{ textDecoration: 'none', color: 'white' }}>BLOG</a></div>
-            <div className="lotus-label label-experience"><a href="/experience" style={{ textDecoration: 'none', color: 'white' }}>EXPERIENCE</a></div>
-            <div className="lotus-label label-packages"><a href="/packages" style={{ textDecoration: 'none', color: 'white' }}>PACKAGES</a></div>
-            <div className="lotus-label label-about"><a href="/about" style={{ textDecoration: 'none', color: 'white' }}>ABOUT</a></div>
-            <div className="lotus-label label-contact"><a href="/contact" style={{ textDecoration: 'none', color: 'white' }}>CONTACT</a></div>
-            <div className="lotus-label label-home-bottom"><a href="/" style={{ textDecoration: 'none', color: 'white' }}>HOME</a></div>
-            <div className="lotus-label label-tickets"><a href="/tickets" style={{ textDecoration: 'none', color: 'white' }}>TICKETS</a></div>
+            <div className="lotus-label label-purple"><Link to="/blog">BLOG</Link></div>
+            <div className="lotus-label label-yellow"><Link to="/experience">EXPERIENCE</Link></div>
+            <div className="lotus-label label-light-blue"><Link to="/packages">PACKAGES</Link></div>
+            <div className="lotus-label label-red"><Link to="/about">ABOUT</Link></div>
+            <div className="lotus-label label-green"><Link to="/contact">CONTACT</Link></div>
+            <div className="lotus-label label-dark-blue"><Link to="/get-involved">GET INVOLVED</Link></div>
+            <div className="lotus-label label-orange"><Link to="/tickets">TICKETS</Link></div>
           </div>
         </div>
 

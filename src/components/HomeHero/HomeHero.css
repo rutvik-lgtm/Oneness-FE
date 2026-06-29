@@ -112,44 +112,76 @@
   z-index: 20;
 }
 
-.label-blog {
+.lotus-label a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.lotus-label a:hover {
+  transform: scale(1.05);
+}
+
+.label-purple {
   top: 21px;
   left: 50%;
   transform: translateX(-50%);
 }
+.label-purple a:hover {
+  color: #AF7AC5;
+}
 
-.label-experience {
+.label-light-blue {
   top: 13%;
   left: 33%;
   transform: translateX(-50%);
 }
-
-.label-packages {
-    top: 13%;
-    right: 35%;
-  transform: translateX(50%);
+.label-light-blue a:hover {
+  color: #5DADE2;
 }
 
-.label-about {
+.label-dark-blue {
+  top: 13%;
+  right: 35%;
+  transform: translateX(50%);
+}
+.label-dark-blue a:hover {
+  color: #2E86C1;
+}
+
+.label-yellow {
   top: 37%;
   left: 16%;
   transform: translateY(-50%);
 }
+.label-yellow a:hover {
+  color: #EED535;
+}
 
-.label-contact {
+.label-green {
   top: 36%;
   right: 16%;
   transform: translateY(-50%);
 }
-
-.label-home-bottom {
-bottom: 21%;
-    left: 14%;
+.label-green a:hover {
+  color: #58D68D;
 }
 
-.label-tickets {
-    bottom: 21%;
-    right: 13%;
+.label-red {
+  bottom: 21%;
+  left: 14%;
+}
+.label-red a:hover {
+  color: #E63946;
+}
+
+.label-orange {
+  bottom: 21%;
+  right: 13%;
+}
+.label-orange a:hover {
+  color: #EB984E;
 }
 
 .home-hero-text {
@@ -352,39 +384,39 @@ bottom: 21%;
     /* Reset desktop transforms */
   }
 
-  .label-blog {
+  .label-purple {
     top: -13px;
     left: 50%;
     transform: translateX(-50%);
     /* Only keep center transform for top blog label */
   }
 
-  .label-experience {
+  .label-light-blue {
         top: 5%;
         left: 19%;
   }
 
-  .label-packages {
+  .label-dark-blue {
     top: 5%;
     right: 18%;
   }
 
-  .label-about {
+  .label-yellow {
     top: 26%;
     left: 12%;
   }
 
-  .label-contact {
+  .label-green {
     top: 26%;
     right: 8%;
   }
 
-  .label-home-bottom {
+  .label-red {
     bottom: 22%;
     left: 10%;
   }
 
-  .label-tickets {
+  .label-orange {
     bottom: 22%;
     right: 5%;
   }

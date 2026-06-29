@@ -46,7 +46,7 @@ export default function TourPackages() {
           </h1>
           <button className="tp-hero-btn">
             {/* <span className="btn-icon">❁</span> */}
-            RESERVE YOUR TOUR SPOT
+            Book your tour now
             {/* <span className="btn-icon">❁</span> */}
           </button>
         </div>
@@ -247,7 +247,7 @@ export default function TourPackages() {
         </div>
 
         <a href="#reserve" className="tp-reserve-btn" style={{ backgroundImage: `url(${reserveBg})` }}>
-          RESERVE YOUR TOUR SPOT
+          Book your tour now
         </a>
       </section>
     </div>

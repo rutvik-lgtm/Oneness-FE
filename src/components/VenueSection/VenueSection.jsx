@@ -11,7 +11,7 @@ const VenueSection = () => {
         {/* Left Content */}
         <div className="venue-left">
           <h3 className="venue-year">2026</h3>
-          <h2 className="venue-title">OENESS FESTIVAL VENUE</h2>
+          <h2 className="venue-title">ONENESS FESTIVAL VENUE</h2>
           <img src={dividerImg} alt="" className="venue-divider" />
           <p className="venue-description">
             The festival will be hosted in Jaipur, Rajasthan.<br />

@@ -62,7 +62,7 @@ const DiscoverJaipur = () => {
               to="/tour"
               style={{ backgroundImage: `url(${btnBg})` }}
             >
-              LEARN MORE ABOUT JAIPUR TOUR PACKAGES
+              LEARN MORE ABOUT OUR TOUR PACKAGES
             </Link>
           </div>
         </div>
