@@ -128,6 +128,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
 .label-purple a:hover {
   color: #AF7AC5;
 }
@@ -137,6 +138,7 @@
   left: 33%;
   transform: translateX(-50%);
 }
+
 .label-light-blue a:hover {
   color: #5DADE2;
 }
@@ -146,6 +148,7 @@
   right: 35%;
   transform: translateX(50%);
 }
+
 .label-dark-blue a:hover {
   color: #2E86C1;
 }
@@ -155,6 +158,7 @@
   left: 16%;
   transform: translateY(-50%);
 }
+
 .label-yellow a:hover {
   color: #EED535;
 }
@@ -164,6 +168,7 @@
   right: 16%;
   transform: translateY(-50%);
 }
+
 .label-green a:hover {
   color: #58D68D;
 }
@@ -172,6 +177,7 @@
   bottom: 21%;
   left: 14%;
 }
+
 .label-red a:hover {
   color: #E63946;
 }
@@ -180,6 +186,7 @@
   bottom: 21%;
   right: 13%;
 }
+
 .label-orange a:hover {
   color: #EB984E;
 }
@@ -392,18 +399,18 @@
   }
 
   .label-light-blue {
-        top: 5%;
-        left: 19%;
+    top: 5%;
+    left: 19%;
   }
 
   .label-dark-blue {
-    top: 5%;
-    right: 18%;
+    top: 4%;
+    right: 12%;
   }
 
   .label-yellow {
     top: 26%;
-    left: 12%;
+    left: 1%;
   }
 
   .label-green {
@@ -418,7 +425,7 @@
 
   .label-orange {
     bottom: 22%;
-    right: 5%;
+    right: 8%;
   }
 
   .home-hero-text {
