@@ -21,7 +21,7 @@ const HomeHero = () => {
       <div className="home-hero-content">
         {/* Lotus Graphic */}
         <div className="home-hero-lotus-container">
-          <div className="lotus-title-section">
+          {/* <div className="lotus-title-section">
             <svg className="lotus-arrow left-arrow" viewBox="0 0 100 50" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <path d="M 90 10 Q 50 -10 10 40" />
               <polyline points="25,35 10,40 15,25" />
@@ -31,7 +31,7 @@ const HomeHero = () => {
               <path d="M 10 10 Q 50 -10 90 40" />
               <polyline points="75,35 90,40 85,25" />
             </svg>
-          </div>
+          </div> */}
 
           <div className="lotus-graphic-wrapper">
             <img src={centerLotus} alt="Oneness Lotus" className="lotus-img" />
