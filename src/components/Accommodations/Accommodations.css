@@ -610,7 +610,6 @@
 
   .accomm-hotels-section {
     padding: 70px 0 20px;
-    overflow-x: hidden;
   }
 
   .accomm-hotels-header {
@@ -859,6 +858,13 @@
   .accomm-hotel-banner {
     height: 350px;
     min-height: 250px;
+  }
+
+  .accomm-hotels-silhouette {
+    top: 0;
+    height: clamp(35px, 6vw, 60px);
+    transform: translateY(-90%);
+    object-fit: fill;
   }
 
   .accomm-hotels-header {

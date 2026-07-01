@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './HomeHero.css';
 
-import bgImage from '../../assets/homepage/Backgtound.png';
+import bgImage from '../../assets/homepage/home_page.jpeg';
 import logoImage from '../../assets/logo/logo_123.png';
 import centerLotus from '../../assets/homepagelogoo.png';
 import bottomDivider from '../../assets/homepage/Mask group (5).png';
