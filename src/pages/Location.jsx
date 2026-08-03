@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Location.css';
+import UnderDevelopment from '../components/UnderDevelopment/UnderDevelopment';
 import heroBg from '../assets/loc/clarks-amer-jaipur-1_1 (1) 1.png';
 import mapImg from '../assets/loc/Png.png';
 import galleryImg1 from '../assets/loc/Group 215.png';
@@ -9,7 +10,14 @@ import bottomEdge from '../assets/loc/Mask group (8).png';
 import divider1 from '../assets/loc/Group 5 (3).png';
 import divider2 from '../assets/loc/Group 5 (4).png';
 
+// Set to true to show "Coming Soon" page, set to false to show original Location page
+const SHOW_COMING_SOON = true;
+
 const Location = () => {
+  if (SHOW_COMING_SOON) {
+    return <UnderDevelopment />;
+  }
+
   const [searchValue, setSearchValue] = useState('Hotel Clarks Amer');
 
   const handleClear = () => {
