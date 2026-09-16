@@ -10,7 +10,8 @@
   background-repeat: no-repeat;
   padding: 100px 20px 100px;
   overflow: hidden;
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   box-sizing: border-box;
   padding-top: 200px;
 }
@@ -39,9 +40,9 @@
 .blog-year {
   color: #ab794b;
   /* Golden bronze color */
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 32px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   margin-bottom: 8px;
   letter-spacing: 1px;
 }
@@ -49,9 +50,9 @@
 .blog-title {
   color: #8c5d37;
   /* Darker golden bronze/brown */
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(26px, 3.5vw, 42px);
-  font-weight: 900;
+  font-weight: var(--title-weight, 700);
   margin: 0 0 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -130,18 +131,18 @@
 
 .blog-publisher-name {
   color: #333333;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 0.2px;
 }
 
 /* Card title (Hindi) */
 .blog-card-title {
   color: #1a1a1a;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   line-height: 1.45;
   margin: 0 0 12px;
   display: -webkit-box;
@@ -155,7 +156,8 @@
 /* Card description (Hindi) */
 .blog-card-description {
   color: #666666;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 13px;
   line-height: 1.6;
   margin: 0 0 20px;
@@ -170,9 +172,9 @@
 .blog-readmore-btn {
   color: #a82d44;
   /* Premium dark crimson/red color */
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 12px;
-  font-weight: 800;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 0.8px;
   text-decoration: none;
   display: inline-flex;
@@ -212,9 +214,9 @@
   border: none;
   outline: none;
   color: #ffffff;
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1.5px;
   padding: 15px 20px;
   border-radius: 4px;
@@ -250,11 +252,11 @@
   .blog-cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-  }
+}
 
   .blog-section {
     padding: 60px 20px 80px;
-  }
+}
 }
 
 @media (max-width: 768px) {
@@ -263,19 +265,19 @@
     gap: 30px;
     max-width: 500px;
     margin: 0 auto 50px;
-  }
+}
 
   .blog-title {
     font-size: 28px;
-  }
+}
 
   .blog-year {
     font-size: 26px;
-  }
+}
 
   .blog-explore-button {
     width: 320px;
     height: 60px;
     font-size: 11px;
-  }
+}
 }

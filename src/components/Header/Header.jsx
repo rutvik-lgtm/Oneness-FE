@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import logoImg from '../../assets/logo/logo_123.png';
 import './Header.css';
 
@@ -7,7 +7,19 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/blog?search=${encodeURIComponent(searchQuery.trim())}`);
+    } else {
+      navigate('/blog');
+    }
+    setIsOpen(false);
+  };
 
   const isHomePage = location.pathname === '/';
 
@@ -74,7 +86,7 @@ const Header = () => {
         { name: 'Accommodation', path: '/accommodations' },
         { name: 'Accommodations registration', path: '/accommodation' },
         { name: 'Tour packages', path: '/tour-packages' },
-        { name: 'Tours registration', path: '/tour' }
+        { name: 'Tours registration', path: '/toursregistration' }
       ]
     },
     { 
@@ -176,15 +188,20 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="drawer-search">
-          <input type="text" placeholder="Search here..." />
-          <button className="search-btn">
+        <form className="drawer-search" onSubmit={handleSearch}>
+          <input 
+            type="text" 
+            placeholder="Search here..." 
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <button type="submit" className="search-btn" aria-label="Search">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="8" />
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
           </button>
-        </div>
+        </form>
 
         <nav className="drawer-nav">
           {navLinks.map((link) => {

@@ -31,6 +31,7 @@ const teachers = Array.from({ length: 18 }, (_, i) => ({
 
 const TeacherGrid = () => {
   const [activeFilter, setActiveFilter] = useState('All');
+  const [visibleCount, setVisibleCount] = useState(9);
 
   return (
     <section className="teacher-grid-section">
@@ -61,7 +62,7 @@ const TeacherGrid = () => {
 
       {/* Cards Grid */}
       <div className="teacher-cards-grid">
-        {teachers.map((t) => (
+        {teachers.slice(0, visibleCount).map((t) => (
           <Link to="/teacher-inner" className="teacher-card-link" key={t.id}>
             <div className="teacher-card">
               <img src={t.image} alt={t.name} className="teacher-card-img" />
@@ -76,7 +77,20 @@ const TeacherGrid = () => {
       </div>
 
       {/* View More */}
-      <button className="teacher-view-more-btn">VIEW MORE</button>
+      {visibleCount < teachers.length ? (
+        <button 
+          className="teacher-view-more-btn"
+          onClick={() => setVisibleCount(teachers.length)}
+        >
+          VIEW MORE
+        </button>
+      ) : (
+        <Link to="/explore" style={{ textDecoration: 'none' }}>
+          <button className="teacher-view-more-btn">
+            EXPLORE PROGRAM &amp; SCHEDULE
+          </button>
+        </Link>
+      )}
     </section>
   );
 };

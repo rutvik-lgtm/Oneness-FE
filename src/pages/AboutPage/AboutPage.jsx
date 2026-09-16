@@ -110,15 +110,11 @@ const AboutPage = () => {
         <div className="alignment-content">
           <img src={turbanMan} alt="Man" className="alignment-character-left" />
 
-          <div className="alignment-boxes">
-            <div className="alignment-box">
-              Each of us leads our own lives, often focused on our families or personal goals. At the festival, we explore what it means to live, move, and be in alignment with ourselves, each other, and the larger community.
-            </div>
-            <div className="alignment-box">
+          <div className="alignment-box-card">
+            <p className="alignment-box-text">
               Living from your true self allows you to naturally align with the whole, with nature, the universe, and those around you. This alignment forms the foundation for community, harmony, and inner fulfilment.
-            </div>
+            </p>
           </div>
-
         </div>
       </section>
 
@@ -156,30 +152,38 @@ const AboutPage = () => {
 
         <div className="approach-grid">
           <div className={`approach-card card-workshops ${activeCardIndex === 0 ? 'active' : ''}`}>
-            <h3>WORKSHOPS<br />AND<br />EXPERIENCES</h3>
-            <p>
-              Guided sessions that support self-exploration, inner alignment, and authentic expression.
-            </p>
+            <div className="approach-card-inner">
+              <h3>WORKSHOPS<br />AND<br />EXPERIENCES</h3>
+              <p className="approach-card-desc">
+                Guided sessions that support self-exploration, inner alignment, and authentic expression.
+              </p>
+            </div>
           </div>
           <div className={`approach-card card-community ${activeCardIndex === 1 ? 'active' : ''}`}>
-            <h3>COMMUNITY<br />AND<br />CO-CREATION</h3>
-            <p>
-              Each participant actively contributes to the shared field of unity and harmony.
-            </p>
+            <div className="approach-card-inner">
+              <h3>COMMUNITY<br />AND<br />CO-CREATION</h3>
+              <p className="approach-card-desc">
+                Each participant actively contributes to the shared field of unity and harmony.
+              </p>
+            </div>
           </div>
 
           <div className={`approach-card card-art ${activeCardIndex === 2 ? 'active' : ''}`}>
-            <h3>ART<br />AND<br />EXPRESSION</h3>
-            <p>
-              Artists and performers cultivate an environment of inspiration and reflection.
-            </p>
+            <div className="approach-card-inner">
+              <h3>ART<br />AND<br />EXPRESSION</h3>
+              <p className="approach-card-desc">
+                Artists and performers cultivate an environment of inspiration and reflection.
+              </p>
+            </div>
           </div>
 
           <div className={`approach-card card-facilitators ${activeCardIndex === 3 ? 'active' : ''}`}>
-            <h3>FACILITATORS<br />AND<br />GUIDES</h3>
-            <p>
-              Experienced facilitators hold space for deep engagement, learning, and transformation.
-            </p>
+            <div className="approach-card-inner">
+              <h3>FACILITATORS<br />AND<br />GUIDES</h3>
+              <p className="approach-card-desc">
+                Experienced facilitators hold space for deep engagement, learning, and transformation.
+              </p>
+            </div>
           </div>
         </div>
 

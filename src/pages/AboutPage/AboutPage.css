@@ -66,9 +66,9 @@
 }
 
 .about-hero-content h1 {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(2.2rem, 6vw, 3.5rem);
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   line-height: 1.2;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -78,9 +78,9 @@
 
 .about-hero-date {
   color: #f7a938;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   line-height: 1.4;
 }
@@ -127,7 +127,8 @@
 .about-text-wrapper {
   max-width: 800px;
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   color: #4a4a4a;
   font-size: 1.2rem;
   line-height: 1.8;
@@ -189,14 +190,17 @@
 }
 
 .vision-text h2 {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: clamp(2rem, 5vw, 2.8rem);
+  color: #ffffff !important;
   margin-bottom: 25px;
   letter-spacing: 1px;
 }
 
 .vision-text p {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 1.05rem;
   line-height: 1.8;
 }
@@ -308,7 +312,8 @@
 }
 
 .alignment-header h2 {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: clamp(1.8rem, 4vw, 2.2rem);
   color: #B44634;
   /* Brownish red */
@@ -323,70 +328,47 @@
 
 .alignment-content {
   display: flex;
+  align-items: center;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 950px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  min-height: 220px;
+  padding-left: 80px;
 }
 
 .alignment-character-left {
   position: absolute;
-  left: -8%;
-  bottom: -100px;
-  height: 410px;
-  object-fit: contain;
-  z-index: 4;
-}
-
-.alignment-camels-container {
-  position: absolute;
-  right: 1%;
+  left: -40px;
   bottom: -35px;
-  width: 320px;
-  height: 320px;
-  z-index: 4;
-}
-
-.alignment-camel-back {
-  position: absolute;
-  top: 0;
-  right: -62%;
-  width: 140px;
-  height: auto;
+  height: 380px;
   object-fit: contain;
+  z-index: 5;
+  pointer-events: none;
+  filter: drop-shadow(4px 8px 16px rgba(0, 0, 0, 0.18));
 }
 
-.alignment-camel-front {
-  position: absolute;
-  bottom: -62px;
-  left: 214px;
-  width: 280px;
-  height: auto;
-  object-fit: contain;
-}
-
-.alignment-boxes {
-  display: flex;
-  gap: 20px;
-  width: 90%;
-  /* To give space for characters on both sides */
-  z-index: 1;
-}
-
-.alignment-box {
+.alignment-box-card {
   background-color: #3b9270;
-  color: white;
-  padding: 30px;
-  border-radius: 12px;
-  flex: 1;
-  font-family: 'Georgia', serif;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  color: #ffffff;
+  padding: 42px 48px 42px 70px;
+  border-radius: 18px;
+  box-shadow: 10px 10px 0px #433367;
+  max-width: 820px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.alignment-box-text {
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+  line-height: 1.8;
+  color: #ffffff;
   text-align: center;
-  box-shadow: 6px 6px 0px #433367;
-  display: flex;
-  align-items: center;
+  margin: 0;
 }
 
 
@@ -441,8 +423,10 @@
 }
 
 .unity-text h2 {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: clamp(1.45rem, 2.25vw, 2.7rem);
+  color: #ffffff !important;
   margin: 0 0 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -459,7 +443,8 @@
 }
 
 .unity-text p {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: clamp(0.82rem, 1vw, 1.05rem);
   line-height: 1.32;
   max-width: 560px;
@@ -493,18 +478,18 @@
 }
 
 .approach-year {
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(1.25rem, 2.1vw, 2rem);
   color: #B44634;
   letter-spacing: 1px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   display: block;
   margin-bottom: 2px;
 }
 
 .approach-header h2 {
-  font-family: 'Irish Grover', 'Georgia', serif;
-  font-weight: 700;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: clamp(1.35rem, 2.4vw, 2.3rem);
   color: #B44634;
   margin: 0 0 7px;
@@ -521,7 +506,8 @@
 }
 
 .approach-intro-desc {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 18px;
   color: #7a746f;
   line-height: 1.35;
@@ -530,31 +516,31 @@
   padding: 0 20px;
 }
 
-/* Grid layout — 4 cards overlapping horizontally */
+/* Grid layout — 4 cards horizontally */
 .approach-grid {
   position: relative;
-  margin: 38px auto 0;
+  margin: 30px auto 0;
   width: 100%;
-  max-width: 1660px;
+  max-width: 1560px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: clamp(18px, 4.4vw, 86px);
+  align-items: center;
+  gap: clamp(12px, 1.8vw, 30px);
   z-index: 3;
-  padding: 0 6% 145px;
+  padding: 0 20px clamp(180px, 16vw, 260px);
   box-sizing: border-box;
 }
 
 .approach-card {
-  flex: 0 1 365px;
-  width: clamp(190px, 20vw, 365px);
-  aspect-ratio: 465 / 534;
-  height: auto;
-  padding: clamp(76px, 6.5vw, 122px) clamp(24px, 2.4vw, 42px) 30px;
+  position: relative;
+  flex: 0 0 clamp(280px, 21.5vw, 335px);
+  width: clamp(280px, 21.5vw, 335px);
+  max-width: 335px;
+  height: calc(clamp(280px, 21.5vw, 335px) * 534 / 465);
+  padding: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   box-sizing: border-box;
   background-image: url('../../assets/about us/Group 39.png');
   background-size: 100% 100%;
@@ -564,31 +550,59 @@
   margin: 0;
 }
 
-.approach-card {
-  /* padding: 26% 20% 10% 20% !important; */
-}
-
 .approach-card:hover {
   transform: translateY(-8px);
   filter: drop-shadow(0 15px 25px rgba(180, 70, 52, 0.15));
 }
 
-.approach-card h3 {
-  font-family: 'Irish Grover', 'Georgia', serif;
-  font-weight: 700;
-  font-size: clamp(0.78rem, 1.05vw, 1.22rem);
-  line-height: 1.3;
-  margin: 0 0 clamp(18px, 2vw, 32px);
-  text-transform: uppercase;
-  letter-spacing: 0;
+.approach-card-inner {
+  position: absolute;
+  top: 9%;
+  bottom: 9%;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 8px;
 }
 
+.approach-card-inner h3,
+.approach-card h3 {
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif) !important;
+  font-weight: var(--title-weight, 700) !important;
+  font-size: clamp(0.92rem, 1.06vw, 1.16rem) !important;
+  line-height: 1.16 !important;
+  margin: 0 0 clamp(6px, 0.9vw, 12px) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 82% !important;
+  display: block !important;
+}
+
+.approach-card-inner p,
+.approach-card-desc,
 .approach-card p {
-  font-family: 'Georgia', serif;
-  font-size: clamp(0.72rem, 0.92vw, 1rem);
-  color: #756d67;
-  line-height: 1.28;
-  margin: 0;
+  align-self: center !important;
+  width: 100% !important;
+  max-width: 86% !important;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif) !important;
+  font-weight: var(--title-weight, 700) !important;
+  font-size: clamp(0.84rem, 0.94vw, 1.02rem) !important;
+  color: #4a443f !important;
+  line-height: 1.3 !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: block !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  box-sizing: border-box !important;
 }
 
 /* Card heading colors */
@@ -647,57 +661,41 @@
 
 
 /* --- RESPONSIVE ADJUSTMENTS --- */
-@media (max-width: 1200px) {
-  .alignment-boxes {
-    width: 65%;
-  }
-
-  .approach-grid {
-    width: 100%;
-    padding: 0 4% 145px;
-    gap: clamp(18px, 3vw, 42px);
-  }
+@media (max-width: 992px) {
+  .alignment-content {
+    max-width: 740px;
+    padding-left: 60px;
 }
 
-@media (max-width: 992px) {
   .alignment-character-left {
-    height: 300px;
-    left: 0;
-  }
+    height: 290px;
+    left: -20px;
+    bottom: -25px;
+}
 
-  .alignment-camels-container {
-    width: 240px;
-    height: 220px;
-    right: 0;
-    bottom: 0;
-  }
+  .alignment-box-card {
+    padding: 32px 30px 32px 60px;
+    border-radius: 16px;
+    box-shadow: 8px 8px 0px #433367;
+}
 
-  .alignment-camel-back {
-    width: 100px;
-  }
-
-  .alignment-camel-front {
-    width: 170px;
-  }
-
-  .alignment-boxes {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  .alignment-box-text {
+    font-size: 1rem;
+    line-height: 1.7;
+}
 
   .vision-content,
   .unity-content {
     flex-direction: column;
     text-align: center;
-  }
+}
 
   .vision-frame-wrapper {
     width: 90%;
     max-width: 550px;
     height: auto;
     margin-right: 0;
-  }
+}
 
   /* Unity responsive */
   .about-unity {
@@ -707,50 +705,25 @@
     height: auto;
     min-height: auto;
     padding: 40px 5% 60px;
-  }
+}
 
   .unity-image {
     margin-top: -60px;
     z-index: 5;
-  }
+}
 
   .unity-image img {
     max-width: 440px;
     width: 90%;
     margin-bottom: 20px;
-  }
+}
 
   /* Approach responsive */
   .about-approach {
     background-image: none !important;
     min-height: auto;
     height: auto;
-    padding: 80px 5% 0;
-  }
-
-  .approach-grid {
-    position: relative;
-    top: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 0 0 160px;
-  }
-
-  .approach-card {
-    width: 95vw;
-    max-width: 455px;
-    height: auto;
-    aspect-ratio: 465 / 534;
-    padding: 28% 20% 8%;
-    background-image: url('../../assets/about us/Group 39.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    margin: 0;
-    /* reset negative margins on mobile */
-  }
+}
 
   .approach-camel-left {
     position: relative;
@@ -759,11 +732,11 @@
     margin: 20px auto 0;
     display: block;
     width: 120px;
-  }
+}
 
   .approach-palace-right {
     display: none !important;
-  }
+}
 }
 
 @media (max-width: 768px) {
@@ -772,232 +745,141 @@
     position: relative;
     flex-direction: column;
     align-items: center;
-  }
+}
 
   .about-hero-content h1 {
     font-size: 2.2rem;
-  }
+}
 
   .about-hero-date {
     font-size: 1.2rem;
-  }
+}
 
   .about-flower-1 {
     right: -20px;
-  }
+}
 
   .about-flower-2 {
     left: -20px;
-  }
+}
 
   .about-flower-3 {
     left: -20px;
     top: 10%;
-  }
+}
 
   .about-flower-4 {
     right: -20px;
     bottom: 10%;
-  }
+}
 
   .about-text-wrapper {
     font-size: 1rem;
     padding: 0 15px;
-  }
+}
 
   .about-intro {
     padding: 50px 15px;
-  }
+}
 
   .yoga-poses {
     display: none;
-  }
+}
 
-  .alignment-boxes {
-    flex-direction: column;
+  .about-alignment {
+    padding: 25px 15px 45px;
+}
+
+  .alignment-header {
+    margin-bottom: 12px;
+}
+
+  .alignment-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+  .alignment-header .section-divider {
+    height: 10px;
+    max-width: 200px;
+}
+
+  .alignment-content {
+    padding-left: 0;
     width: 100%;
-    margin-top: 20px;
-    gap: 15px;
-  }
-
-  .alignment-box {
-    padding: 24px 20px 24px 75px;
-    text-align: left;
-    font-size: 0.9rem;
-    line-height: 1.45;
-  }
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: auto;
+    margin-top: 5px;
+}
 
   .alignment-character-left {
     position: absolute;
-    left: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 220px;
-    z-index: 4;
+    left: -12px;
+    bottom: -10px;
+    height: 190px;
+    z-index: 5;
     display: block;
-  }
+}
 
-  .alignment-camels-container {
-    position: relative;
-    width: 260px;
-    height: 240px;
-    margin: 20px auto 0;
-    display: block;
-    bottom: 0;
-    right: 0;
-  }
+  .alignment-box-card {
+    width: 100%;
+    padding: 18px 14px 18px 72px;
+    border-radius: 14px;
+    box-shadow: 6px 6px 0px #433367;
+}
 
-  .alignment-camel-back {
-    width: 110px;
-  }
-
-  .alignment-camel-front {
-    width: 190px;
-  }
+  .alignment-box-text {
+    font-size: 0.86rem;
+    line-height: 1.5;
+    text-align: left;
+}
 
   .vision-frame-wrapper {
     width: 95%;
     max-width: 450px;
     height: auto;
     margin-right: 0;
-  }
+}
 
   .unity-content {
     gap: 15px;
-  }
+}
 
   .unity-image {
     margin-top: -50px;
-  }
+}
 
   .unity-image img {
     max-width: 350px;
     width: 90%;
     margin-bottom: 5px;
-  }
+}
 
   .unity-divider-wrapper {
     margin-bottom: 12px;
-  }
+}
 
   .unity-text h2 {
     font-size: 1.85rem;
+    color: #ffffff !important;
     margin-bottom: 8px;
-  }
+}
 
   .unity-text p {
     font-size: 1.05rem;
     line-height: 1.5;
     margin-bottom: 12px;
-  }
+}
 
   .approach-header h2 {
     font-size: 2rem;
-  }
-
-  /* Approach mobile toggle and card styling */
-  .approach-grid {
-    padding: 0 0 20px !important;
-  }
-
-  .approach-grid .approach-card:not(.active) {
-    display: none;
-  }
-
-  @keyframes fadeSlideIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .approach-card.active {
-    animation: fadeSlideIn 0.5s ease-out forwards;
-  }
-
-  .approach-carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    z-index: 10;
-    position: relative;
-  }
-
-  .carousel-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: rgba(180, 70, 52, 0.3);
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-
-  .carousel-dot.active {
-    background-color: #B44634;
-    transform: scale(1.25);
-  }
-
-  .approach-toggle-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: #B44634;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 10;
-    position: relative;
-    margin: 20px auto 40px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-  }
-
-  .approach-toggle-btn:hover {
-    background-color: #9c3625;
-    transform: scale(1.05);
-  }
-
-  .approach-toggle-btn:active {
-    transform: scale(0.95);
-  }
-
-  .approach-card {
-    padding: 26% 20% 10% 20% !important;
-    margin-bottom: 25px;
-    /* Adjusted padding to fit larger text inside the arch border */
-  }
-
-  .approach-card h3 {
-    font-size: 1.35rem !important;
-    margin-bottom: 14px !important;
-  }
-
-  .approach-card p {
-    font-size: 1.65rem !important;
-    line-height: 1.45 !important;
-  }
-
-  .approach-landscape {
-    bottom: -5px !important;
-  }
+}
 }
 
-@media (max-width: 768px) {
-  .approach-card {
-    padding: 26% 20% 10% !important;
-  }
-}
-
+/* Hide mobile carousel controls on desktop & tablet */
 .approach-toggle-btn,
 .approach-carousel-dots {
   display: none;
@@ -1006,22 +888,214 @@
 @media (max-width: 1024px) {
   .yoga-poses {
     display: none !important;
-  }
+}
 }
 
-@media (max-width: 1024px) and (min-width: 641px) {
+/* --- TABLET VIEW (641px - 1240px): 2x2 Grid Layout --- */
+@media (max-width: 1240px) and (min-width: 641px) {
+  .about-approach {
+    padding: 60px 4% 0;
+}
+
   .approach-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    max-width: 900px;
-    gap: 30px;
-    padding: 0 4% 100px;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(280px, 320px)) !important;
+    justify-content: center !important;
+    gap: 36px 28px !important;
+    max-width: 720px !important;
+    margin: 30px auto 0 !important;
+    padding: 0 10px clamp(160px, 18vw, 240px) !important;
+}
+
+  .approach-grid .approach-card {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 300px !important;
+    max-width: 300px !important;
+    height: calc(300px * 534 / 465) !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+}
+
+  .approach-card-inner {
+    position: absolute !important;
+    top: 9% !important;
+    bottom: 9% !important;
+    left: 10% !important;
+    right: 10% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0 6px !important;
+}
+
+  .approach-card-inner h3,
+  .approach-card h3 {
+    font-size: clamp(0.95rem, 1.5vw, 1.15rem) !important;
+    line-height: 1.16 !important;
+    margin-bottom: 6px !important;
+    width: 100% !important;
+    max-width: 82% !important;
+}
+
+  .approach-card-inner p,
+  .approach-card-desc,
+  .approach-card p {
+    font-size: clamp(0.85rem, 1.25vw, 0.98rem) !important;
+    line-height: 1.32 !important;
+    width: 100% !important;
+    max-width: 86% !important;
+}
+
+  .approach-toggle-btn,
+  .approach-carousel-dots {
+    display: none !important;
+}
+}
+
+/* --- MOBILE VIEW (<=640px): Interactive Single Card Carousel --- */
+@media (max-width: 640px) {
+  .about-approach {
+    padding: 40px 16px 0 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+  .approach-header h2 {
+    font-size: 1.85rem;
+}
+
+  .approach-intro-desc {
+    font-size: 0.95rem;
+    line-height: 1.45;
+    padding: 0 10px;
+}
+
+  .approach-grid {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 0 10px !important;
+    margin: 20px auto 0 !important;
+    width: 100% !important;
+}
+
+  .approach-grid .approach-card:not(.active) {
+    display: none !important;
+}
+
+  @keyframes fadeSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+}
+    to {
+      opacity: 1;
+      transform: translateY(0);
+}
   }
 
-  .approach-card {
-    width: 100%;
-    max-width: 320px;
-    margin: 0;
-  }
+  .approach-grid .approach-card.active {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: min(84vw, 290px) !important;
+    max-width: 290px !important;
+    height: calc(min(84vw, 290px) * 534 / 465) !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    animation: fadeSlideIn 0.4s ease-out forwards;
+}
+
+  .approach-card-inner {
+    position: absolute !important;
+    top: 9% !important;
+    bottom: 9% !important;
+    left: 10% !important;
+    right: 10% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0 6px !important;
+}
+
+  .approach-card-inner h3,
+  .approach-card h3 {
+    font-size: clamp(0.95rem, 4.2vw, 1.15rem) !important;
+    line-height: 1.16 !important;
+    margin-bottom: 6px !important;
+    width: 100% !important;
+    max-width: 82% !important;
+}
+
+  .approach-card-inner p,
+  .approach-card-desc,
+  .approach-card p {
+    font-size: clamp(0.82rem, 3.6vw, 0.95rem) !important;
+    line-height: 1.3 !important;
+    width: 100% !important;
+    max-width: 86% !important;
+}
+
+  .approach-carousel-dots {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin-top: 14px !important;
+    margin-bottom: 12px !important;
+    z-index: 10 !important;
+    position: relative !important;
+}
+
+  .carousel-dot {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 50% !important;
+    background-color: rgba(180, 70, 52, 0.3) !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, transform 0.3s ease !important;
+}
+
+  .carousel-dot.active {
+    background-color: #B44634 !important;
+    transform: scale(1.25) !important;
+}
+
+  .approach-toggle-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background-color: #B44634 !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer !important;
+    z-index: 10 !important;
+    position: relative !important;
+    margin: 0 auto clamp(100px, 26vw, 150px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transition: transform 0.2s ease, background-color 0.2s ease !important;
+}
+
+  .approach-toggle-btn:hover {
+    background-color: #9c3625 !important;
+    transform: scale(1.05);
+}
+
+  .approach-toggle-btn:active {
+    transform: scale(0.95);
+}
+
+  .approach-landscape {
+    bottom: 0 !important;
+}
 }

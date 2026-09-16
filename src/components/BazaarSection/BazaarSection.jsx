@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './BazaarSection.css';
 
 // Background & dividers
@@ -57,7 +58,9 @@ const BazaarSection = () => {
               <img src={framePurple} alt="" className="bazaar-frame" />
               <div className="bazaar-card-overlay">
                 <h3 className="bazaar-card-title">SPIRITUAL<br />ART</h3>
-                <button className="bazaar-card-btn">Experience Oneness</button>
+                <Link to="/bazaar" style={{ textDecoration: 'none' }}>
+                  <button className="bazaar-card-btn">Experience Oneness</button>
+                </Link>
               </div>
               <img src={imgSpiritualArt} alt="Spiritual Art" className="bazaar-circle-img" />
             </div>
@@ -67,7 +70,9 @@ const BazaarSection = () => {
               <img src={frameblue} alt="" className="bazaar-frame" />
               <div className="bazaar-card-overlay">
                 <h3 className="bazaar-card-title">DEVOTIONAL<br />ITEMS</h3>
-                <button className="bazaar-card-btn">Experience Oneness</button>
+                <Link to="/bazaar" style={{ textDecoration: 'none' }}>
+                  <button className="bazaar-card-btn">Experience Oneness</button>
+                </Link>
               </div>
               <img src={imgDevotionalItems} alt="Devotional Items" className="bazaar-circle-img" />
             </div>
@@ -80,7 +85,9 @@ const BazaarSection = () => {
               <div className="bazaar-card-overlay center-overlay">
                 <img src={imgCenter} alt="Nicolas" className="bazaar-nicolas-img" />
                 <h3 className="bazaar-card-title title-center">NATURAL & WELLNESS<br />OFFERINGS</h3>
-                <button className="bazaar-card-btn btn-center">Experience Oneness</button>
+                <Link to="/bazaar" style={{ textDecoration: 'none' }}>
+                  <button className="bazaar-card-btn btn-center">Experience Oneness</button>
+                </Link>
               </div>
             </div>
           </div>
@@ -92,7 +99,9 @@ const BazaarSection = () => {
               <img src={frameRed} alt="" className="bazaar-frame" />
               <div className="bazaar-card-overlay">
                 <h3 className="bazaar-card-title">HANDCRAFTED<br />TEXTILES</h3>
-                <button className="bazaar-card-btn">Experience Oneness</button>
+                <Link to="/bazaar" style={{ textDecoration: 'none' }}>
+                  <button className="bazaar-card-btn">Experience Oneness</button>
+                </Link>
               </div>
               <img src={imgHandcraftedTextiles} alt="Handcrafted Textiles" className="bazaar-circle-img" />
             </div>
@@ -102,7 +111,9 @@ const BazaarSection = () => {
               <img src={frameBrown} alt="" className="bazaar-frame" />
               <div className="bazaar-card-overlay">
                 <h3 className="bazaar-card-title">JEWELLERY ROOTED<br />IN TRADITION</h3>
-                <button className="bazaar-card-btn">Experience Oneness</button>
+                <Link to="/bazaar" style={{ textDecoration: 'none' }}>
+                  <button className="bazaar-card-btn">Experience Oneness</button>
+                </Link>
               </div>
               <img src={imgJewellery} alt="Jewellery" className="bazaar-circle-img" />
             </div>

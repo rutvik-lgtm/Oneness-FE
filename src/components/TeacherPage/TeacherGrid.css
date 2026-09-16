@@ -15,7 +15,8 @@
 }
 
 .teacher-grid-year {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 24px;
   color: #e43320;
   margin: 0;
@@ -23,7 +24,8 @@
 }
 
 .teacher-grid-heading {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 36px;
   color: #e43320;
   margin: 4px 0 12px;
@@ -46,7 +48,8 @@
 }
 
 .teacher-grid-subtitle {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 15px;
   color: #2a7a7a;
   margin: 0;
@@ -65,12 +68,12 @@
 }
 
 .teacher-filter-btn {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 13px;
   padding: 7px 16px;
   border-radius: 2px;
   border: 1px solid #e36060;
-  font-weight: 500;
+  font-weight: var(--title-weight, 700);
   background: #ffffff;
   color: #000000;
   cursor: pointer;
@@ -159,36 +162,37 @@
 }
 
 .teacher-card-name {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 12px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #ffffff;
   margin: 0 0 6px;
   line-height: 1.2;
 }
 
 .teacher-card-category {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 10px;
   color: #ffffff;
   opacity: 0.95;
   margin: 0 0 0px;
-  font-weight: normal;
+  font-weight: var(--title-weight, 700);
   line-height: 1.3;
 }
 
 .teacher-card-location {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 10px;
   color: #ffffff;
   opacity: 0.95;
   margin: -5px;
-  font-weight: normal;
+  font-weight: var(--body-weight, 400);
 }
 
 /* ===== View More Button ===== */
 .teacher-view-more-btn {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 16px;
   color: #fff;
   background-image: url('../../assets/homepage/button/Group 232.png');
@@ -215,79 +219,79 @@
   .teacher-cards-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px 18px;
-  }
+}
   
   .teacher-card-name {
     font-size: 18px;
-  }
+}
   
   .teacher-card-category,
   .teacher-card-location {
     font-size: 13px;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .teacher-grid-heading {
     font-size: 28px;
-  }
+}
 
   .teacher-cards-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px 14px;
-  }
+}
 
   .teacher-filter-btn {
     font-size: 12px;
     padding: 6px 14px;
-  }
+}
   
   .teacher-card-name {
     font-size: 16px;
     margin-bottom: 4px;
-  }
+}
   
   .teacher-card-category,
   .teacher-card-location {
     font-size: 12px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .teacher-grid-section {
     padding: 40px 10px 60px;
-  }
+}
 
   .teacher-grid-heading {
     font-size: 22px;
-  }
+}
 
   .teacher-cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px 10px;
-  }
+}
 
   .teacher-filter-tabs {
     gap: 6px;
-  }
+}
 
   .teacher-filter-btn {
     font-size: 11px;
     padding: 5px 12px;
-  }
+}
   
   .teacher-card-overlay {
     padding: 6px 8px;
     height: 30%;
-  }
+}
 
   .teacher-card-name {
     font-size: 13px;
     margin-bottom: 2px;
-  }
+}
 
   .teacher-card-category,
   .teacher-card-location {
     font-size: 10px;
-  }
+}
 }

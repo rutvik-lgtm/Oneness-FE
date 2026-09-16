@@ -77,17 +77,18 @@
 }
 
 .gi-hero-subtitle {
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 32px;
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
+  color: #ffffff !important;
   margin-bottom: 15px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .gi-hero-title {
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 56px;
-  font-weight: 900;
+  font-weight: var(--title-weight, 700);
   color: #fca311;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -159,5 +160,3 @@
     bottom: 40px;
   }
 }
-
-

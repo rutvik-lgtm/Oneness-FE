@@ -43,16 +43,17 @@
 }
 
 .accomm-year-tag {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #aa3344; /* Royal red */
   letter-spacing: 2px;
   margin-bottom: 8px;
 }
 
 .accomm-section-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: clamp(32px, 4.5vw, 48px);
   color: #2b1f1d;
   margin: 0 0 16px 0;
@@ -66,7 +67,8 @@
 }
 
 .accomm-section-desc {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 18px;
   line-height: 1.6;
   color: #554440;
@@ -108,9 +110,9 @@
 
 .accomm-card-category {
   display: inline-block;
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   text-transform: uppercase;
   color: #aa3344;
   letter-spacing: 1.5px;
@@ -121,7 +123,8 @@
 }
 
 .accomm-card-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 26px;
   color: #2b1f1d;
   margin: 0 0 8px 0;
@@ -129,7 +132,8 @@
 }
 
 .accomm-card-tagline {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 14px;
   font-style: italic;
   color: #88706b;
@@ -146,7 +150,8 @@
 }
 
 .accomm-card-desc {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 15px;
   line-height: 1.6;
   color: #5d4a46;
@@ -157,9 +162,9 @@
 /* Features and Inclusions List elements */
 .accomm-features-box h4,
 .accomm-inclusions-box h4 {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   text-transform: uppercase;
   color: #2b1f1d;
   letter-spacing: 1px;
@@ -180,7 +185,8 @@
 
 .accomm-features-box li,
 .accomm-inclusions-box li {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 14px;
   line-height: 1.4;
   color: #5d4a46;
@@ -209,9 +215,9 @@
 }
 
 .accomm-price-tag {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 15px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #88706b;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -225,7 +231,8 @@
   color: #ffffff;
   border: none;
   border-radius: 6px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 15px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -251,36 +258,36 @@
   .accomm-cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-  }
+}
   .accomm-pillar {
     display: none; /* Hide pillars on small screens to maintain spacing */
-  }
+}
 }
 
 @media (max-width: 768px) {
   .accommodation-details-section {
     padding: 70px 16px;
-  }
+}
   .accomm-section-header {
     margin-bottom: 40px;
-  }
+}
   .accomm-cards-grid {
     grid-template-columns: 1fr;
     gap: 28px;
-  }
+}
   .accomm-card {
     max-width: 500px;
     margin: 0 auto;
     width: 100%;
-  }
+}
   .accomm-card-header {
     padding: 24px 24px 16px;
-  }
+}
   .accomm-card-body {
     padding: 20px 24px 24px;
     gap: 20px;
-  }
+}
   .accomm-card-footer {
     padding: 20px 24px 24px;
-  }
+}
 }

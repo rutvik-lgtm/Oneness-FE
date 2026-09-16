@@ -140,34 +140,34 @@
 @media (max-width: 1024px) {
   .contact-hero-bg {
     height: 350px;
-  }
+}
 
   .side-team-container {
     width: 400px;
     height: 400px;
     bottom: -150px;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .contact-hero-bg {
     height: 250px;
-  }
+}
 
   .hero-ornament {
     height: 50px;
-  }
+}
 
   .side-team-container {
     width: 250px;
     height: 250px;
     bottom: -100px;
-  }
+}
 
   .team-member-img {
     width: 85%;
     margin-bottom: 20px;
-  }
+}
 }
 
 @media (max-width: 480px) {
@@ -176,7 +176,7 @@
     width: 200px;
     height: 200px;
     bottom: -60px;
-  }
+}
 .hero-left-brush {
       bottom: -15%;
       left: 10px;
@@ -187,27 +187,27 @@
 }
   .left-edge {
     left: -35px;
-  }
+}
 
   .right-edge {
     right: -35px;
-  }
+}
 
   .contact-hero-bg {
     height: 220px;
-  }
+}
 
   .hero-ornament {
     height: 45px;
-  }
+}
 
   .team-member-img {
     width: 95%;
     margin-bottom: 12px;
-  }
+}
 
   .hero-center-mandala {
     width: 32px;
     height: 32px;
-  }
+}
 }

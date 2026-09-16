@@ -2,10 +2,11 @@
   position: relative;
   width: 100%;
   max-width: 1920px;
-  min-height: 640px;
+  min-height: 520px;
   overflow: hidden;
   background: #ffffff;
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   margin: 0 auto;
 }
 
@@ -39,35 +40,33 @@
   left: 0;
   width: 160px;
   z-index: 2;
+  pointer-events: none;
 }
 
 .oneness-speakers-feather-right {
   position: absolute;
-  top: 70%;
+  bottom: 80px;
   right: 0;
   width: 160px;
-  transform: translateY(-50%);
   z-index: 2;
+  pointer-events: none;
 }
 
 .oneness-speakers-warmth {
   position: absolute;
   inset: 0;
   z-index: 2;
-  /* background:
-    linear-gradient(90deg, rgba(255, 211, 126, 0.9) 0%, rgba(255, 192, 82, 0.25) 48%, rgba(255, 151, 14, 0.55) 100%),
-    linear-gradient(180deg, rgba(255, 211, 122, 0.15) 0%, rgba(255, 238, 212, 0.62) 78%, rgba(255, 246, 238, 0.9) 100%); */
 }
 
 .oneness-speakers-content {
   position: relative;
   z-index: 3;
   display: flex;
-  min-height: 560px;
+  min-height: 480px;
   max-width: 1600px;
   margin: 0 auto;
   margin-top: 30px;
-  padding: 0px 72px 150px;
+  padding: 0px 72px 110px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -84,7 +83,7 @@
 .oneness-speakers-hands {
   position: absolute;
   left: 50%;
-  top: -57;
+  top: -57px;
   width: 256px;
   max-width: 100%;
   transform: translateX(-50%);
@@ -103,7 +102,7 @@
   background: rgba(255, 255, 255, 0.94);
   color: #4b3a70;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   line-height: 1.2;
   box-shadow: 0 8px 18px rgba(122, 65, 17, 0.12);
 }
@@ -111,10 +110,10 @@
 .oneness-speakers-content h2 {
   margin: 68px 0 14px;
   color: #a95d36;
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(32px, 3.1vw, 48px);
   line-height: 1.1;
-  font-weight: 900;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -131,57 +130,27 @@
   color: #777071;
   font-size: clamp(14px, 0.15vw, 20px);
   line-height: 1.55;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
 }
 
 .oneness-speakers-quote {
-  margin: 0 0 22px;
+  margin: 0 0 15px;
   color: #17110f;
   font-size: clamp(20px, 1.65vw, 28px);
   line-height: 1.35;
   font-weight: 900;
 }
 
-.oneness-speakers-values {
-  display: flex;
-  width: 100%;
-  max-width: 1580px;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  color: #73537c;
-  font-size: clamp(13px, -0.4vw, 20px);
-  line-height: 1.45;
-  font-weight: 800;
-}
-
-.oneness-speakers-values span {
-  position: relative;
-  flex: 1;
-  padding: 0 26px;
-}
-
-.oneness-speakers-values span+span::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 2px;
-  height: 22px;
-  transform: translateY(-50%);
-  background: rgba(75, 58, 112, 0.55);
-}
-
 @media (max-width: 992px) {
   .oneness-speakers-section {
     min-height: auto;
-  }
+}
 
   .oneness-speakers-content {
     min-height: auto;
     padding: 20px 28px 80px;
     margin-top: 0;
-  }
+}
 
   .oneness-speakers-feather-left {
     display: block;
@@ -189,72 +158,57 @@
     top: 30px;
     left: -15px;
     opacity: 0.8;
-  }
+}
 
   .oneness-speakers-feather-right {
     display: block;
     width: 75px;
     bottom: 50px;
-    top: auto;
     right: -15px;
-    transform: none;
     opacity: 0.8;
-  }
+}
 
   .oneness-speakers-content h2 {
     margin: 45px 0 10px;
     font-size: 24px;
-  }
-
-  .oneness-speakers-values {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .oneness-speakers-values span {
-    padding: 0;
-  }
-
-  .oneness-speakers-values span+span::before {
-    display: none;
-  }
+}
 }
 
 @media (max-width: 576px) {
   .oneness-speakers-section {
     min-height: auto;
-  }
+}
 
   .oneness-speakers-content {
     min-height: auto;
-    padding: 15px 18px 60px;
+    padding: 15px 18px 65px;
     margin-top: 0;
-  }
+}
 
   .oneness-speakers-feather-left {
     width: 55px;
     top: 20px;
-  }
+}
 
   .oneness-speakers-feather-right {
     width: 65px;
     bottom: 30px;
-  }
+}
 
   .oneness-speakers-content h2 {
     margin: 35px 0 10px;
     font-size: 20px;
-  }
+}
 
   .oneness-speakers-emblem {
     height: 142px;
-  }
+}
 
   .oneness-speakers-badge {
     font-size: 16px;
-  }
+}
 
   .oneness-speakers-brush {
     height: 100px;
-  }
+}
 }

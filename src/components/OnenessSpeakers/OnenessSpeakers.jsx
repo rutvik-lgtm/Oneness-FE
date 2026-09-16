@@ -36,11 +36,6 @@ const OnenessSpeakers = () => {
           "When our hearts become one, the world becomes one."
         </p>
 
-        <div className="oneness-speakers-values">
-          <span>Those who value peace, harmony, and connection.</span>
-          <span>Together, we share reflection, culture, and community.</span>
-          <span>United in the spirit of oneness and world peace</span>
-        </div>
       </div>
 
       <img src={bottomBrush} alt="" className="oneness-speakers-brush" />

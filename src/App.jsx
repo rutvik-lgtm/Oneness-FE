@@ -42,6 +42,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/toursregistration" element={<Tour />} />
           <Route path="/tour" element={<Tour />} />
           <Route path="/accommodation" element={<Accommodation />} />
           <Route path="/accommodations" element={<Accommodations />} />
@@ -53,10 +54,9 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/teacher" element={<Teacher />} />
           <Route path="/teacher-inner" element={<TeacherInner />} />
-          
+
           {/* Under construction / empty page routes */}
           <Route path="/home" element={<UnderDevelopment />} />
-          <Route path="/about" element={<UnderDevelopment />} />
           <Route path="/tickets" element={<TicketsPage />} />
           <Route path="/location" element={<Location />} />
           <Route path="/blog" element={<Blog />} />

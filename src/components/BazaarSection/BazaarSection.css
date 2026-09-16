@@ -10,7 +10,8 @@
   /* Changed to visible to let waves overlap next section */
   z-index: 5;
   /* Position on top of the next blog section */
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   padding-top: 110px;
   padding-bottom: 0;
   box-sizing: border-box;
@@ -92,9 +93,9 @@
 }
 
 .bazaar-title {
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(28px, 3.5vw, 44px);
-  font-weight: 900;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 2px;
   margin: 0 0 10px;
   text-transform: uppercase;
@@ -111,7 +112,7 @@
 .bazaar-subtitle {
   font-size: clamp(13px, 1.1vw, 16px);
   line-height: 1.6;
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   max-width: 600px;
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.95);
@@ -189,10 +190,10 @@
 /* Card title */
 .bazaar-card-title {
   color: #ffffff;
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 19px;
   line-height: 1.25;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 0.8px;
   margin: 0 auto 12px;
   text-transform: uppercase;
@@ -209,9 +210,9 @@
   border-radius: 7px;
   /* Pill shape */
   padding: 8px 22px;
-  font-family: 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   transition: background-color 0.25s, transform 0.25s, box-shadow 0.25s;
@@ -310,112 +311,112 @@
 @media (max-width: 1100px) {
   .bazaar-cards-layout {
     gap: 25px;
-  }
+}
 
   .bazaar-card {
     width: 210px;
-  }
+}
 
   .bazaar-card-overlay {
     padding: 130px 15px 22px;
-  }
+}
 
   .bazaar-circle-img {
     width: 112px;
     height: 112px;
     top: 9px;
     border-width: 3px;
-  }
+}
 
   .bazaar-card-title {
     font-size: 16px;
     margin-bottom: 10px;
-  }
+}
 
   .bazaar-card-btn {
     padding: 6px 18px;
     font-size: 10px;
-  }
+}
 
   /* Center Card scaling */
   .bazaar-card-center {
     width: 280px;
-  }
+}
 
   .center-overlay {
     padding: 150px 20px 30px;
-  }
+}
 
   .title-center {
     font-size: 18px;
     margin-bottom: 12px;
-  }
+}
 
   .btn-center {
     padding: 8px 22px;
     font-size: 11px;
-  }
+}
 
   .bazaar-waves-graphic {
     bottom: -100px;
-  }
+}
 }
 
 @media (max-width: 850px) {
   .bazaar-section {
     padding-top: 90px;
-  }
+}
 
   .bazaar-cards-layout {
     flex-direction: column;
     gap: 30px;
-  }
+}
 
   .bazaar-col {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-  }
+}
 
   .bazaar-col-left,
   .bazaar-col-right {
     align-items: center;
-  }
+}
 
   .bazaar-col-center {
     order: -1;
     /* Keep Natural Wellness at the top on mobile */
-  }
+}
 
   .bazaar-card {
     width: 230px;
-  }
+}
 
   .bazaar-card-overlay {
     padding: 140px 18px 24px;
-  }
+}
 
   .bazaar-circle-img {
     width: 122px;
     height: 122px;
     top: 10px;
-  }
+}
 
   .bazaar-card-center {
     width: 300px;
-  }
+}
 
   .center-overlay {
     padding: 160px 22px 32px;
-  }
+}
 
   .bazaar-waves-graphic {
     bottom: -80px;
     height: 180px;
     object-fit: cover;
     object-position: bottom;
-  }
+}
 }
 
 @media (max-width: 520px) {
@@ -424,59 +425,59 @@
     flex-wrap: nowrap;
     justify-content: center;
     gap: 12px;
-  }
+}
 
   .bazaar-col-center {
     flex-direction: column;
     align-items: center;
-  }
+}
 
   .bazaar-card {
     width: 155px;
-  }
+}
 
   .bazaar-card-overlay {
     padding: 100px 10px 15px;
-  }
+}
 
   .bazaar-circle-img {
     width: 85px;
     height: 85px;
     top: 7px;
-  }
+}
 
   .bazaar-card-title {
     font-size: 11px;
     margin-bottom: 6px;
-  }
+}
 
   .bazaar-card-btn {
     padding: 4px 10px;
     font-size: 8px;
-  }
+}
 
   .bazaar-card-center {
     width: 280px;
-  }
+}
 
   .center-overlay {
     padding: 140px 15px 25px;
-  }
+}
 
   .title-center {
     font-size: 16px;
     margin-bottom: 10px;
-  }
+}
 
   .btn-center {
     padding: 8px 22px;
     font-size: 11px;
-  }
+}
 
   .bazaar-waves-graphic {
     bottom: -50px;
     height: 130px;
     object-fit: cover;
     object-position: bottom;
-  }
+}
 }

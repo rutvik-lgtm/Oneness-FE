@@ -3,7 +3,8 @@
   width: 100%;
   min-height: 100vh;
   background-color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
 }
 
 .tp-hero {
@@ -30,7 +31,7 @@
 .tp-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  /* background: rgba(0, 0, 0, 0.45); */
 }
 
 .tp-hero-mask-top {
@@ -67,8 +68,8 @@
 .tp-hero-subtitle {
   color: #fff;
   font-size: 26px;
-  font-family: "Georgia", serif;
-  font-weight: 700;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   margin: 0 0 10px;
   letter-spacing: 0.5px;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
@@ -77,18 +78,18 @@
 .tp-hero-title-small {
   color: #fff;
   font-size: 34px;
-  font-family: "Georgia", serif;
-  font-weight: 700;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   margin: 0 0 30px;
   letter-spacing: 0.5px;
   text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
 .tp-hero-title {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   color: #F7A938;
   font-size: clamp(32px, 4.5vw, 64px);
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   text-transform: uppercase;
   line-height: 1.15;
   max-width: 1000px;
@@ -107,9 +108,9 @@
   background-color: transparent;
   color: #191919;
   padding: 16px 20px;
-  font-family: "Georgia", serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -174,22 +175,22 @@
 
 /* ── Shared section styles ── */
 .tp-section-year {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 18px;
   color: #191919;
   margin: 0 0 2px;
   letter-spacing: 1.5px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
 }
 
 .tp-section-title {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(18px, 2.2vw, 26px);
   color: #191919;
   text-transform: uppercase;
   margin: 0 0 10px;
   letter-spacing: 1.5px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   line-height: 1.3;
 }
 
@@ -202,7 +203,8 @@
 }
 
 .tp-section-text {
-  font-family: "Georgia", serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 13px;
   color: #555;
   line-height: 1.7;
@@ -263,11 +265,11 @@
 
 /* ── Package Links ── */
 .tp-package-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 16px;
   margin-top: 24px;
+  width: 100%;
 }
 
 .tp-package-link {
@@ -276,7 +278,8 @@
   border: 1.5px solid #bbb;
   border-radius: 4px;
   text-decoration: none;
-  font-family: "Georgia", serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 14px;
   color: #333;
   background: transparent;
@@ -290,7 +293,7 @@
 }
 
 .tp-link-highlight {
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -301,6 +304,13 @@
 
 .tp-link-highlight.red {
   color: #C3223F;
+}
+
+.tp-customize-btn {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 8px;
+  cursor: pointer;
 }
 
 /* ── CTA BANNER ── */
@@ -324,17 +334,18 @@
 }
 
 .tp-cta-title {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(16px, 2vw, 22px);
   color: #fff;
   text-transform: uppercase;
   margin: 0 0 8px;
   letter-spacing: 1px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
 }
 
 .tp-cta-text {
-  font-family: "Georgia", serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 12px;
   color: #bbb;
   margin: 0 0 22px;
@@ -350,9 +361,9 @@
   background-color: transparent;
   color: #fff;
   padding: 12px 32px;
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   text-transform: uppercase;
   letter-spacing: 0.8px;
   border: none;
@@ -396,13 +407,13 @@
 }
 
 .tp-tips-title {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(22px, 2.5vw, 32px);
   color: #A34A2E; /* copper/rust color from screenshot */
   text-transform: uppercase;
   margin: 0 0 10px;
   letter-spacing: 1.5px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   line-height: 1.3;
 }
 
@@ -451,7 +462,8 @@
   padding: 28px 36px;
   box-sizing: border-box;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-  font-family: "Georgia", serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 14.5px;
   color: #333333;
   line-height: 1.65;
@@ -550,14 +562,14 @@
 }
 
 .tp-venue-title {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(22px, 3vw, 40px);
   color: #ffffff;
   text-transform: uppercase;
   margin: 0 auto 40px;
   max-width: 700px;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: var(--title-weight, 700);
   line-height: 1.3;
   position: relative;
   z-index: 3;
@@ -611,7 +623,8 @@
   flex: 1;
   border: none;
   outline: none;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 14px;
   color: #3c4043;
   background: transparent;
@@ -642,7 +655,8 @@
 }
 
 .tp-venue-tip {
-  font-family: "Georgia", serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
   font-style: italic;
@@ -683,19 +697,20 @@
 }
 
 .tp-contact-title {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(20px, 2.5vw, 32px);
   color: #ffffff;
   margin: 0 auto 15px;
   letter-spacing: 1.5px;
-  font-weight: 400;
+  font-weight: var(--title-weight, 700);
   text-transform: uppercase;
   max-width: 800px;
   line-height: 1.3;
 }
 
 .tp-contact-description {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: clamp(12px, 1.4vw, 15px);
   line-height: 1.6;
   color: #ffffff;
@@ -722,7 +737,8 @@
   padding: 12px 30px;
   text-decoration: none;
   gap: 6px;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: clamp(12px, 1.4vw, 15px);
   transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -737,7 +753,7 @@
 
 .pill-label {
   color: #F7A938;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
 }
 
 .pill-value {
@@ -746,7 +762,8 @@
 }
 
 .tp-contact-footer-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: clamp(11px, 1.3vw, 13px);
   line-height: 1.6;
   color: #ffffff;
@@ -767,7 +784,8 @@
   background-repeat: no-repeat;
   color: #ffffff;
   text-decoration: none;
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 20px;
   letter-spacing: 1px;
   transition: transform 0.2s, filter 0.2s;
@@ -787,75 +805,75 @@
   .tp-festival {
     padding: 40px 15px 50px;
     flex-direction: column;
-  }
+}
 
   .tp-festival-content {
     width: 100%;
     max-width: 100%;
-  }
+}
 
   .tp-upcoming-content {
     width: 100%;
     max-width: 100%;
     margin-left: 0;
-  }
+}
 
   .tp-festival-palace,
   .tp-upcoming-palace {
     opacity: 0.1;
     max-width: 60%;
-  }
+}
 
   .tp-upcoming {
     padding: 40px 15px 0;
-  }
+}
 
   .tp-section-year {
     font-size: 16px;
-  }
+}
 
   .tp-section-title {
     font-size: 18px;
-  }
+}
 
   .tp-section-text {
     font-size: 12px;
-  }
+}
 
   .tp-package-link {
     font-size: 12px;
     padding: 7px 18px;
-  }
+}
 
   .tp-cta-banner {
     width: 100%;
     margin-left: 0;
     border-radius: 12px 12px 0 0;
     padding: 30px 18px 35px;
-  }
+}
 
   .tp-cta-title {
     font-size: 16px;
-  }
+}
 
   .tp-cta-btn {
     font-size: 12px;
     padding: 10px 24px;
-  }
+}
 
   /* Travel Tips Mobile Styling */
   .tp-travel-tips {
     padding: 60px 20px 70px;
-  }
+}
 
   .tp-tips-container {
     gap: 30px;
-  }
+}
 
   .tp-tip-row {
     flex-direction: column !important;
     text-align: center;
-  }
+}
 
   .tp-tip-image-wrapper {
     flex: 0 0 auto;
@@ -863,7 +881,7 @@
     max-width: 100%;
     margin-bottom: 12px;
     z-index: 2;
-  }
+}
 
   .tp-tip-card {
     max-width: 100%;
@@ -874,7 +892,7 @@
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.02);
-  }
+}
 
 .tp-upcoming .tp-divider {
   margin: 0 107px 22px;
@@ -897,7 +915,7 @@
     height: 4px;
     width: auto;
     border-radius: 8px 8px 0 0;
-  }
+}
 
 .tp-hero-btn {
 font-size: 14px;
@@ -910,73 +928,73 @@ padding: 12px 4px;
 
   .tp-elephant {
     display: none;
-  }
+}
 }
 
 @media (max-width: 1100px) {
   .tp-elephant {
     display: none;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .tp-venue-map {
     padding: 80px 15px 60px;
-  }
+}
 
   .tp-venue-title {
     font-size: 22px;
     margin-bottom: 25px;
-  }
+}
 
   .tp-venue-mandala {
     font-size: 28px;
-  }
+}
 
   .tp-venue-search {
     top: calc(17% + 8px);
     left: calc(4.5% + 8px);
     width: 200px;
     height: 36px;
-  }
+}
 
   .tp-venue-search-input {
     font-size: 12px;
-  }
+}
 
   .tp-venue-tip {
     font-size: 11px;
-  }
+}
 
   /* Contact & Reserve Section Mobile Override */
   .tp-contact-reserve {
     padding: 40px 16px;
     margin-bottom: 30px;
-  }
+}
 
   .tp-contact-container {
     padding: 35px 20px;
     min-height: auto;
     border-radius: 24px;
     background-size: cover; /* use cover to avoid distortion on mobile */
-  }
+}
 
   .tp-contact-title {
     font-size: clamp(18px, 5vw, 26px);
     margin-bottom: 12px;
-  }
+}
 
   .tp-contact-description {
     font-size: 13px;
     margin-bottom: 20px;
-  }
+}
 
   .tp-contact-info-row {
     flex-direction: column;
     align-items: center;
     gap: 12px;
     margin-bottom: 20px;
-  }
+}
 
   .tp-contact-pill {
     width: 100%;
@@ -987,11 +1005,11 @@ padding: 12px 4px;
     justify-content: center;
     flex-wrap: wrap;
     gap: 4px;
-  }
+}
 
   .tp-contact-footer-text {
     font-size: 11px;
-  }
+}
 
   .tp-reserve-btn {
     margin-top: 30px;
@@ -999,13 +1017,261 @@ padding: 12px 4px;
     height: auto;
     aspect-ratio: 300 / 52;
     font-size: clamp(14px, 4.5vw, 16px);
-  }
+}
 }
 
 /* --- Tablet: ≤ 1024px --- */
 @media (max-width: 1024px) {
   .tp-contact-container {
     padding: 75px 35px;
-  }
+}
 }
 
+/* ── Customize Tour Button ── */
+.tp-customize-btn {
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* ── Itinerary Notice Toast ── */
+.tp-itinerary-notice {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: #FFF8E7;
+  border: 1px solid #E8872B;
+  color: #B44634;
+  border-radius: 4px;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
+  font-size: 13px;
+  box-shadow: 0 2px 8px rgba(232, 135, 43, 0.15);
+  animation: tpFadeIn 0.3s ease;
+}
+
+@keyframes tpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+}
+  to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+/* ── Customize Tour Popup Modal ── */
+.tp-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  box-sizing: border-box;
+}
+
+.tp-modal-dialog {
+  background-color: #FAF6ED;
+  border-radius: 20px;
+  border: 3px solid #E8872B;
+  outline: 1.5px dashed #B44634;
+  outline-offset: -8px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
+  width: 100%;
+  max-width: 480px;
+  padding: 34px 30px 30px;
+  box-sizing: border-box;
+  position: relative;
+  animation: tpScaleIn 0.25s ease-out forwards;
+}
+
+@keyframes tpScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+}
+  to {
+    opacity: 1;
+    transform: scale(1);
+}
+}
+
+.tp-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: #ffffff;
+  border: 1.5px solid #E8872B;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  color: #B44634;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.tp-modal-close:hover {
+  background: #B44634;
+  color: #ffffff;
+  border-color: #B44634;
+  transform: rotate(90deg);
+}
+
+.tp-modal-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.tp-modal-logo {
+  width: 85px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 8px;
+  display: block;
+}
+
+.tp-modal-title {
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
+  color: #B44634;
+  font-size: 1.55rem;
+  text-align: center;
+  margin: 0 0 6px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.tp-modal-divider {
+  display: block;
+  margin: 0 auto 6px;
+  width: min(200px, 60%);
+  height: auto;
+  object-fit: contain;
+}
+
+.tp-modal-subtitle {
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-size: 0.88rem;
+  color: #8A3B2D;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+  font-weight: var(--title-weight, 700);
+}
+
+.tp-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tp-modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.tp-modal-field label {
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-size: 0.92rem;
+  font-weight: var(--title-weight, 700);
+  color: #4A3E38;
+}
+
+.tp-modal-field input {
+  padding: 11px 14px;
+  border: 1.5px solid #D6CEBE;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
+  box-sizing: border-box;
+  outline: none;
+  background: #FAF9F6;
+  color: #2C241E;
+  transition: all 0.2s ease;
+}
+
+.tp-modal-field input:focus {
+  border-color: #B44634;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(180, 70, 52, 0.12);
+}
+
+.tp-modal-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.tp-modal-reserve-btn {
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 13px 40px;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
+  font-size: 18px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 12px rgba(180, 70, 52, 0.3));
+  transition: transform 0.2s, filter 0.2s;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  min-width: 240px;
+}
+
+.tp-modal-reserve-btn:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 6px 16px rgba(180, 70, 52, 0.4));
+}
+
+.tp-modal-reserve-btn:active {
+  transform: scale(0.98);
+}
+
+.tp-modal-reserve-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.tp-modal-error {
+  color: #C3223F;
+  font-size: 0.88rem;
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
+}
+
+.tp-modal-success {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+.tp-modal-success p {
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-size: 1.05rem;
+  color: #27725B;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  font-weight: var(--title-weight, 700);
+}

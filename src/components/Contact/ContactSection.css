@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Playfair+Display:wght@400;600;800&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .contact-section {
   position: relative;
@@ -39,9 +39,9 @@
 }
 
 .contact-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 40px;
-  font-weight: 400;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 2px;
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -83,8 +83,8 @@
 }
 
 .contact-field label {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 16px;
   color: #333;
 }
@@ -97,7 +97,8 @@
   background-color: transparent;
   border: 1px solid #d1d5db;
   border-radius: 8px;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 15px;
   color: #555;
   outline: none;
@@ -137,7 +138,8 @@
   background-repeat: no-repeat;
   background-color: transparent;
   color: #FFFFFF;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 16px;
   padding: 12px 30px;
   border: none;
@@ -159,7 +161,8 @@
 
 
 .contact-footer-text {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 16px;
   color: #444;
   text-align: center;
@@ -171,19 +174,19 @@
 @media (max-width: 768px) {
   .contact-row {
     grid-template-columns: 1fr;
-  }
+}
 
   .contact-title {
     font-size: 32px;
-  }
+}
 
   .contact-divider {
     width: 200px;
-  }
+}
 
   .contact-mandala {
     display: none;
-  }
+}
 }
 
 /* Decorative Background Mandalas */

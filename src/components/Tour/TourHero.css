@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Playfair+Display:wght@400;700;800&family=Roboto+Serif:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .tour-hero {
   position: relative;
@@ -70,24 +70,25 @@
 }
 
 .tour-year {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 40px;
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   line-height: 50px;
   margin: 0;
 }
 
 .tour-pkg-title {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 40px;
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   line-height: 50px;
   margin: 0;
   color: white;
 }
 
 .tour-main-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 72px;
   color: #FFAA00;
   /* Yellow/Orange color from image */
@@ -112,7 +113,8 @@
   color: #333333;
   border: none;
   padding: 12px 40px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 18px;
   letter-spacing: 2px;
   cursor: pointer;
@@ -156,49 +158,49 @@
 @media (max-width: 768px) {
   .tour-hero {
     height: 60vh;
-  }
+}
 
   .tour-brush-top,
   .tour-brush-bottom {
     height: 60px;
-  }
+}
 
   .tour-year,
   .tour-pkg-title {
     font-size: 24px;
     line-height: 32px;
-  }
+}
 
   .tour-main-title {
     font-size: 48px;
     margin: 5px 0 20px;
-  }
+}
 
   .tour-reserve-btn {
     padding: 12px 30px;
     font-size: 14px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .tour-hero {
     height: 70vh;
-  }
+}
 
   .tour-year,
   .tour-pkg-title {
     font-size: 18px;
     line-height: 24px;
-  }
+}
 
   .tour-main-title {
     font-size: 36px;
     margin: 5px 0 15px;
-  }
+}
 
   .tour-reserve-btn {
     padding: 10px 20px;
     font-size: 13px;
     letter-spacing: 1px;
-  }
+}
 }

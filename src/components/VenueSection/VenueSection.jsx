@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './VenueSection.css';
 
 import venueImage from '../../assets/homepage/Group 123.png';
@@ -17,11 +18,13 @@ const VenueSection = () => {
             The festival will be hosted in Jaipur, Rajasthan.<br />
             Full venue details will be shared with registered participants
           </p>
-          <button className="venue-explore-btn">
-            {/* <span className="corner top-left"></span> */}
-            {/* <span className="corner bottom-left"></span> */}
-            EXPLORE VENUE
-          </button>
+          <Link to="/location" style={{ textDecoration: 'none' }}>
+            <button className="venue-explore-btn">
+              {/* <span className="corner top-left"></span> */}
+              {/* <span className="corner bottom-left"></span> */}
+              EXPLORE VENUE
+            </button>
+          </Link>
         </div>
 
         {/* Right Image */}

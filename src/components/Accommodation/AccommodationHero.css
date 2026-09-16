@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Playfair+Display:wght@400;700;800&family=Roboto+Serif:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .accommodation-hero {
   position: relative;
@@ -85,9 +85,9 @@
 }
 
 .accommodation-subtitle {
-  font-family: 'Roboto Serif';
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 25px;
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1.5px;
   margin: 0;
   color: #ffffff;
@@ -97,7 +97,8 @@
 }
 
 .accommodation-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: clamp(35px, 5vw, 65px);
   color: #F8B12F;;
   margin: 20px;
@@ -108,10 +109,10 @@
 }
 
 .accommodation-hero-desc {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(16px, 2.5vw, 22px);
   font-style: italic;
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   line-height: 1.6;
   max-width: 750px;
   color: rgba(255, 255, 255, 0.9);
@@ -134,7 +135,8 @@
   color: #1a1a1a;
   border: none;
   padding: 16px 48px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 20px;
   letter-spacing: 2px;
   cursor: pointer;
@@ -160,79 +162,79 @@
   from {
     opacity: 0;
     transform: translateY(-20px);
-  }
+}
 
   to {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(25px);
-  }
+}
 
   to {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 }
 
 @keyframes scaleIn {
   from {
     opacity: 0;
     transform: scale(0.92);
-  }
+}
 
   to {
     opacity: 1;
     transform: scale(1);
-  }
+}
 }
 
 /* Responsiveness adjustments */
 @media (max-width: 768px) {
   .accommodation-hero {
     height: 65vh;
-  }
+}
 
   .accommodation-brush-top,
   .accommodation-brush-bottom {
     height: 60px;
-  }
+}
 
   .accommodation-subtitle {
     font-size: 14px;
     letter-spacing: 1px;
-  }
+}
 
   .accommodation-hero-desc {
     margin-bottom: 15px;
-  }
+}
 
   .accommodation-reserve-btn {
     padding: 12px 36px;
     font-size: 16px;
     min-width: 220px;
     min-height: 52px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .accommodation-hero {
     height: 70vh;
-  }
+}
 
   .accommodation-subtitle {
     font-size: 12px;
-  }
+}
 
   .accommodation-hero-desc {
     font-size: 14px;
     line-height: 1.5;
-  }
+}
 
   .accommodation-reserve-btn {
     padding: 10px 24px;
@@ -240,5 +242,5 @@
     min-width: 190px;
     min-height: 48px;
     letter-spacing: 1px;
-  }
+}
 }

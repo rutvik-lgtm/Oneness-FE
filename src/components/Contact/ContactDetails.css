@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .contact-details-section {
   padding: 60px 20px;
@@ -16,7 +16,8 @@
 }
 
 .contact-details-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 48px;
   margin-bottom: 10px;
   background: linear-gradient(135deg, #CD642D 0%, #71423D 100%);
@@ -33,7 +34,8 @@
 }
 
 .contact-details-intro {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 18px;
   color: #4a4a4a;
   max-width: 700px;
@@ -42,9 +44,9 @@
 }
 
 .contact-details-support {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #5D4E8C; /* Purple color from image */
   margin: 0;
 }
@@ -84,21 +86,22 @@
 }
 
 .detail-label {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 22px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   margin: 0;
 }
 
 .detail-value {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 24px;
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   margin: 5px 0 10px;
 }
 
 .detail-subtext {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 14px;
   color: #666;
   margin: 0;
@@ -135,8 +138,8 @@
   justify-content: center;
   align-items: center;
   margin: 10px 0 15px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 16px;
 }
 
@@ -176,27 +179,27 @@
   .contact-details-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
+}
   
   .contact-details-title {
     font-size: 36px;
-  }
+}
 
   .contact-detail-box {
     padding: 25px 15px;
     width: 100%;
     box-sizing: border-box;
-  }
+}
 
   .detail-value {
     font-size: clamp(14px, 5.2vw, 18px);
     word-break: break-all;
     margin: 5px 0 8px;
-  }
+}
 
   .social-links-row {
     flex-wrap: wrap;
     gap: 12px 18px;
     font-size: 14px;
-  }
+}
 }

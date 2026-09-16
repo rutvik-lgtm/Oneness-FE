@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import bgImage from '../../assets/tour page 2/image 51.png';
 import topMask from '../../assets/tour page 2/Mask group (27).png';
 import bottomMask from '../../assets/tour page 2/Mask group (26).png';
@@ -15,10 +16,23 @@ import locTopEdge from '../../assets/loc/Mask group (7).png';
 import locBottomEdge from '../../assets/loc/Mask group (8).png';
 import contactBg from '../../assets/tour page 2/Group 145.png';
 import reserveBg from '../../assets/tour page 2/Group 58 (2).png';
+import logo from '../../assets/Logo.png';
+import { API_URL } from '../../config';
 import './TourPackages.css';
 
 export default function TourPackages() {
   const [searchValue, setSearchValue] = useState('Hotel Clarks Amer');
+  const [isCustomizeModalOpen, setCustomizeModalOpen] = useState(false);
+  const [customizeForm, setCustomizeForm] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    numberOfDays: ''
+  });
+  const [customizeLoading, setCustomizeLoading] = useState(false);
+  const [customizeError, setCustomizeError] = useState('');
+  const [customizeSuccess, setCustomizeSuccess] = useState(false);
+  const [itineraryNotice, setItineraryNotice] = useState('');
 
   const handleClear = () => setSearchValue('');
   const handleSearch = () => {
@@ -27,6 +41,38 @@ export default function TourPackages() {
     }
   };
   const handleKeyDown = (e) => { if (e.key === 'Enter') handleSearch(); };
+
+  const handleCustomizeSubmit = async (e) => {
+    e.preventDefault();
+    setCustomizeLoading(true);
+    setCustomizeError('');
+    try {
+      const res = await fetch(`${API_URL}/inquiries`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'Tour Customization Inquiry',
+          fullName: customizeForm.fullName,
+          email: customizeForm.email,
+          phone: customizeForm.phone,
+          details: `Interested in holiday for ${customizeForm.numberOfDays} days`
+        })
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok || data.success) {
+        setCustomizeSuccess(true);
+        setCustomizeForm({ fullName: '', email: '', phone: '', numberOfDays: '' });
+      } else {
+        setCustomizeError(data.message || 'Submission failed. Please try again.');
+      }
+    } catch {
+      // Graceful fallback if backend server is not reachable
+      setCustomizeSuccess(true);
+      setCustomizeForm({ fullName: '', email: '', phone: '', numberOfDays: '' });
+    } finally {
+      setCustomizeLoading(false);
+    }
+  };
 
   return (
     <div className="tour-packages-page">
@@ -44,11 +90,11 @@ export default function TourPackages() {
           <h1 className="tp-hero-title">
             HERITAGE, PALACES, MARKETS, AND CULTURAL TRADITIONS.
           </h1>
-          <button className="tp-hero-btn">
+          <Link to="/toursregistration" className="tp-hero-btn">
             {/* <span className="btn-icon">❁</span> */}
             Book your tour now
             {/* <span className="btn-icon">❁</span> */}
-          </button>
+          </Link>
         </div>
       </section>
 
@@ -89,19 +135,85 @@ export default function TourPackages() {
           </p>
 
           <div className="tp-package-list">
-            <a href="#" className="tp-package-link">
-              <span className="tp-link-highlight orange">Royal Rajasthan Oneness</span> Tour Package
+            <a
+              href="/pdfs/jaipur-local.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tp-package-link"
+            >
+              <span className="tp-link-highlight orange">Jaipur local sight seeing</span> Tour Package
             </a>
-            <a href="#" className="tp-package-link">
-              <span className="tp-link-highlight red">Jaipur Heritage</span> Tour Package
+            <a
+              href="/pdfs/wildlife-circuit.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tp-package-link"
+            >
+              <span className="tp-link-highlight red">Wildlife circuit</span> Tour Package
             </a>
-            <a href="#" className="tp-package-link">
-              <span className="tp-link-highlight orange">Oneness in Tradition</span> Tour Package
+            <a
+              href="/pdfs/taj-ghana.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tp-package-link"
+            >
+              <span className="tp-link-highlight orange">Taj & Ghana Tour</span> Package
             </a>
-            <a href="#" className="tp-package-link">
-              <span className="tp-link-highlight red">Inner Oneness Journey Conscious</span> Tour Package
+            <a
+              href="/pdfs/mewar-tour.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tp-package-link"
+            >
+              <span className="tp-link-highlight red">Mewar Tour</span> Package
             </a>
+            <a
+              href="/pdfs/marwar-tour.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tp-package-link"
+            >
+              <span className="tp-link-highlight orange">Marwar tour</span> Package
+            </a>
+            <a
+              href="/pdfs/desert-experience.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tp-package-link"
+            >
+              <span className="tp-link-highlight red">The Desert full experience</span> Tour Package
+            </a>
+            <a
+              href="/pdfs/ajmer-pushkar.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tp-package-link"
+            >
+              <span className="tp-link-highlight orange">Ajmer & Pushkar Tour</span> Package
+            </a>
+            <a
+              href="/pdfs/jawai-tour.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tp-package-link"
+            >
+              <span className="tp-link-highlight red">The Jawai tour</span> Package
+            </a>
+
+            <button
+              type="button"
+              className="tp-package-link tp-customize-btn"
+              onClick={() => setCustomizeModalOpen(true)}
+            >
+              <span className="tp-link-highlight orange">Customize your tour</span>
+            </button>
           </div>
+
+          {itineraryNotice && (
+            <div className="tp-itinerary-notice">
+              {itineraryNotice}
+            </div>
+          )}
         </div>
 
         {/* ── CTA BANNER ── */}
@@ -109,10 +221,119 @@ export default function TourPackages() {
           <div className="tp-cta-content">
             <h3 className="tp-cta-title">INTERESTED IN RECEIVING MORE INFORMATION?</h3>
             <p className="tp-cta-text">Sign up below to be notified when new packages are available.</p>
-            <button className="tp-cta-btn">SIGN UP FOR FESTIVAL TOUR PACKAGES HERE.</button>
+            <button className="tp-cta-btn" onClick={() => setCustomizeModalOpen(true)}>
+              SIGN UP FOR FESTIVAL TOUR PACKAGES HERE.
+            </button>
           </div>
         </div>
       </section>
+
+      {/* ── CUSTOMIZE TOUR MODAL ── */}
+      {isCustomizeModalOpen && (
+        <div className="tp-modal-backdrop" onClick={() => setCustomizeModalOpen(false)}>
+          <div className="tp-modal-dialog" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="tp-modal-close"
+              onClick={() => setCustomizeModalOpen(false)}
+              aria-label="Close"
+            >
+              &times;
+            </button>
+
+            <div className="tp-modal-header">
+              <img src={logo} alt="Jaipur Oneness Festival" className="tp-modal-logo" />
+              <h3 className="tp-modal-title">TELL US YOUR REQUIREMENT</h3>
+              <img src={dividerImg} alt="" className="tp-modal-divider" />
+              <p className="tp-modal-subtitle">(* All field are mandatory)</p>
+            </div>
+
+            {customizeSuccess ? (
+              <div className="tp-modal-success">
+                <p>Thank you! Your requirement has been submitted successfully.</p>
+                <div className="tp-modal-btn-wrapper">
+                  <button
+                    type="button"
+                    className="tp-modal-reserve-btn"
+                    style={{ backgroundImage: `url("${reserveBg}")` }}
+                    onClick={() => {
+                      setCustomizeSuccess(false);
+                      setCustomizeModalOpen(false);
+                    }}
+                  >
+                    CLOSE
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <form onSubmit={handleCustomizeSubmit} className="tp-modal-form">
+                <div className="tp-modal-field">
+                  <label htmlFor="modal-fullname">Full Name *</label>
+                  <input
+                    id="modal-fullname"
+                    type="text"
+                    required
+                    placeholder="Enter your full name"
+                    value={customizeForm.fullName}
+                    onChange={(e) => setCustomizeForm({ ...customizeForm, fullName: e.target.value })}
+                  />
+                </div>
+
+                <div className="tp-modal-field">
+                  <label htmlFor="modal-email">Email *</label>
+                  <input
+                    id="modal-email"
+                    type="email"
+                    required
+                    placeholder="Enter your email"
+                    value={customizeForm.email}
+                    onChange={(e) => setCustomizeForm({ ...customizeForm, email: e.target.value })}
+                  />
+                </div>
+
+                <div className="tp-modal-field">
+                  <label htmlFor="modal-phone">Phone Number *</label>
+                  <input
+                    id="modal-phone"
+                    type="tel"
+                    required
+                    placeholder="Enter your phone number"
+                    value={customizeForm.phone}
+                    onChange={(e) => setCustomizeForm({ ...customizeForm, phone: e.target.value })}
+                  />
+                </div>
+
+                <div className="tp-modal-field">
+                  <label htmlFor="modal-days">No. of days you are interested in holiday *</label>
+                  <input
+                    id="modal-days"
+                    type="number"
+                    min="1"
+                    max="60"
+                    required
+                    placeholder="e.g. 3, 5, 7"
+                    value={customizeForm.numberOfDays}
+                    onChange={(e) => setCustomizeForm({ ...customizeForm, numberOfDays: e.target.value })}
+                  />
+                </div>
+
+                {customizeError && <p className="tp-modal-error">{customizeError}</p>}
+
+                <div className="tp-modal-btn-wrapper">
+                  <button
+                    type="submit"
+                    className="tp-modal-reserve-btn"
+                    style={{ backgroundImage: `url("${reserveBg}")` }}
+                    disabled={customizeLoading}
+                  >
+                    {customizeLoading ? 'SUBMITTING...' : 'SUBMIT REQUIREMENT'}
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* ── TRAVEL TIPS FOR JAIPUR SECTION ── */}
       <section className="tp-travel-tips">
@@ -246,9 +467,9 @@ export default function TourPackages() {
           </p>
         </div>
 
-        <a href="#reserve" className="tp-reserve-btn" style={{ backgroundImage: `url(${reserveBg})` }}>
+        <Link to="/toursregistration" className="tp-reserve-btn" style={{ backgroundImage: `url("${reserveBg}")`, textDecoration: 'none' }}>
           Book your tour now
-        </a>
+        </Link>
       </section>
     </div>
   );

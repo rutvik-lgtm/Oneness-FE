@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Roboto+Serif:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .accomm-page-wrapper {
   width: 100%;
@@ -67,29 +67,29 @@
 }
 
 .accomm-hero-subtitle {
-  font-family: "Roboto Serif", serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(18px, 2.5vw, 40px);
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 0.5px;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
   margin: 0;
 }
 
 .accomm-hero-year {
-  font-family: "Roboto Serif", serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(18px, 2.5vw, 40px);
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 0.5px;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
   margin: 8px 0 35px 0;
 }
 
 .accomm-hero-title {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   color: #F8B12F;
   /* Warm Orange-Gold */
   font-size: clamp(34px, 5.5vw, 65px);
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   text-transform: uppercase;
   line-height: 1.15;
   max-width: 950px;
@@ -131,9 +131,9 @@
 }
 
 .accomm-btn-text {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(14px, 1.8vw, 19px);
-  font-weight: bold;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -171,73 +171,73 @@
 @media (max-width: 1024px) {
   .accomm-hero-section {
     height: 75vh;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .accomm-hero-section {
     height: 65vh;
     min-height: 480px;
-  }
+}
 
   .accomm-hero-year {
     margin-bottom: 25px;
-  }
+}
 
   .accomm-hero-title {
     margin-bottom: 35px;
-  }
+}
 
   .accomm-reserve-btn {
     padding: 14px 36px;
     min-width: 250px;
     min-height: 58px;
-  }
+}
 
   .flower-left-bottom {
     bottom: -10px;
     left: -20px;
     transform: scale(0.7);
-  }
+}
 
   .flower-right-top {
     top: -10px;
     right: -20px;
     transform: scale(0.7);
-  }
+}
 }
 
 @media (max-width: 480px) {
   .accomm-hero-section {
     height: 60vh;
     min-height: 400px;
-  }
+}
 
   .accomm-hero-year {
     margin-bottom: 20px;
-  }
+}
 
   .accomm-hero-title {
     margin-bottom: 25px;
-  }
+}
 
   .accomm-reserve-btn {
     padding: 12px 28px;
     min-width: 220px;
     min-height: 52px;
-  }
+}
 
   .flower-left-bottom {
     bottom: -8px;
     left: -16px;
     transform: scale(0.6);
-  }
+}
 
   .flower-right-top {
     top: -8px;
     right: -16px;
     transform: scale(0.6);
-  }
+}
 }
 
 /* ── INTRO DESCRIPTION SECTION ── */
@@ -259,21 +259,21 @@
 }
 
 .accomm-intro-year {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(20px, 2.5vw, 35px);
   color: #B44634;
   /* Muted red-brown color from logo/theme */
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 2px;
   margin: 0 0 10px 0;
 }
 
 .accomm-intro-title {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(32px, 5.5vw, 42px);
   color: #B44634;
   /* Muted red-brown */
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1.5px;
   margin: 0 0 10px 0;
   line-height: 1.2;
@@ -287,12 +287,12 @@
 }
 
 .accomm-intro-text {
-  font-family: "Roboto Serif", serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(14px, 1.8vw, 17px);
   color: #554440;
   line-height: 1.85;
   margin: 0;
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   letter-spacing: 0.2px;
 }
 
@@ -310,21 +310,21 @@
 @media (max-width: 768px) {
   .accomm-intro-section {
     padding: 70px 15px 90px;
-  }
+}
 
   .accomm-intro-divider {
     margin: 10px auto 25px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .accomm-intro-section {
     padding: 50px 10px 70px;
-  }
+}
 
   .accomm-intro-divider {
     margin: 8px auto 20px;
-  }
+}
 }
 
 /* ── CLARKS BANNER SECTION ── */
@@ -386,9 +386,9 @@
 }
 
 .accomm-hotels-year {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(20px, 3vw, 26px);
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 2px;
   margin: 0 0 8px 0;
   color: #ffffff;
@@ -404,9 +404,9 @@
 }
 
 .accomm-hotels-title {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(22px, 3.5vw, 36px);
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1.5px;
   margin: 0;
   color: #ffffff;
@@ -435,23 +435,23 @@
 @media (max-width: 768px) {
   .accomm-starburst-left {
     left: 4%;
-  }
+}
 
   .accomm-starburst-right {
     right: 4%;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .accomm-starburst-left {
     left: 2%;
     display: none;
-  }
+}
 
   .accomm-starburst-right {
     display: none;
     right: 2%;
-  }
+}
 }
 
 .accomm-hotels-divider {
@@ -462,7 +462,8 @@
 }
 
 .accomm-hotels-subtitle {
-  font-family: "Georgia", serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: clamp(14px, 1.8vw, 17px);
   font-style: italic;
   line-height: 1.7;
@@ -538,7 +539,8 @@
 }
 
 .accomm-hotel-name {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: clamp(18px, 2.2vw, 22px);
   color: #ffffff;
   margin: 0 0 6px 0;
@@ -546,9 +548,9 @@
 }
 
 .accomm-hotel-distance {
-  font-family: "Roboto Serif", serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   margin: 0 0 14px 0;
 }
 
@@ -561,7 +563,8 @@
 }
 
 .accomm-hotel-desc {
-  font-family: "Georgia", serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 12.5px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
@@ -574,11 +577,11 @@
   .accomm-hotels-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 20px;
-  }
+}
 
   .accomm-hotels-section {
     padding: 80px 15px 20px;
-  }
+}
 }
 
 @media (max-width: 768px) {
@@ -593,39 +596,42 @@
     width: 100%;
     box-sizing: border-box;
     scroll-padding: 0 20px;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
-  }
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE/Edge */
+}
 
   .accomm-hotels-grid::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome/Safari */
-  }
+    display: none;
+    /* Hide scrollbar for Chrome/Safari */
+}
 
   .accomm-hotel-card {
     flex: 0 0 280px;
     max-width: 280px;
     scroll-snap-align: center;
     margin: 0;
-  }
+}
 
   .accomm-hotels-section {
     padding: 70px 0 20px;
-  }
+}
 
   .accomm-hotels-header {
     padding: 0 20px;
     margin-bottom: 40px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .accomm-hotels-section {
     padding: 60px 0 20px;
-  }
+}
 
   .accomm-hotels-header {
     margin-bottom: 30px;
-  }
+}
 }
 
 /* ── BOTTOM ARCHWAY CTA SECTION ── */
@@ -742,22 +748,22 @@
 }
 
 .accomm-arch-year {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(14px, 1.8vw, 32px);
   color: #4c3a80;
   /* Purple accent matching footer/theme */
   margin: 0 0 clamp(2px, 0.8vw, 8px) 0;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 2px;
 }
 
 .accomm-arch-title {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(12px, 1.8vw, 30px);
   color: #BD2640;
   line-height: 1.25;
   margin: 0;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -794,9 +800,9 @@
 }
 
 .accomm-arch-btn-text {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(12px, 1.4vw, 17px);
-  font-weight: bold;
+  font-weight: var(--title-weight, 700);
   color: #ffffff;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -840,7 +846,7 @@
   left: 0;
   width: 100%;
   height: auto;
-  transform: translateY(-99%);
+  transform: translateY(-85%);
   z-index: 4;
   pointer-events: none;
 }
@@ -851,97 +857,97 @@
   .accomm-arch-content {
     width: 50%;
     top: 72%;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .accomm-hotel-banner {
     height: 350px;
     min-height: 250px;
-  }
+}
 
   .accomm-hotels-silhouette {
     top: 0;
     height: clamp(35px, 6vw, 60px);
     transform: translateY(-90%);
     object-fit: fill;
-  }
+}
 
   .accomm-hotels-header {
     margin-bottom: 40px;
-  }
+}
 
   .accomm-arch-content {
     width: 55%;
     top: 71%;
-  }
+}
 
   .accomm-arch-section {
     padding: 0px 10px 100px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .accomm-hotel-banner {
     height: 220px;
     min-height: 180px;
-  }
+}
 
   .accomm-hotels-header {
     margin-bottom: 30px;
-  }
+}
 
   .accomm-arch-content {
-           width: 34%;
-        top: 73%;
-  }
+    width: 34%;
+    top: 73%;
+}
 
   .accomm-arch-section {
     padding: 0px 5px 75px;
-  }
+}
 
   .accomm-arch-year {
     font-size: 13px;
     margin-bottom: 2px;
-  }
+}
 
   .accomm-arch-title {
     font-size: 11px;
     line-height: 1.2;
-  }
+}
 
   .accomm-arch-divider {
     width: 80px;
     margin: 4px auto 6px;
-  }
+}
 
   .accomm-arch-btn {
     padding: 6px 12px;
     min-width: 150px;
     border-radius: 6px;
-  }
+}
 
   .accomm-arch-btn-text {
-        font-size: 8px;
-        letter-spacing: 0.8px;
-        margin: 0 0px;
-  }
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    margin: 0 0px;
+}
 
   .arch-flower-left,
   .arch-flower-right {
     width: 10px;
     height: 10px;
-  }
+}
 
   .arch-flower-left {
     left: -8px;
-  }
+}
 
   .arch-flower-right {
     right: -8px;
-  }
+}
 
-.reg-submit-btn {
+  .reg-submit-btn {
     background-size: 45% 59%;
     background-position: center;
     background-repeat: no-repeat;
@@ -949,7 +955,8 @@
     color: white;
     border: none;
     padding: 12px 40px;
-    font-family: 'Irish Grover', cursive;
+    font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+    font-weight: var(--title-weight, 700);
     font-size: 14px;
     cursor: pointer;
     box-shadow: none;

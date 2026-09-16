@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import './BlogInner.css';
 import { API_URL } from '../config';
 
@@ -11,56 +11,50 @@ import bottomDivider from '../assets/blog/dvider_20 4 (2).png';
 import flourishImg from '../assets/blog/Group 79 (2).png';
 import flourishImg1 from '../assets/blog/Group 5.png';
 import cardImg from '../assets/blog/Rectangle 37 (2).png';
+import { DEFAULT_BLOGS } from '../data/blogData';
 
 const BlogInner = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const [blog, setBlog] = useState(null);
   const [latestPosts, setLatestPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState('');
 
   // Comment Form State
   const [commentForm, setCommentForm] = useState({ name: '', email: '', comment: '' });
   const [commentLoading, setCommentLoading] = useState(false);
   const [commentError, setCommentError] = useState('');
   const [commentSuccess, setCommentSuccess] = useState(false);
-  console.log("BlogInner rendering: slug =", slug, "loading =", loading, "blog =", blog);
 
   useEffect(() => {
-    console.log('BlogInner: slug =', slug);
     window.scrollTo(0, 0);
 
     const fetchBlogData = async () => {
       setLoading(true);
-      try {
-        // Fetch specific blog by slug
-        const res = await fetch(`${API_URL}/blogs/${slug}`);
-        const data = await res.json();
-        if (data.success) {
-          setBlog(data.data);
-        } else {
-          // Fallback static blog post if slug not found
-          setBlog({
-            _id: 'mock123',
-            title: 'GRAVIDA POSUERE SUSCIPIT ELEMENTUM DONEC EGET INTEGER.',
-            excerpt: 'Discover the simple yet powerful ways introducing a daily meditation practice can reduce stress and increase clarity.',
-            content: 'Meditation is not about stopping thoughts; it is about recognizing that you are more than your thoughts. In this article, we outline five practical techniques to incorporate meditation into a busy workday, from morning breathwork to evening gratitude logs. Learn how just 10 minutes a day can restructure neural pathways and reduce high cortisol levels. Sit tempus auctor nulla ipsum eu et. Dapibus non a amet urna condimentum. Gravida posuere suscipit elementum donec eget integer. Tempus sit consectetur integer nulla vel. Vestibulum pretium bibendum egestas arcu tellus neque. In at leo facilisis pulvinar interdum. Imperdiet leo sed feugiat arcu massa nascetur.',
-            author: 'Swami Dhyan Saraswati',
-            comments: []
-          });
+      if (slug) {
+        try {
+          const res = await fetch(`${API_URL}/blogs/${slug}`);
+          const data = await res.json();
+          if (data.success && data.data) {
+            setBlog(data.data);
+            setLoading(false);
+            return;
+          }
+        } catch (err) {
+          console.error('Error fetching blog post, using local fallback', err);
         }
-      } catch (err) {
-        console.error('Error fetching blog post', err);
-        setBlog({
-          _id: 'mock123',
-          title: 'GRAVIDA POSUERE SUSCIPIT ELEMENTUM DONEC EGET INTEGER.',
-          excerpt: 'Discover the simple yet powerful ways introducing a daily meditation practice can reduce stress and increase clarity.',
-          content: 'Meditation is not about stopping thoughts; it is about recognizing that you are more than your thoughts. In this article, we outline five practical techniques to incorporate meditation into a busy workday, from morning breathwork to evening gratitude logs. Learn how just 10 minutes a day can restructure neural pathways and reduce high cortisol levels. Sit tempus auctor nulla ipsum eu et. Dapibus non a amet urna condimentum. Gravida posuere suscipit elementum donec eget integer. Tempus sit consectetur integer nulla vel. Vestibulum pretium bibendum egestas arcu tellus neque. In at leo facilisis pulvinar interdum. Imperdiet leo sed feugiat arcu massa nascetur.',
-          author: 'Swami Dhyan Saraswati',
-          comments: []
-        });
-      } finally {
-        setLoading(false);
+
+        const matched = DEFAULT_BLOGS.find(b => b.slug === slug || b._id === slug);
+        if (matched) {
+          setBlog(matched);
+        } else {
+          setBlog(DEFAULT_BLOGS[0]);
+        }
+      } else {
+        setBlog(DEFAULT_BLOGS[0]);
       }
+      setLoading(false);
     };
 
     const fetchLatestBlogs = async () => {
@@ -68,42 +62,18 @@ const BlogInner = () => {
         const res = await fetch(`${API_URL}/blogs`);
         const data = await res.json();
         if (data.success && data.data.length > 0) {
-          setLatestPosts(data.data.slice(0, 5));
-        } else {
-          setLatestPosts(Array(3).fill({
-            author: 'The Times of India',
-            title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में...',
-            excerpt: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत...',
-            slug: 'meditation-transform-daily-routine',
-            createdAt: new Date().toLocaleDateString()
-          }));
+          const hasBurnout = data.data.some(b => b.slug === DEFAULT_BLOGS[0].slug);
+          const list = hasBurnout ? data.data : [DEFAULT_BLOGS[0], ...data.data];
+          setLatestPosts(list.filter(p => p.slug !== slug).slice(0, 5));
+          return;
         }
       } catch (err) {
-        console.error('Error fetching latest blogs', err);
-        setLatestPosts(Array(3).fill({
-          author: 'The Times of India',
-          title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में...',
-          excerpt: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत...',
-          slug: 'meditation-transform-daily-routine',
-          createdAt: new Date().toLocaleDateString()
-        }));
+        console.error('Error fetching latest blogs, using local fallback', err);
       }
+      setLatestPosts(DEFAULT_BLOGS.filter(p => p.slug !== slug).slice(0, 5));
     };
 
-    if (slug) {
-      fetchBlogData();
-    } else {
-      // If no slug is in params (accessed via /blog-inner directly), show default mock details
-      setBlog({
-        _id: 'mock123',
-        title: 'GRAVIDA POSUERE SUSCIPIT ELEMENTUM DONEC EGET INTEGER.',
-        excerpt: 'Discover the simple yet powerful ways introducing a daily meditation practice can reduce stress and increase clarity.',
-        content: 'Meditation is not about stopping thoughts; it is about recognizing that you are more than your thoughts. In this article, we outline five practical techniques to incorporate meditation into a busy workday, from morning breathwork to evening gratitude logs. Learn how just 10 minutes a day can restructure neural pathways and reduce high cortisol levels. Sit tempus auctor nulla ipsum eu et. Dapibus non a amet urna condimentum. Gravida posuere suscipit elementum donec eget integer. Tempus sit consectetur integer nulla vel. Vestibulum pretium bibendum egestas arcu tellus neque. In at leo facilisis pulvinar interdum. Imperdiet leo sed feugiat arcu massa nascetur.',
-        author: 'Swami Dhyan Saraswati',
-        comments: []
-      });
-      setLoading(false);
-    }
+    fetchBlogData();
     fetchLatestBlogs();
   }, [slug]);
 
@@ -224,7 +194,7 @@ const BlogInner = () => {
                       value={commentForm.name} 
                       onChange={handleCommentChange} 
                       required 
-                      style={{ flex: 1, padding: '12px 16px', background: '#fff', border: '1px solid #c8c2b5', color: '#333', borderRadius: '8px', outline: 'none', fontFamily: 'Roboto, sans-serif', fontSize: '0.95rem' }}
+                      style={{ flex: 1, padding: '12px 16px', background: '#fff', border: '1px solid #c8c2b5', color: '#333', borderRadius: '8px', outline: 'none', fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '0.95rem' }}
                     />
                     <input 
                       name="email"
@@ -233,7 +203,7 @@ const BlogInner = () => {
                       value={commentForm.email} 
                       onChange={handleCommentChange} 
                       required 
-                      style={{ flex: 1, padding: '12px 16px', background: '#fff', border: '1px solid #c8c2b5', color: '#333', borderRadius: '8px', outline: 'none', fontFamily: 'Roboto, sans-serif', fontSize: '0.95rem' }}
+                      style={{ flex: 1, padding: '12px 16px', background: '#fff', border: '1px solid #c8c2b5', color: '#333', borderRadius: '8px', outline: 'none', fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '0.95rem' }}
                     />
                   </div>
                   <textarea 
@@ -243,7 +213,7 @@ const BlogInner = () => {
                     value={commentForm.comment} 
                     onChange={handleCommentChange} 
                     required 
-                    style={{ padding: '12px 16px', background: '#fff', border: '1px solid #c8c2b5', color: '#333', borderRadius: '8px', outline: 'none', fontFamily: 'Roboto, sans-serif', fontSize: '0.95rem', resize: 'vertical' }}
+                    style={{ padding: '12px 16px', background: '#fff', border: '1px solid #c8c2b5', color: '#333', borderRadius: '8px', outline: 'none', fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: '0.95rem', resize: 'vertical' }}
                   ></textarea>
                   <button 
                     type="submit" 
@@ -259,13 +229,24 @@ const BlogInner = () => {
 
           {/* Right Column - Sidebar */}
           <div className="blog-inner-right">
-            <div className="blog-search-widget">
+            <form 
+              className="blog-search-widget"
+              onSubmit={(e) => {
+                e.preventDefault();
+                navigate('/blog');
+              }}
+            >
               <h3>Search Blogs</h3>
               <div className="search-input-group">
-                <input type="text" placeholder="Enter Detail" />
-                <button>Search</button>
+                <input 
+                  type="text" 
+                  placeholder="Enter Detail" 
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                <button type="submit">Search</button>
               </div>
-            </div>
+            </form>
             
             <div className="blog-latest-widget">
               <h3>LATEST BLOGS</h3>

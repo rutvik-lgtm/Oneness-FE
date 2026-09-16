@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Accommodations.css';
 
 // Assets
@@ -290,13 +291,15 @@ const Accommodations = () => {
               FESTIVAL?
             </h2>
             <img src={dividerImg} alt="Teal Divider" className="accomm-arch-divider" />
-            <button className="accomm-arch-btn" onClick={handleScrollToStays}>
-              <div className="accomm-arch-btn-inner">
-                {/* <FlowerIcon className="arch-flower-left" /> */}
-                <span className="accomm-arch-btn-text">RESERVE YOUR ACCOMMODATION →</span>
-                {/* <FlowerIcon className="arch-flower-right" /> */}
-              </div>
-            </button>
+            <Link to="/accommodation" style={{ textDecoration: 'none' }}>
+              <button className="accomm-arch-btn">
+                <div className="accomm-arch-btn-inner">
+                  {/* <FlowerIcon className="arch-flower-left" /> */}
+                  <span className="accomm-arch-btn-text">RESERVE YOUR ACCOMMODATION →</span>
+                  {/* <FlowerIcon className="arch-flower-right" /> */}
+                </div>
+              </button>
+            </Link>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Roboto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* ── HERO SECTION ── */
 .ach-hero {
@@ -99,7 +99,8 @@
 }
 
 .ach-hero-title-top {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 28px;
   color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
@@ -108,7 +109,8 @@
 }
 
 .ach-hero-glance {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 22px;
   color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
@@ -117,12 +119,12 @@
 }
 
 .ach-hero-title {
-  font-family: "Irish Grover", cursive;
-  font-size: clamp(32px, 8vw, 61px);
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-size: clamp(32px, 8vw, 55px);
   /* color: #D4AF37; */
   color: #cc9309;
   /* Gold color */
-  font-weight: bold;
+  font-weight: var(--title-weight, 700);
   text-shadow:
     1px 1px 2px #b8860b,
     0 0 5px #ffd700,
@@ -135,9 +137,9 @@
 }
 
 .ach-hero-sub {
-  font-family: "Roboto Serif", serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(16px, 2.5vw, 22px);
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   color: #ffffff;
   line-height: 1.4;
   max-width: 850px;
@@ -168,7 +170,8 @@
 }
 
 .section-title-top {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 26px;
   background: linear-gradient(135deg, #ff6a00, #cc4400, #1a0a00);
   -webkit-background-clip: text;
@@ -179,7 +182,8 @@
 }
 
 .section-title-main {
-  font-family: "Irish Grover", cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 32px;
   background: linear-gradient(135deg, #ff6a00, #cc4400, #1a0a00);
   -webkit-background-clip: text;
@@ -224,7 +228,8 @@
   border-right: 4px solid #4A3B8B;
   border-radius: 6px;
   padding: 14px 22px;
-  font-family: "Roboto Serif", serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 12.8px;
   color: #2c2c2c;
   line-height: 1.55;
@@ -266,8 +271,8 @@
 
 /* Value (Number) Specific Styling */
 .stat-val-base {
-  font-family: "Irish Grover", cursive;
-  font-weight: 400;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0;
@@ -303,8 +308,8 @@
 
 /* Label Specific Styling */
 .stat-lab-base {
-  font-family: "Roboto Serif", serif;
-  font-weight: 600;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   letter-spacing: 0.8px;
   text-transform: uppercase;
   margin: 0;
@@ -377,65 +382,65 @@
     flex-direction: column;
     align-items: center;
     gap: 60px;
-  }
+}
 
   .left-content-stack {
     width: 100%;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .mobile-menu {
     display: block;
-  }
+}
 
   .info-stats-section {
     padding: 60px 20px;
-  }
+}
 
   .section-title-main {
     font-size: 28px;
-  }
+}
 
   .stat-item {
     width: 200px;
     height: 230px;
-  }
+}
 
   .stat-num {
     font-size: 32px;
-  }
+}
 
   .ach-hero {
     height: 60vh;
-  }
+}
 
   .ach-hero-title-top {
     font-size: 20px;
-  }
+}
 
   .ach-hero-glance {
     font-size: 16px;
     margin-bottom: 20px;
-  }
+}
 
   .stat-overlay {
     width: 120px;
-  }
+}
 
   .stat-val-0,
   .stat-val-1 {
     font-size: 26px;
-  }
+}
 
   .stat-val-2,
   .stat-val-3 {
     font-size: 18px;
-  }
+}
 
   .stat-val-4 {
     font-size: 26px;
-  }
+}
 
   .stat-lab-0,
   .stat-lab-1,
@@ -444,40 +449,40 @@
   .stat-lab-4 {
     font-size: 9px;
     max-width: 90px;
-  }
+}
 
   .section-header {
     margin-top: 30px;
-  }
+}
 
   .ach-hero-title {
     font-size: 24px !important;
     /* line-height: 0; */
-  }
+}
 
   .ach-hero-bg-award {
     height: 650px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .stat-overlay {
     width: 100px;
-  }
+}
 
   .stat-val-0,
   .stat-val-1 {
     font-size: 20px;
-  }
+}
 
   .stat-val-2,
   .stat-val-3 {
     font-size: 16px;
-  }
+}
 
   .stat-val-4 {
     font-size: 20px;
-  }
+}
 
   .stat-lab-0,
   .stat-lab-1,
@@ -486,22 +491,22 @@
   .stat-lab-4 {
     font-size: 8px;
     max-width: 80px;
-  }
+}
 
   .right-stats-masonry {
     max-width: 100%;
-  }
+}
 
   .section-title-main {
     font-size: 22px;
-  }
+}
 
   .section-title-top {
     font-size: 20px;
-  }
+}
 
   .text-box {
     padding: 10px 14px;
     font-size: 11.5px;
-  }
+}
 }

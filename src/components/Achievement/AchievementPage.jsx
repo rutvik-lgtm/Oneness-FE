@@ -27,7 +27,7 @@ export default function AchievementPage() {
   ];
 
   return (
-    <div style={{ width: '100%', minHeight: '100vh', backgroundColor: '#fff', fontFamily: 'Roboto, sans-serif' }}>
+    <div style={{ width: '100%', minHeight: '100vh', backgroundColor: '#fff', fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
       {/* ── HERO SECTION ── */}
       <section className="ach-hero">
         <img src={bgCulture} alt="" className="ach-hero-bg-culture" />

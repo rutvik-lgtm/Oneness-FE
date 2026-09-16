@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .tour-reg-section {
   padding: 100px 20px;
@@ -58,7 +58,8 @@
   padding: 35px 35px 35px 70px;
   border-radius: 20px;
   /* Radius from Figma */
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.05);
   position: relative;
   transition: transform 0.3s ease;
@@ -87,16 +88,16 @@
 }
 
 .info-title-v2 {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   margin: 0 0 15px 0;
   color: inherit;
 }
 
 .info-text-v2 {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   line-height: 30px;
   margin-bottom: 20px;
   color: #231F1F;
@@ -112,14 +113,14 @@
   padding-left: 10px;
   margin-bottom: 5px;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   line-height: 30px;
   color: #231F1F;
 }
 
 .info-contact-v2 {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   margin: 10px 0;
   display: flex;
   align-items: center;
@@ -184,9 +185,9 @@
 }
 
 .form-subtitle-v2 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 20px;
-  font-weight: 800;
+  font-weight: var(--title-weight, 700);
   color: #333;
 }
 
@@ -198,9 +199,9 @@
 
 .reg-group label {
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #666;
   margin-bottom: 5px;
 }
@@ -213,7 +214,8 @@
   border: 1px solid #EEE9E0;
   border-radius: 10px;
   background-color: #FAF9F6;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   color: #333;
 }
 
@@ -246,7 +248,8 @@
   color: white;
   border: none;
   padding: 12px 40px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 18px;
   cursor: pointer;
   box-shadow: none;
@@ -266,55 +269,55 @@
   .tour-reg-container {
     gap: 20px;
     padding: 0 15px;
-  }
+}
 
   .info-box-v2 {
     width: 100%;
     max-width: 500px;
-  }
+}
 }
 
 @media (max-width: 992px) {
   .tour-reg-container {
     flex-direction: column;
     align-items: center;
-  }
+}
 
   .tour-reg-left {
     width: 100%;
     order: 2;
-  }
+}
 
   .tour-reg-right {
     width: 100%;
     order: 1;
     margin-bottom: 50px;
-  }
+}
 
   .layered-frame {
     width: 100%;
     max-width: 655px;
     padding: 60px 40px;
-  }
+}
 
   .tour-reg-guide-wrapper {
     flex-direction: row;
     align-items: center;
     gap: 0;
     width: 100%;
-  }
+}
 
   .boy-img-container {
     flex-shrink: 0;
     z-index: 11;
     transform: translateX(10px);
-  }
+}
 
   .tour-reg-boy {
     height: 220px;
     /* Even smaller to save space */
     width: auto;
-  }
+}
 
   .info-box-v2 {
     flex-grow: 1;
@@ -323,25 +326,25 @@
     margin-left: -20px;
     padding: 20px 15px 20px 30px;
     border-radius: 15px;
-  }
+}
 
   .info-title-v2 {
     font-size: 15px;
     margin-bottom: 5px;
-  }
+}
 
   .info-text-v2,
   .info-list-v2 li {
     font-size: 11px;
     line-height: 16px;
     margin-bottom: 5px;
-  }
+}
 }
 
 @media (max-width: 600px) {
   .tour-reg-section {
     padding: 40px 10px;
-  }
+}
 
   .layered-frame {
     width: 100%;
@@ -350,41 +353,41 @@
     /* Cap width for better mobile look */
     padding: 80px 35px 80px 35px;
     min-height: auto;
-  }
+}
 
   .form-header-v2 {
     margin-bottom: 20px;
-  }
+}
 
   .form-logo-v2 {
     width: 100px;
-  }
+}
 
   .form-subtitle-v2 {
     font-size: 18px;
     line-height: 1.2;
     margin-top: 10px;
-  }
+}
 
   .reg-row {
     flex-direction: column;
     gap: 15px;
-  }
+}
 
   .info-title-v2 {
     font-size: 20px;
-  }
+}
 
   .info-text-v2,
   .info-list-v2 li {
     font-size: 14px;
     line-height: 24px;
-  }
+}
 
   .reg-submit-btn {
     width: 40%;
     /* Full width button on mobile */
     padding: 12px 20px;
     font-size: 14px;
-  }
+}
 }

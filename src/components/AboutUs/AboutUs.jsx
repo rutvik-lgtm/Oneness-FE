@@ -27,7 +27,7 @@ const AboutUs = () => {
           </div>
 
           <p className="about-us-desc">
-            The Oneness Festival is a cultural gathering dedicated to awakening to peace and unity, within ourselves, between people, and across cultures. <strong className="about-us-strong">Hosted in the royal city of Jaipur,</strong> the festival invites seekers, teachers, artists, and humanitarian leaders to come together in reflection, wisdom, meditation, culture, music, and shared humanity.
+            The Oneness Festival is a cultural gathering dedicated to awakening to peace and unity, within ourselves, between people, and across cultures. <strong className="about-us-strong">Hosted in the royal city of Jaipur.</strong>
           </p>
 
           <p className="about-us-desc">
@@ -36,7 +36,7 @@ const AboutUs = () => {
 
           <div className="about-us-actions">
             <Link className="btn-stay-informed" to="/get-involved" >
-              STAY INFORMED
+              STAY TUNED
             </Link>
             <Link className="btn-contact-us" to="/contact">CONTACT US</Link>
           </div> 

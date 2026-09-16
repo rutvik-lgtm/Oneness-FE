@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .tour-packages-section {
   position: relative;
@@ -90,7 +90,8 @@
   width: 100%;
   border-collapse: collapse;
   color: #FFFFFF;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   margin-bottom: 40px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -100,7 +101,7 @@
   /* Muted magenta header color from image */
   padding: 15px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
 }
@@ -117,7 +118,7 @@
 }
 
 .tp-pkg-type {
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #FFFFFF;
   width: 28%;
 }
@@ -141,7 +142,8 @@
   color: #ffffff;
   border: none;
   padding: 12px 50px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 18px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -185,28 +187,28 @@
 @media (max-width: 1024px) {
   .tp-pillar-left {
     left: 10px;
-  }
+}
 
   .tp-pillar-right {
     right: 10px;
-  }
+}
 
   .tp-content-wrapper {
     padding: 40px 30px;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .tp-pillar {
     display: none;
     /* Hide pillars on small tablets/mobile */
-  }
+}
 
   .tp-content-wrapper {
     margin: 20px 10px;
     padding: 30px 15px;
     width: 100%;
-  }
+}
 
   /* Note: In JSX, wrap table in <div className="tp-table-container"> */
   .tp-table-container {
@@ -214,30 +216,30 @@
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 20px;
-  }
+}
 
   .tp-table {
     min-width: 600px;
-  }
+}
 
   .tp-table th {
     font-size: 16px;
     padding: 10px;
-  }
+}
 
   .tp-table td {
     font-size: 13px;
     padding: 10px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .tp-table {
     min-width: 500px;
-  }
+}
 
   .tp-reserve-btn {
     padding: 12px 25px;
     font-size: 14px;
-  }
+}
 }

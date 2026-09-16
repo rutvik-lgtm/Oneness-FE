@@ -97,7 +97,7 @@
 @media (max-width: 1024px) {
   .gallery-item1 {
     width: 23%;
-  }
+}
 }
 
 @media (max-width: 768px) {
@@ -106,40 +106,40 @@
     padding: 0 4px;
     width: 100%;
     box-sizing: border-box;
-  }
+}
   .gallery-images {
     flex-wrap: nowrap; /* Strictly force cards side-by-side (no 2x2 grid!) */
     gap: 12px;
     width: 100%;
     overflow: hidden;
-  }
+}
   .gallery-item1 {
     display: none; /* Hide images by default on mobile viewports */
     width: 46%; /* Exactly two fit side-by-side */
     max-width: 150px; /* Tightly sized so everything fits beautifully with navigation arrows */
     flex-shrink: 0;
-  }
+}
   .gallery-item1.mobile-visible {
     display: flex; /* Show only the active pair */
     animation: fadeInStay 0.5s ease-out forwards;
-  }
+}
   .gallery-section {
     padding: 30px 5px;
-  }
+}
   .gallery-arrow {
     width: 34px;
     height: 34px;
     margin: 0 4px;
-  }
+}
 }
 
 @keyframes fadeInStay {
   from {
     opacity: 0;
     transform: translateY(8px);
-  }
+}
   to {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 }

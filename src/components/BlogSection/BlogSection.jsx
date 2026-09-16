@@ -13,21 +13,24 @@ const BlogSection = () => {
   const blogs = [
     {
       id: 1,
-      publisher: 'The Times of India',
-      title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में दुनियाभर से जुटेंगे 500 स्पीकर,......',
-      description: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत \'मॉर्निंग म्यूजिक नादा बिटवीन साउंड्स एंड साइलेंस\' से होगी, इस सत्र में कर्नाटक संगीत की प्रस्तुति के जरिए ध्वनि और मौन के बीच के संतुलन को प्रस्तुत किया जाएगा......',
+      publisher: 'Jaipur Oneness Festival',
+      title: 'Burnout isn’t a personal failure, it’s a sign to reconnect',
+      description: 'Staring at a laptop, unable to start? Burnout is not a character flaw. It is a predictable response to unsustainable pacing, and real recovery begins with genuine connection.',
+      slug: 'burnout-isnt-a-personal-failure-its-a-sign-to-reconnect',
     },
     {
       id: 2,
-      publisher: 'The Times of India',
-      title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में दुनियाभर से जुटेंगे 500 स्पीकर,......',
-      description: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत \'मॉर्निंग म्यूजिक नादा बिटवीन साउंड्स एंड साइलेंस\' से होगी, इस सत्र में कर्नाटक संगीत की प्रस्तुति के जरिए ध्वनि और मौन के बीच के संतुलन को प्रस्तुत किया जाएगा......',
+      publisher: 'Swami Dhyan Saraswati',
+      title: 'Meditation & Mindful Living in Modern Times',
+      description: 'Discover simple yet profound ways introducing a daily meditation practice can reduce stress, foster inner peace, and increase clarity.',
+      slug: 'meditation-transform-daily-routine',
     },
     {
       id: 3,
       publisher: 'The Times of India',
-      title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में दुनियाभर से जुटेंगे 500 स्पीकर,......',
-      description: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत \'मॉर्निंग म्यूजिक नादा बिटवीन साउंड्स एंड साइलेंस\' से होगी, इस सत्र में कर्नाटक संगीत की प्रस्तुति के जरिए ध्वनि और मौन के बीच के संतुलन को प्रस्तुत किया जाएगा......',
+      title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में दुनियाभर से जुटेंगे 500 स्पीकर',
+      description: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत \'मॉर्निंग म्यूजिक नादा बिटवीन साउंड्स एंड साइलेंस\' से होगी, इस सत्र में कर्नाटक संगीत की प्रस्तुति होगी...',
+      slug: 'jaipur-oneness-festival-speakers-gather',
     }
   ];
 
@@ -55,9 +58,9 @@ const BlogSection = () => {
                 </div>
                 <h3 className="blog-card-title">{blog.title}</h3>
                 <p className="blog-card-description">{blog.description}</p>
-                <a href="#readmore" className="blog-readmore-btn">
+                <Link to={`/blog-inner/${blog.slug}`} className="blog-readmore-btn">
                   READ MORE <span className="arrow">→</span>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

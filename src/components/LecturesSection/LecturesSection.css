@@ -7,7 +7,8 @@
   /* margin-top: -3px to close subpixel gaps */
   background: #ffffff;
   overflow: hidden;
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
 }
 
 .lectures-brush-top {
@@ -72,18 +73,18 @@
 
 .lectures-year {
   color: #a95d36;
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 32px;
   margin: 0 0 10px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
 }
 
 .lectures-title {
   color: #a95d36;
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(32px, 3vw, 42px);
   margin: 0 0 15px;
-  font-weight: 900;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1px;
 }
 
@@ -112,7 +113,8 @@
   border: none;
   padding: 15px 40px;
   text-decoration: none;
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 18px;
   cursor: pointer;
   box-shadow: none;
@@ -127,25 +129,25 @@
 @media (max-width: 1200px) {
   .lectures-container {
     min-height: 900px;
-  }
+}
 
   .lectures-text-content {
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
     padding: 0 20px;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .lectures-container {
     min-height: 700px;
     /* Reduced min-height to pull content closer */
-  }
+}
 
   .lectures-section {
     min-height: 635px;
-  }
+}
 
 
 
@@ -153,26 +155,26 @@
     max-height: 95%;
     bottom: -10px;
     /* Shifted down to hide white bottom area and reduce gap */
-  }
+}
 
   .lectures-text-content {
     margin-top: 60px;
-  }
+}
 
   .lectures-title {
     font-size: 28px;
-  }
+}
 }
 
 @media (max-width: 576px) {
   .lectures-container {
     min-height: 600px;
     /* Reduced min-height */
-  }
+}
 
   .lectures-illustration {
     max-height: 90%;
     bottom: -10px;
     /* Shifted down to hide white bottom area */
-  }
+}
 }

@@ -11,8 +11,11 @@ import flourishImg from '../assets/blog/Group 79 (2).png';
 import cardImg from '../assets/blog/Rectangle 37 (2).png';
 import did from '../assets/blog/Group 5 (7).png';
 
+import { DEFAULT_BLOGS } from '../data/blogData';
+
 const Blog = () => {
-  const [blogPosts, setBlogPosts] = useState([]);
+  const [blogPosts, setBlogPosts] = useState(DEFAULT_BLOGS);
+  const [visibleCount, setVisibleCount] = useState(3);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,19 +25,14 @@ const Blog = () => {
         const res = await fetch(`${API_URL}/blogs`);
         const data = await res.json();
         if (data.success && data.data.length > 0) {
-          setBlogPosts(data.data);
+          const hasBurnout = data.data.some(b => b.slug === DEFAULT_BLOGS[0].slug);
+          setBlogPosts(hasBurnout ? data.data : [DEFAULT_BLOGS[0], ...data.data]);
         } else {
-          // Fallback to static mock blogs
-          setBlogPosts(Array(6).fill({
-            author: 'The Times of India',
-            title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में दुनियाभर से जुटेंगे 500 स्पीकर,.....',
-            excerpt: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत \'मॉर्निंग म्यूजिक नाद बिल्विंग SOUND & SILENCE\' से होगी...',
-            slug: 'meditation-transform-daily-routine',
-            coverImage: cardImg
-          }));
+          setBlogPosts(DEFAULT_BLOGS);
         }
       } catch (err) {
-        console.error('Failed to fetch blogs', err);
+        console.error('Failed to fetch blogs, using default posts', err);
+        setBlogPosts(DEFAULT_BLOGS);
       }
     };
     fetchBlogs();
@@ -73,7 +71,7 @@ const Blog = () => {
         </div>
 
         <div className="blog-grid">
-          {blogPosts.map((post, index) => (
+          {blogPosts.slice(0, visibleCount).map((post, index) => (
             <div className="blog-card" key={post._id || index}>
               <div className="blog-card-img">
                 <img src={post.coverImage || cardImg} alt="Blog Cover" />
@@ -92,7 +90,12 @@ const Blog = () => {
         </div>
 
         <div className="load-more-container">
-          <button className="load-more-btn">LOAD MORE BLOGS</button>
+          <button 
+            className="load-more-btn"
+            onClick={() => setVisibleCount((prev) => prev + 3)}
+          >
+            LOAD MORE BLOGS
+          </button>
         </div>
          <div className="blog-hero-bottom-divider">
           <img src={bottomDivider} alt="divider" />
@@ -109,26 +112,26 @@ const Blog = () => {
 
         <div className="media-grid">
           <div className="media-grid-top">
-            <div className="media-video large">
+            <Link to="/gallery" className="media-video large" style={{ textDecoration: 'none', display: 'block' }}>
               <div className="play-button"></div>
-            </div>
-            <div className="media-video large">
+            </Link>
+            <Link to="/gallery" className="media-video large" style={{ textDecoration: 'none', display: 'block' }}>
               <div className="play-button"></div>
-            </div>
+            </Link>
           </div>
           <div className="media-grid-bottom">
-            <div className="media-video small">
+            <Link to="/gallery" className="media-video small" style={{ textDecoration: 'none', display: 'block' }}>
               <div className="play-button"></div>
-            </div>
-            <div className="media-video small">
+            </Link>
+            <Link to="/gallery" className="media-video small" style={{ textDecoration: 'none', display: 'block' }}>
               <div className="play-button"></div>
-            </div>
-            <div className="media-video small">
+            </Link>
+            <Link to="/gallery" className="media-video small" style={{ textDecoration: 'none', display: 'block' }}>
               <div className="play-button"></div>
-            </div>
-            <div className="media-video small">
+            </Link>
+            <Link to="/gallery" className="media-video small" style={{ textDecoration: 'none', display: 'block' }}>
               <div className="play-button"></div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

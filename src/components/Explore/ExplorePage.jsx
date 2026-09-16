@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import bgImage from '../../assets/exp explore page/image 36.png';
 import maskTop from '../../assets/exp explore page/Mask group (6).png';
 import maskBottom from '../../assets/exp explore page/Mask group (7).png';
@@ -23,7 +24,6 @@ export default function ExplorePage() {
   // References for smooth scrolling
   const thursdayRef = useRef(null);
   const fridayRef = useRef(null);
-  const saturdayRef = useRef(null);
 
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -64,9 +64,7 @@ export default function ExplorePage() {
           <h1 className="explore-title">FESTIVAL SCHEDULE</h1>
           
           <button className="explore-btn-white" onClick={() => window.open(mapImages[selectedMapPage], '_blank')}>
-            {/* <span className="deco-icon icon-tl">✾</span> */}
             DOWNLOAD NOW
-            {/* <span className="deco-icon icon-br">✾</span> */}
           </button>
         </div>
       </section>
@@ -203,16 +201,16 @@ export default function ExplorePage() {
                 <div className="pdf-viewer-sidebar">
                   {[1, 2, 3, 4, 5, 6].map(num => (
                     <div 
-                      key={num} 
-                      className={`pdf-thumbnail-item ${selectedMapPage === num ? 'pdf-thumbnail-active' : ''}`}
-                      onClick={() => setSelectedMapPage(num)}
-                    >
-                      <div className="pdf-thumbnail-image-wrapper">
-                        <img src={mapImages[num]} alt={`Thumbnail ${num}`} className="pdf-thumbnail-img" />
-                      </div>
-                      <div className="pdf-thumbnail-num">{num}</div>
+                    key={num} 
+                    className={`pdf-thumbnail-item ${selectedMapPage === num ? 'pdf-thumbnail-active' : ''}`}
+                    onClick={() => setSelectedMapPage(num)}
+                  >
+                    <div className="pdf-thumbnail-image-wrapper">
+                      <img src={mapImages[num]} alt={`Thumbnail ${num}`} className="pdf-thumbnail-img" />
                     </div>
-                  ))}
+                    <div className="pdf-thumbnail-num">{num}</div>
+                  </div>
+                ))}
                 </div>
                 
                 {/* Main View */}
@@ -248,7 +246,6 @@ export default function ExplorePage() {
           <div className="day-tabs-container">
             <button className="day-tab active" onClick={() => scrollToSection(thursdayRef)}>Day 1</button>
             <button className="day-tab" onClick={() => scrollToSection(fridayRef)}>Day 2</button>
-            <button className="day-tab" onClick={() => scrollToSection(saturdayRef)}>Day 3</button>
             <div className="day-date-label">THURSDAY, 5<sup>th</sup> DECEMBER</div>
           </div>
 
@@ -265,9 +262,11 @@ export default function ExplorePage() {
                 </p>
                 <div className="card-footer">
                   <span className="card-time">11:30 AM - 12:30 PM</span>
-                  <button className="card-read-more-btn">
-                    READ MORE <span className="arrow-icon">→</span>
-                  </button>
+                  <Link to="/tickets" style={{ textDecoration: 'none' }}>
+                    <button className="card-read-more-btn">
+                      READ MORE <span className="arrow-icon">→</span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -284,7 +283,6 @@ export default function ExplorePage() {
           <div className="day-tabs-container">
             <button className="day-tab" onClick={() => scrollToSection(thursdayRef)}>Day 1</button>
             <button className="day-tab active" onClick={() => scrollToSection(fridayRef)}>Day 2</button>
-            <button className="day-tab" onClick={() => scrollToSection(saturdayRef)}>Day 3</button>
             <div className="day-date-label">FRIDAY, 6<sup>th</sup> DECEMBER</div>
           </div>
 
@@ -341,7 +339,9 @@ export default function ExplorePage() {
                       </p>
                       <div className="scroll-footer">
                         <span className="scroll-time">11:30 AM - 12:30 PM</span>
-                        <button className="scroll-detail-btn">Detail</button>
+                        <Link to="/tickets" style={{ textDecoration: 'none' }}>
+                          <button className="scroll-detail-btn">Detail</button>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -356,7 +356,9 @@ export default function ExplorePage() {
                       </p>
                       <div className="scroll-footer">
                         <span className="scroll-time">11:30 AM - 12:30 PM</span>
-                        <button className="scroll-detail-btn">Detail</button>
+                        <Link to="/tickets" style={{ textDecoration: 'none' }}>
+                          <button className="scroll-detail-btn">Detail</button>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -376,7 +378,9 @@ export default function ExplorePage() {
                       </p>
                       <div className="scroll-footer">
                         <span className="scroll-time">11:30 AM - 12:30 PM</span>
-                        <button className="scroll-detail-btn">Detail</button>
+                        <Link to="/tickets" style={{ textDecoration: 'none' }}>
+                          <button className="scroll-detail-btn">Detail</button>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -396,156 +400,9 @@ export default function ExplorePage() {
                       </p>
                       <div className="scroll-footer">
                         <span className="scroll-time">11:30 AM - 12:30 PM</span>
-                        <button className="scroll-detail-btn">Detail</button>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── SATURDAY SECTION (DAY 3) ── */}
-      <section className="day-section saturday-section-bg" ref={saturdayRef}>
-        <div className="schedule-mandala-blue mandala-left"></div>
-        <div className="schedule-mandala-blue mandala-right"></div>
-        <div className="section-container">
-          {/* Day Navigation Tabs */}
-          <div className="day-tabs-container">
-            <button className="day-tab" onClick={() => scrollToSection(thursdayRef)}>Day 1</button>
-            <button className="day-tab" onClick={() => scrollToSection(fridayRef)}>Day 2</button>
-            <button className="day-tab active" onClick={() => scrollToSection(saturdayRef)}>Day 3</button>
-            <div className="day-date-label">SATURDAY, 7<sup>th</sup> DECEMBER</div>
-          </div>
-
-          {/* Scroll Hint Mobile */}
-          <div style={{ textAlign: 'center' }}>
-            <span className="scroll-hint-mobile">Swipe to scroll schedule &rarr;</span>
-          </div>
-
-          <div className="timeline-scroll-container">
-            {/* Column Headers Row (Aligned with Columns) */}
-            <div className="timeline-headers-row">
-              <div className="timeline-headers-spacer"></div>
-              <div className="timeline-headers-grid">
-                <div className="column-header-box col-header-red">
-                  <span className="col-header-title">LOREM IPSUM</span>
-                  <span className="col-header-subtitle">Lorem ipsum</span>
-                </div>
-                <div className="column-header-box col-header-green">
-                  <span className="col-header-title">LOREM IPSUM</span>
-                  <span className="col-header-subtitle">Lorem ipsum</span>
-                </div>
-                <div className="column-header-box col-header-blue">
-                  <span className="col-header-title">LOREM IPSUM</span>
-                  <span className="col-header-subtitle">Lorem ipsum</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Timeline Grid */}
-            <div className="timeline-grid-layout">
-              {/* Left Times Column */}
-              <div className="timeline-hours-col">
-                {["11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "01:00 PM", "01:30 PM", "02:00 PM", "02:30 PM", "03:00 PM", "03:50 PM", "04:00 PM", "05:30 PM", "06:00 PM", "06:30 PM", "07:00 PM", "07:30 PM", "08:00 PM", "08:30 PM", "09:00 PM", "09:30 PM", "10:00 PM"].map((time, idx) => (
-                  <div key={idx} className="timeline-time-label">{time}</div>
-                ))}
-              </div>
-
-              {/* Vertical Divider Line */}
-              <div className="timeline-vertical-line"></div>
-
-              {/* Columns of Scrolls */}
-              <div className="timeline-events-columns">
-                
-                {/* Column 1: Red Ribbon Scrolls */}
-                <div className="timeline-event-column red-column">
-                  
-                  {/* Scroll 1: 11:30 AM - 12:30 PM */}
-                  <div className="scroll-wrapper medium-scroll" style={{ top: '35px' }}>
-                    <img src={scrollMedium} alt="" className="scroll-bg-image" />
-                    <div className="scroll-content-overlay red-theme">
-                      <h4 className="scroll-title">LOREM IPSUM</h4>
-                      <p className="scroll-desc">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-                      </p>
-                      <div className="scroll-footer">
-                        <span className="scroll-time">11:30 AM - 12:30 PM</span>
-                        <button className="scroll-detail-btn">Detail</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Scroll 2: 04:00 PM - 05:30 PM */}
-                  <div className="scroll-wrapper medium-scroll" style={{ top: '500px' }}>
-                    <img src={scrollMedium} alt="" className="scroll-bg-image" />
-                    <div className="scroll-content-overlay red-theme">
-                      <h4 className="scroll-title">LOREM IPSUM</h4>
-                      <p className="scroll-desc">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-                      </p>
-                      <div className="scroll-footer">
-                        <span className="scroll-time">11:30 AM - 12:30 PM</span>
-                        <button className="scroll-detail-btn">Detail</button>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                {/* Column 2: Green Ribbon Scrolls */}
-                <div className="timeline-event-column green-column">
-                  
-                  {/* Scroll 1: 02:00 PM - 03:00 PM */}
-                  <div className="scroll-wrapper medium-scroll" style={{ top: '280px' }}>
-                    <img src={scrollMedium} alt="" className="scroll-bg-image" />
-                    <div className="scroll-content-overlay green-theme">
-                      <h4 className="scroll-title">LOREM IPSUM</h4>
-                      <p className="scroll-desc">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-                      </p>
-                      <div className="scroll-footer">
-                        <span className="scroll-time">11:30 AM - 12:30 PM</span>
-                        <button className="scroll-detail-btn">Detail</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Scroll 2: 06:30 PM - 07:30 PM */}
-                  <div className="scroll-wrapper medium-scroll" style={{ top: '750px' }}>
-                    <img src={scrollMedium} alt="" className="scroll-bg-image" />
-                    <div className="scroll-content-overlay green-theme">
-                      <h4 className="scroll-title">LOREM IPSUM</h4>
-                      <p className="scroll-desc">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-                      </p>
-                      <div className="scroll-footer">
-                        <span className="scroll-time">11:30 AM - 12:30 PM</span>
-                        <button className="scroll-detail-btn">Detail</button>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                {/* Column 3: Blue Ribbon Scrolls */}
-                <div className="timeline-event-column blue-column">
-                  
-                  {/* Scroll 1: 01:30 PM - 04:00 PM (Tall Scroll) */}
-                  <div className="scroll-wrapper tall-scroll" style={{ top: '150px' }}>
-                    <img src={scrollTall} alt="" className="scroll-bg-image" />
-                    <div className="scroll-content-overlay blue-theme">
-                      <h4 className="scroll-title">LOREM IPSUM</h4>
-                      <p className="scroll-desc">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
-                      </p>
-                      <div className="scroll-footer">
-                        <span className="scroll-time">11:30 AM - 12:30 PM</span>
-                        <button className="scroll-detail-btn">Detail</button>
+                        <Link to="/tickets" style={{ textDecoration: 'none' }}>
+                          <button className="scroll-detail-btn">Detail</button>
+                        </Link>
                       </div>
                     </div>
                   </div>

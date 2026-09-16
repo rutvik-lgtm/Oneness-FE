@@ -108,18 +108,18 @@
 }
 
 .teacher-inner-pretitle {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 26px;
-  font-weight: normal;
+  font-weight: var(--title-weight, 700);
   margin: 0 0 4px;
   letter-spacing: 0.5px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .teacher-inner-year {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 28px;
-  font-weight: normal;
+  font-weight: var(--title-weight, 700);
   margin: 0 0 24px;
   letter-spacing: 0.5px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
@@ -127,9 +127,9 @@
 
 /* Button Wrapper and Corner Decorations */
 .teacher-inner-btn {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 15px;
-  font-weight: bold;
+  font-weight: var(--title-weight, 700);
   color: #111111;
   background-image: url('../../assets/homepage/button/Group 60 (8).png');
   background-size: 100% 100%;
@@ -194,7 +194,8 @@
 
 /* Large Teacher Name styling */
 .teacher-inner-name {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 54px;
   color: #f7a522; /* Warm yellow/orange */
   margin: 0 0 4px;
@@ -221,16 +222,17 @@
 }
 
 .desc-highlight {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 19px;
   margin: 0;
   font-style: italic;
-  font-weight: 500;
+  font-weight: var(--body-weight, 400);
   letter-spacing: 0.3px;
 }
 
 .desc-sub {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 16px;
   margin: 0;
   opacity: 0.9;
@@ -242,97 +244,97 @@
   .teacher-inner-container {
     gap: 40px;
     padding: 110px 30px 90px;
-  }
+}
 
   .teacher-inner-name {
     font-size: 44px;
-  }
+}
 
   .teacher-inner-pretitle {
     font-size: 22px;
-  }
+}
 
   .teacher-inner-year {
     font-size: 24px;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .teacher-inner-hero {
     min-height: auto;
     height: auto;
-  }
+}
 
   .teacher-inner-container {
     flex-direction: column;
     gap: 50px;
     padding: 120px 20px 80px;
-  }
+}
 
   .teacher-inner-photo-frame {
     max-width: 320px;
-  }
+}
 
   .teacher-inner-name {
     font-size: 38px;
-  }
+}
 
   .teacher-inner-pretitle {
     font-size: 20px;
-  }
+}
 
   .teacher-inner-year {
     font-size: 22px;
-  }
+}
 
   .teacher-inner-brush {
     height: 100px;
-  }
+}
   
   .teacher-inner-brush-bottom {
     bottom: -3px;
     height: 75px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .teacher-inner-container {
     gap: 30px;
     padding: 100px 15px 60px;
-  }
+}
 
   .teacher-inner-photo-frame {
     max-width: 250px;
-  }
+}
 
   .teacher-inner-name {
     font-size: 30px;
     letter-spacing: 1px;
-  }
+}
 
   .teacher-inner-pretitle {
     font-size: 17px;
-  }
+}
 
   .teacher-inner-year {
     font-size: 18px;
     margin-bottom: 15px;
-  }
+}
 
   .teacher-inner-btn {
     font-size: 13px;
     padding: 10px 28px;
-  }
+}
 
   .desc-highlight {
     font-size: 16px;
-  }
+}
 
   .desc-sub {
     font-size: 14px;
-  }
+}
 
   .teacher-inner-brush {
     height: 70px;
-  }
+}
 }

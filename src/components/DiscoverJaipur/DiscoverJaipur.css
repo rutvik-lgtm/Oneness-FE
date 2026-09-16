@@ -96,9 +96,9 @@
 
 /* Title */
 .dj-title {
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(32px, 3.5vw, 40px);
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #2F302D;
   letter-spacing: 2px;
   margin: 0 0 10px;
@@ -115,10 +115,10 @@
 
 /* Lead text/Subtitle */
 .dj-subtitle {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 17px;
   line-height: 1.7;
-  font-weight: 400;
+  font-weight: var(--title-weight, 700);
   color: #333333;
   margin: 0 0 24px;
   max-width: 560px;
@@ -126,7 +126,8 @@
 
 /* Paragraphs */
 .dj-description {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 16px;
   line-height: 1.7;
   color: #333333;
@@ -152,9 +153,9 @@
   color: #ffffff;
   border: none;
   padding: 0 40px;
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1.5px;
   cursor: pointer;
   box-shadow: none;
@@ -183,27 +184,27 @@
   .dj-container {
     gap: 40px;
     padding: 0 15px;
-  }
+}
 
   .dj-palace-img {
     max-width: 450px;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .discover-jaipur-section {
     padding: 70px 15px;
-  }
+}
 
   .dj-container {
     flex-direction: column;
     align-items: center;
     gap: 48px;
-  }
+}
 
   .dj-left {
     justify-content: center;
-  }
+}
 
   .dj-palace-img {
     width: 100% !important;
@@ -213,30 +214,30 @@
     display: block;
     transform: scale(1.2);
     /* Scales up the palace building equally from the center */
-  }
+}
 
   .dj-right {
     max-width: 500px;
     margin-left: 0;
     margin-top: -125px;
     padding-right: 0;
-  }
+}
 
   .dj-rickshaw-icon {
     width: 80px;
-  }
+}
 
   .dj-explore-btn {
     min-width: 290px;
     min-height: 54px;
     padding: 10px 30px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .discover-jaipur-section {
     padding: 50px 10px;
-  }
+}
 
   .dj-palace-img {
     width: 125% !important;
@@ -246,15 +247,15 @@
     display: block;
     transform: scale(1.35);
     margin-top: -45px;
-  }
+}
 
   .dj-rickshaw-icon {
     width: 70px;
-  }
+}
 
   .dj-explore-btn {
     min-width: 270px;
     min-height: 50px;
     font-size: 11px;
-  }
+}
 }

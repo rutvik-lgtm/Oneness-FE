@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Roboto+Serif:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .accommodation-reg-section {
   padding: 100px 24px;
@@ -35,7 +35,8 @@
   max-width: 620px;
   margin: 0 auto;
   color: #aa3344;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   gap: 12px;
 }
 
@@ -45,9 +46,9 @@
 }
 
 .accomm-reg-year {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(24px, 4vw, 36px);
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   background: linear-gradient(to bottom,
       #d77a3f 0%,
       #b45a2b 40%,
@@ -60,9 +61,9 @@
 }
 
 .accomm-reg-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(28px, 4.5vw, 42px);
-  font-weight: 800;
+  font-weight: var(--title-weight, 700);
   background: linear-gradient(to bottom,
       #d77a3f 0%,
       #b45a2b 40%,
@@ -76,9 +77,9 @@
 }
 
 .accomm-reg-subtitle {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(22px, 3.5vw, 34px);
-  font-weight: 800;
+  font-weight: var(--title-weight, 700);
   background: linear-gradient(to bottom,
       #d77a3f 0%,
       #b45a2b 40%,
@@ -106,7 +107,8 @@
 }
 
 .accomm-reg-desc {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 16px;
   line-height: 1.6;
   color: #554440;
@@ -127,7 +129,8 @@
   color: #ffffff;
   border: none;
   padding: 12px 36px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 16px;
   letter-spacing: 1.5px;
   cursor: pointer;
@@ -181,7 +184,8 @@
   padding: 35px 35px 35px 70px;
   border-radius: 20px;
   /* Radius from Figma */
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.05);
   position: relative;
   transition: transform 0.3s ease;
@@ -210,16 +214,16 @@
 }
 
 .info-title-v2 {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 24px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   margin: 0 0 15px 0;
   color: inherit;
 }
 
 .info-text-v2 {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   line-height: 30px;
   margin-bottom: 25px;
 }
@@ -235,7 +239,7 @@
 
 .info-list-v2 li {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   line-height: 1.5;
   display: flex;
   align-items: flex-start;
@@ -250,9 +254,9 @@
 }
 
 .info-contact-v2 {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 18px;
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   margin: 0 0 15px 0;
   display: flex;
   align-items: center;
@@ -333,9 +337,9 @@
 }
 
 .accomm-reg-group label {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #665550;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -350,7 +354,8 @@
   border-radius: 8px;
   background-color: #FCF7F0;
   /* Soft warm peach/cream input color from user's photo */
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 15px;
   color: #333333;
   outline: none;
@@ -396,7 +401,8 @@
   color: #ffffff;
   border: none;
   padding: 14px 40px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 18px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -426,14 +432,16 @@
 }
 
 .accomm-booking-success-message h4 {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 26px;
   color: #aa3344;
   margin: 0 0 12px 0;
 }
 
 .accomm-booking-success-message p {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 16px;
   line-height: 1.6;
   color: #554440;
@@ -446,7 +454,8 @@
   color: #ffffff;
   border: none;
   border-radius: 6px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 15px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -469,24 +478,24 @@
   from {
     opacity: 0;
     transform: translateX(-40px);
-  }
+}
 
   to {
     opacity: 1;
     transform: translateX(0);
-  }
+}
 }
 
 @keyframes fadeInRight {
   from {
     opacity: 0;
     transform: translateX(40px);
-  }
+}
 
   to {
     opacity: 1;
     transform: translateX(0);
-  }
+}
 }
 
 /* Responsiveness adjustments */
@@ -494,52 +503,52 @@
   .accomm-reg-container {
     gap: 20px;
     padding: 0 15px;
-  }
+}
 
   .accomm-info-box {
     width: 100%;
     max-width: 500px;
-  }
+}
 }
 
 @media (max-width: 992px) {
   .accomm-reg-container {
     flex-direction: column;
     align-items: center;
-  }
+}
 
   .accomm-reg-left {
     width: 100%;
-  }
+}
 
   .accomm-reg-right {
     width: 100%;
     margin-top: 50px;
-  }
+}
 
   .accomm-layered-frame {
     width: 100%;
     max-width: 655px;
     padding: 60px 40px;
-  }
+}
 
   .accomm-reg-guide-wrapper {
     flex-direction: row;
     align-items: center;
     gap: 0;
     width: 100%;
-  }
+}
 
   .boy-img-container {
     flex-shrink: 0;
     z-index: 11;
     transform: translateX(10px);
-  }
+}
 
   .accomm-reg-boy {
     height: 220px;
     width: auto;
-  }
+}
 
   .accomm-info-box {
     flex-grow: 1;
@@ -547,70 +556,70 @@
     margin-left: -20px;
     padding: 20px 15px 20px 30px;
     border-radius: 15px;
-  }
+}
 
   .info-title-v2 {
     font-size: 15px;
     margin-bottom: 5px;
-  }
+}
 
   .info-text-v2,
   .info-list-v2 li {
     font-size: 11px;
     line-height: 16px;
     margin-bottom: 5px;
-  }
+}
 
   .accomm-reg-reserve-btn {
     padding: 12px 20px;
     font-size: 14px;
     margin-bottom: 20px;
-  }
+}
 
   .accomm-reg-reserve-btn {
     /* font-size: 12px !important; */
     min-height: 40px !important;
     min-width: 150px !important;
-  }
+}
 
 }
 
 @media (max-width: 600px) {
   .accommodation-reg-section {
     padding: 40px 10px;
-  }
+}
 
   .accomm-layered-frame {
     width: 100%;
     max-width: 450px;
     padding: 80px 35px 80px 35px;
     min-height: auto;
-  }
+}
 
   .accomm-form-header-v2 {
     margin-bottom: 20px;
-  }
+}
 
   .accomm-form-logo-v2 {
     width: 100px;
-  }
+}
 
   .accomm-reg-row {
     flex-direction: column;
     gap: 15px;
-  }
+}
 
   /* Guide Wrapper Mobile Fixes */
   .boy-img-container {
     transform: translateX(5px);
-  }
+}
 
   .accomm-reg-boy {
     margin-top: 6px;
         height: 180px;
         position: absolute;
         margin-left: 260px;
-  }
+}
 
   .info-list-v2 {
   list-style: none;
@@ -619,32 +628,32 @@
     display: flex;
     flex-direction: column;
     gap: 0px;
-  }
+}
 
   .accomm-info-box {
     padding: 15px 10px 15px 20px;
     margin-left: 0px;
-  }
+}
 
   .info-title-v2 {
     font-size: 16px;
-  }
+}
 
   .info-text-v2,
   .info-list-v2 li {
     font-size: 12px;
     line-height: 20px;
-  }
+}
   
   .info-contact-v2 {
     font-size: 13px;
     word-break: break-all;
-  }
+}
 
   .accomm-reg-submit-btn {
     background-size: 50% 50%;
     width: 40%;
     padding: 12px 20px;
     font-size: 14px;
-  }
+}
 }

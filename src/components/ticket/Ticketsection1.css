@@ -1,7 +1,8 @@
 .tickets-section {
   padding: 80px 0 100px;
   background-color: #ffffff;
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   margin-top: -2px;
   /* Fix for 1px subpixel rendering gap */
   position: relative;
@@ -21,6 +22,21 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 60px;
+}
+
+.tickets-main-heading {
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif) !important;
+  font-size: clamp(34px, 5vw, 60px);
+  font-weight: var(--title-weight, 700) !important;
+  color: #ffaa00;
+  text-align: center;
+  margin: 10px 0 25px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow:
+    2px 2px 0px #9d5000,
+    3px 3px 0px #9d5000,
+    4px 4px 8px rgba(0, 0, 0, 0.45);
 }
 
 .custom-logo-container {
@@ -50,8 +66,8 @@
   align-items: flex-start;
   color: #65463E;
   /* Warm dark brown */
-  font-family: 'Arial', sans-serif;
-  font-weight: 900;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   text-transform: uppercase;
 }
 
@@ -106,7 +122,8 @@
 }
 
 .info-item span {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
 }
 
 /* Layout Split */
@@ -202,10 +219,10 @@
 }
 
 .ticket-title {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 26px;
   /* Smaller title */
-  font-weight: bold;
+  font-weight: var(--title-weight, 700);
   color: #222;
   margin: 0 0 10px 0;
   letter-spacing: 1px;
@@ -292,7 +309,8 @@
   border: none;
   padding: 12px 40px;
   font-size: 20px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   cursor: pointer;
   letter-spacing: 1px;
   transition: transform 0.3s ease;
@@ -365,9 +383,9 @@
 }
 
 .coming-soon-title {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 46px;
-  font-weight: bold;
+  font-weight: var(--title-weight, 700);
   color: #49366e;
   line-height: 1.1;
   margin: 0 0 20px 0;
@@ -422,13 +440,13 @@
 @media (max-width: 1024px) {
   .tickets-content-split {
     flex-direction: column;
-  }
+}
 
   .tickets-left,
   .tickets-right {
     max-width: 100%;
     width: 100%;
-  }
+}
 }
 
 @media (max-width: 768px) {
@@ -437,35 +455,35 @@
     justify-content: center;
     gap: 10px;
     /* Small gap to fit in one line */
-  }
+}
 
   .info-item {
     font-size: 12px;
     /* Smaller text to ensure it fits in one line */
     gap: 5px;
-  }
+}
 
   .info-item svg {
     width: 16px;
     height: 16px;
-  }
+}
 
   .tickets-grid {
     grid-template-columns: 1fr;
-  }
+}
 
   .coming-soon-card {
     padding: 50px 30px;
-  }
+}
 
   .coming-soon-title {
     font-size: 32px;
     margin-top: 40px;
-  }
+}
 
   .card-inner p {
     font-size: 14px;
-  }
+}
 
   .sunset-placeholder {
     position: relative;
@@ -474,7 +492,7 @@
     justify-content: center;
     width: 100%;
     margin-bottom: 33px;
-  }
+}
 
   .sunset-image {
     width: 90%;
@@ -482,82 +500,82 @@
     height: auto;
     border-radius: 12px;
     display: block;
-  }
+}
 
   .custom-logo-container {
     flex-direction: column;
     gap: 15px;
     margin-bottom: 30px;
     margin-left: 0;
-  }
+}
 
   .custom-logo-img {
     width: 400px;
-  }
+}
 
   .logo-text-wrapper {
     margin-left: 0;
     align-items: center;
-  }
+}
 
   .lotus-logo-img {
     width: 180px;
     max-width: 60%;
-  }
+}
 
   .jaipur-text,
   .oneness-text,
   .festival-text {
     font-size: 36px;
-  }
+}
 
   .krishna-i {
     height: 40px;
     margin: 0 2px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .custom-logo-img {
     width: 280px;
-  }
+}
 
   .lotus-logo-img {
     width: 120px;
     max-width: 80%;
-  }
+}
 
   .jaipur-text,
   .oneness-text,
   .festival-text {
     font-size: 24px;
-  }
+}
 
   .krishna-i {
     height: 28px;
-  }
+}
 
   .page-btn {
     width: 38px;
     height: 38px;
     font-size: 16px;
-  }
+}
 
   .select-btn {
     padding: 8px 20px;
     font-size: 13px;
-  }
+}
 
   .coming-soon-card {
     padding: 30px 15px;
-  }
+}
 
   .card-frame-inner {
     top: 15px;
     left: 15px;
     width: calc(100% - 30px);
     height: calc(100% - 30px);
-  }
+}
 }
 
 /* Booking Modal Styles */
@@ -587,12 +605,12 @@
 }
 
 .booking-modal-title {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   color: #49366e;
   font-size: 28px;
   margin-top: 0;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: var(--title-weight, 700);
 }
 
 .booking-form {

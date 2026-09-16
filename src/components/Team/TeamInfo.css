@@ -19,7 +19,8 @@
 
 .team-info-year,
 .team-info-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   color: #AF4935;
   /* Earthy rust/maroon color */
   margin: 0;
@@ -50,7 +51,8 @@
 }
 
 .team-info-text {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: clamp(15px, 2vw, 17px);
   line-height: 1.8;
   color: #4A4640;
@@ -63,9 +65,9 @@
 @media (max-width: 768px) {
   .team-info-section {
     padding: 60px 15px 80px;
-  }
+}
 
   .team-info-separator-container {
     margin: 20px 0 25px;
-  }
+}
 }

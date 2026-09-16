@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Playfair+Display:wght@400;700;800&family=Roboto+Serif:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .team-hero {
   position: relative;
@@ -63,9 +63,9 @@
 }
 
 .team-subtitle {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(22px, 3.5vw, 32px);
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1px;
   margin: 0;
   color: #ffffff;
@@ -80,7 +80,8 @@
 }
 
 .team-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: clamp(49px, 2.5vw, 99px);
   color: #F8B12F;
   /* Warm Gold contrast matching the logo and the image text */
@@ -94,26 +95,26 @@
   .team-hero {
     height: 65vh;
     min-height: 450px;
-  }
+}
 
   .team-brush-top,
   .team-brush-bottom {
     height: 70px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .team-hero {
     height: 60vh;
     min-height: 400px;
-  }
+}
 
   .team-brush-top,
   .team-brush-bottom {
     height: 50px;
-  }
+}
 
   .team-title {
     letter-spacing: 1px;
-  }
+}
 }

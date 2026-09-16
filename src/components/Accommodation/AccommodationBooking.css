@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .accommodation-booking-section {
   padding: 100px 24px;
@@ -31,7 +31,8 @@
 }
 
 .guide-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 36px;
   color: #2b1f1d;
   margin: 0;
@@ -39,7 +40,8 @@
 }
 
 .guide-intro {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 16px;
   line-height: 1.7;
   color: #554440;
@@ -70,9 +72,9 @@
 }
 
 .box-title {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 20px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   margin: 0 0 16px 0;
   color: inherit;
 }
@@ -88,16 +90,17 @@
 
 .guide-list li {
   padding-left: 10px;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 15px;
   line-height: 1.6;
   color: #333333;
 }
 
 .contact-detail {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   margin: 10px 0;
   display: flex;
   align-items: center;
@@ -161,7 +164,8 @@
 }
 
 .booking-form-subtitle {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 22px;
   color: #2b1f1d;
   letter-spacing: 1.5px;
@@ -182,9 +186,9 @@
 }
 
 .booking-group label {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #665550;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -198,7 +202,8 @@
   border: 1px solid #ebdcd9;
   border-radius: 8px;
   background-color: #FAF9F6;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 15px;
   color: #333333;
   outline: none;
@@ -241,7 +246,8 @@
   color: #ffffff;
   border: none;
   padding: 14px 32px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 18px;
   letter-spacing: 1px;
   cursor: pointer;
@@ -275,14 +281,16 @@
 }
 
 .booking-success-message h4 {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 28px;
   color: #aa3344;
   margin: 0 0 12px 0;
 }
 
 .booking-success-message p {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 16px;
   line-height: 1.6;
   color: #554440;
@@ -295,7 +303,8 @@
   color: #ffffff;
   border: none;
   border-radius: 6px;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 15px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -310,33 +319,33 @@
   .accomm-booking-container {
     flex-direction: column;
     gap: 40px;
-  }
+}
   .accomm-booking-left {
     position: static;
     width: 100%;
-  }
+}
   .accomm-booking-right {
     width: 100%;
-  }
+}
   .booking-layered-frame {
     max-width: 100%;
     padding: 60px 30px;
-  }
+}
 }
 
 @media (max-width: 600px) {
   .accommodation-booking-section {
     padding: 60px 16px;
-  }
+}
   .booking-row {
     flex-direction: column;
     gap: 16px;
-  }
+}
   .booking-layered-frame {
     padding: 50px 35px;
-  }
+}
   .booking-submit-btn {
     width: 100%;
     font-size: 16px;
-  }
+}
 }

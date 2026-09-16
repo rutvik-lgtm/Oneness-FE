@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Playfair+Display:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .contact-bottom-section {
   position: relative;
@@ -75,9 +75,9 @@
 }
 
 .cb-year {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 40px;
-  font-weight: 400;
+  font-weight: var(--title-weight, 700);
   color: #FAF4E5;
   letter-spacing: 2px;
   line-height: 100%;
@@ -86,9 +86,9 @@
 }
 
 .cb-title {
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 46px;
-  font-weight: 400;
+  font-weight: var(--title-weight, 700);
   color: #FAF4E5;
   letter-spacing: 3px;
   margin: 0;
@@ -103,7 +103,8 @@
 }
 
 .cb-desc {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 16px;
   color: rgba(250, 244, 229, 0.85);
   margin: 0;
@@ -127,9 +128,9 @@
   border: 2px solid #ffffff;
   border-radius: 0px;
   color: #ffffff;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 19px;
-  font-weight: 500;
+  font-weight: var(--body-weight, 400);
   text-align: center;
   outline: none;
   transition: border-color 0.3s ease;
@@ -165,7 +166,8 @@
   background-repeat: no-repeat;
   background-color: transparent;
   color: #71423D;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 16px;
   letter-spacing: 2px;
   border: none;
@@ -187,7 +189,7 @@
   .cb-btn {
     width: 80%;
     max-width: 280px;
-  }
+}
 }
 
 .cb-btn:hover {
@@ -229,9 +231,9 @@
 @media (max-width: 768px) {
   .cb-title {
     font-size: 32px;
-  }
+}
 
   .cb-form {
     max-width: 320px;
-  }
+}
 }

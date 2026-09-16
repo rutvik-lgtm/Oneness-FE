@@ -109,16 +109,17 @@
 }
 
 .profile-name {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 28px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #333333;
   margin: 0 0 15px 0;
   letter-spacing: 0.5px;
 }
 
 .profile-desc {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 15px;
   line-height: 1.8;
   color: #777777;
@@ -130,41 +131,41 @@
   .camel-left {
     left: -120px;
     width: 200px;
-  }
+}
   .camel-right {
     right: -120px;
     width: 200px;
-  }
+}
   
   .profile-row {
     gap: 40px;
-  }
+}
   
   .profile-image-col {
     flex: 0 0 300px;
-  }
+}
 }
 
 @media (max-width: 768px) {
   .camel-left, .camel-right {
     display: none; /* Hide decorative camels on mobile if they overlap too much */
-  }
+}
 
   .profile-row, .profile-row.row-reverse {
     flex-direction: column;
     text-align: center;
     gap: 30px;
-  }
+}
 
   .profile-text-col.text-left, 
   .profile-text-col.text-right {
     text-align: center;
     padding: 0 20px;
-  }
+}
   
   .profile-image-col {
     flex: 0 0 auto;
     width: 80%;
     max-width: 300px;
-  }
+}
 }

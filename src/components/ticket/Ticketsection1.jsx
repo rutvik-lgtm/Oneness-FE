@@ -175,6 +175,7 @@ const TicketsSection = () => {
       <div className="tickets-container">
         {/* Header Info */}
         <div className="festival-info-header">
+          <h1 className="tickets-main-heading">GET YOUR TICKETS</h1>
           <div className="custom-logo-container">
             <img src={logoFile} alt="Jaipur Oneness Festival Logo" className="custom-logo-img" />
           </div>

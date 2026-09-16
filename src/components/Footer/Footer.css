@@ -3,7 +3,8 @@
   /* Matched exactly to the bottom pixel of group 94.png */
   color: #d1d5db;
   z-index: 99;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   position: relative;
   margin-top: auto;
 }
@@ -295,7 +296,7 @@ width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-  }
+}
 
 .footer-bottom-content {
 width: 100%;
@@ -313,33 +314,33 @@ width: 100%;
     grid-column: span 2;
     /* Contact takes full width */
     margin-bottom: 20px;
-  }
+}
 
   .right-section {
     grid-column: span 2;
     /* Newsletter section full width */
-  }
+}
 
   .footer-middle {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
+}
 
   .footer-search {
     justify-content: center;
     width: 100%;
-  }
+}
 
   .footer-search input {
     max-width: 100%;
-  }
+}
 
   .footer-bottom-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
+}
 }
 
 /* Mobile Specific Fixes */
@@ -347,7 +348,7 @@ width: 100%;
   .footer-top-bg {
     height: 60px;
     /* Scaled down significantly for mobile */
-  }
+}
 
 .footer-bottom-content {
 width: 100%;
@@ -367,7 +368,7 @@ width: 100%;
     top: auto;
     bottom: 100px;
     opacity: 0.15;
-  }
+}
 
   .right-top-links {
     display: flex;
@@ -376,25 +377,25 @@ width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 15px;
-  }
+}
 
   .sub-col {
     min-width: 30%;
     /* Ensure they fit side by side */
-  }
+}
 
   .newsletter-form {
     flex-direction: column;
     gap: 10px;
-  }
+}
 
   .newsletter-form input {
     border-radius: 4px;
-  }
+}
 
   .newsletter-form button {
     padding: 12px;
     width: 100%;
     border-radius: 4px;
-  }
+}
 }

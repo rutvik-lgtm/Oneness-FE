@@ -2,7 +2,8 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 60px 20px;
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   margin-bottom: 90px;
 }
 
@@ -19,19 +20,19 @@
 .tid-title {
   color: #A85A3F;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   text-transform: uppercase;
-  font-family: Irish Grover;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   margin-bottom: 10px;
   letter-spacing: 1px;
 }
 
 .tid-subtitle {
-    font-family: Roboto Serif;
+    font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   letter-spacing: 1px;
   color: #4B2F7E;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   line-height: 1.4;
   margin-bottom: 20px;
 }
@@ -44,7 +45,8 @@
 }
 
 .tid-content {
-    font-family: Roboto Serif;
+    font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+    font-weight: var(--body-weight, 400);
   color: #888888;
   font-size: 0.95rem;
   line-height: 1.8;
@@ -121,14 +123,14 @@
   font-family: 'Brush Script MT', 'Caveat', cursive, serif;
 }
 
-.tid-vt-live { 
+.tid-vt-live {
   font-size: 2.2rem; 
   color: #fff; 
   margin-bottom: -15px; 
   font-weight: normal;
 }
 
-.tid-vt-night { 
+.tid-vt-night {
   font-size: 6rem; 
   color: #d67a2a; 
   font-weight: 800; 
@@ -137,7 +139,7 @@
   letter-spacing: 2px; 
 }
 
-.tid-vt-rock { 
+.tid-vt-rock {
   font-size: 2rem; 
   color: #fff; 
   margin-top: -15px; 
@@ -179,13 +181,13 @@
   margin-left: 4px;
 }
 
-.tid-vt-special { 
+.tid-vt-special {
   font-size: 1.8rem; 
   color: #d67a2a; 
   margin: 0; 
   text-align: right;
 }
-.tid-vt-names { 
+.tid-vt-names {
   font-size: 1rem; 
   font-weight: bold; 
   margin-bottom: 0; 
@@ -212,14 +214,14 @@
   text-align: right;
 }
 
-.tid-book-text { 
+.tid-book-text {
   font-size: 1.5rem; 
   color: #d67a2a; 
   margin: 0 0 5px 0; 
   line-height: 1; 
 }
 
-.tid-book-url { 
+.tid-book-url {
   font-size: 0.9rem; 
   margin: 0; 
   font-weight: bold;
@@ -239,7 +241,7 @@
   cursor: pointer;
 }
 
-.yt-logo { 
+.yt-logo {
   height: 16px; 
   width: 16px;
 }
@@ -306,25 +308,25 @@
     padding: 30px;
     align-items: center;
     text-align: center;
-  }
+}
   .tid-video-left {
     display: none;
-  }
+}
   .tid-vt-desc, .tid-vt-special, .tid-vt-names, .tid-vt-book {
     text-align: center;
-  }
+}
   .tid-play-area {
     justify-content: center;
     flex-direction: column;
-  }
+}
   .tid-play-btn {
     margin-right: 0;
     margin-bottom: 10px;
-  }
+}
   .tid-vt-bottom {
     flex-direction: column;
-  }
+}
   .tid-vertical-text {
     display: none;
-  }
+}
 }

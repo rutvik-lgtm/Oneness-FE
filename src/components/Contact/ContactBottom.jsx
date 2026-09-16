@@ -82,7 +82,7 @@ const ContactBottom = () => {
             color: status.success ? '#FAF4E5' : '#ff9999', 
             marginTop: '15px', 
             fontWeight: 'bold',
-            fontFamily: 'Playfair Display, serif',
+            fontFamily: "'Cormorant Garamond', Georgia, serif",
             fontSize: '16px'
           }}>
             {status.message}

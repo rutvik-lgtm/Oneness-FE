@@ -1,64 +1,84 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import bgImage from '../../assets/exp page img/Screenshot 2026-04-11 at 10.43.51AM 1.png';
+
+// Hero Background Images
+import expHero1 from '../../assets/exp.png';
+import expHero2 from '../../assets/Expereince (2).png';
+import expHero3 from '../../assets/exp3.png';
+import expHero4 from '../../assets/exp4.png';
 import maskGroup from '../../assets/Mask group.png';
 import peacockFeather from '../../assets/exp page img/image 13.png';
 import group5 from '../../assets/exp page img/Group 5.png';
 import textureBg from '../../assets/exp page img/image 34 (1).png';
 
-// New images for the cards section
+// Images for the cards section
 import group218 from '../../assets/exp2 page img/Group 218.png';
 import group219 from '../../assets/exp2 page img/Group 219.png';
 import group220 from '../../assets/exp2 page img/Group 220.png';
 import group221 from '../../assets/exp2 page img/Group 221.png';
 
-
 import './ExperiencePage.css';
 
-export default function ExperiencePage() {
-  const [startIndex, setStartIndex] = React.useState(0);
-  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+const heroSlides = [
+  { src: expHero1, position: 'center 68%' },
+  { src: expHero2, position: 'center 42%' },
+  { src: expHero3, position: 'center 50%' },
+  { src: expHero4, position: 'center 40%' }
+];
 
-  React.useEffect(() => {
+export default function ExperiencePage() {
+  const [startIndex, setStartIndex] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
+
+  // Auto-rotate hero slides every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentHeroSlide((prev) => (prev === heroSlides.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const cards = [
-    { 
-      img: group218, 
-      title: 'PROGRAM', 
-      description: 'Workshops, performances, and immersive experiences', 
+    {
+      img: group221,
+      title: 'LIFETIME ACHIEVEMENT AWARD',
+      description: 'Recognizing enduring impact and devotion',
+      link: '/achievement',
+      btnText: 'EXPLORE AWARD'
+    },
+    {
+      img: group218,
+      title: 'PROGRAM – Schedule',
+      description: 'Workshops, performances, and immersive experiences',
       link: '/explore',
       btnText: 'EXPLORE PROGRAM'
     },
-    { 
-      img: group219, 
-      title: 'TEACHERS & ARTISTS', 
-      description: 'Facilitators, performers, and inspiring voices', 
+    {
+      img: group219,
+      title: 'TEACHERS & ARTISTS',
+      description: 'Facilitators, performers, and inspiring voices',
       link: '/teacher',
       btnText: 'EXPLORE TEACHERS & ARTISTS'
     },
-    { 
-      img: group220, 
-      title: 'BAZAAR', 
-      description: 'Marketplace of soulful, conscious creations', 
+    {
+      img: group220,
+      title: 'BAZAAR',
+      description: 'Marketplace of soulful, conscious creations',
       link: '/bazaar',
       btnText: 'EXPLORE BAZAAR'
-    },
-    { 
-      img: group221, 
-      title: 'LIFETIME ACHIEVEMENT AWARD', 
-      description: 'Recognizing enduring impact and devotion', 
-      link: '/achievement',
-      btnText: 'EXPLORE AWARD'
     }
   ];
 
   const getVisibleCount = () => {
     if (windowWidth <= 768) return 2;
-    if (windowWidth <= 1200) return 2;
+    if (windowWidth <= 1200) return 3;
     return 4;
   };
 
@@ -82,16 +102,16 @@ export default function ExperiencePage() {
     setStartIndex((prev) => (prev + 1) % cards.length);
   };
 
-  React.useEffect(() => {
-    if (visibleCount >= cards.length) return;
+  // Auto-rotate cards every 4 seconds
+  useEffect(() => {
     const timer = setInterval(() => {
       setStartIndex((prev) => (prev + 1) % cards.length);
-    }, 4000); // rotate every 4 seconds
+    }, 4000);
     return () => clearInterval(timer);
-  }, [cards.length, visibleCount]);
+  }, [cards.length]);
 
   return (
-    <div style={{ width: '100%', minHeight: '100vh', backgroundColor: '#fff', fontFamily: 'Roboto, sans-serif' }}>
+    <div style={{ width: '100%', minHeight: '100vh', backgroundColor: '#fff', fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
 
       <svg width="0" height="0" style={{ position: 'absolute' }}>
         <defs>
@@ -103,27 +123,58 @@ export default function ExperiencePage() {
 
       {/* ── HERO SECTION ── */}
       <section className="exp-hero">
-        <img src={bgImage} alt="Background" className="exp-hero-bg" />
+        <div className="exp-slider-container">
+          {heroSlides.map((slide, index) => (
+            <div
+              key={index}
+              className={`exp-slide ${index === currentHeroSlide ? 'active' : ''}`}
+            >
+              <img
+                src={slide.src}
+                alt={`Experience ${index + 1}`}
+                className="exp-slide-img"
+                style={{ objectPosition: slide.position }}
+              />
+            </div>
+          ))}
+        </div>
         <div className="exp-hero-overlay" />
-        <img src={maskGroup} alt="Mask" className="exp-hero-mask" />
+        <img src={maskGroup} alt="Header Brush" className="exp-hero-mask" />
         <div className="exp-hero-content">
-          <h2 className="exp-hero-text-small">
+          <h2 className="exp-hero-subtitle">
             Teachers, Artists, Humanitarian leaders, Wisdom, Meditation,<br />
             Culture, Music, and Shared Humanity
           </h2>
-          <h1 className="exp-hero-text-large">
+          <h1 className="exp-hero-title">
             More information will be revealed soon here.
           </h1>
           <div className="exp-btn-container" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
-            {/* <Link to="/explore" className="exp-btn-white"> */}
             <Link to="/explore" className="exp-btn-white">
-
               EXPLORE PROGRAM
             </Link>
             <Link to="/achievement" className="exp-btn-outline">
               ACHIEVEMENT AWARD
             </Link>
           </div>
+        </div>
+
+        <div className="exp-slider-indicators">
+          {heroSlides.map((_, index) => (
+            <div
+              key={index}
+              className={`exp-indicator ${index === currentHeroSlide ? 'active' : ''}`}
+              onClick={() => setCurrentHeroSlide(index)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setCurrentHeroSlide(index);
+                }
+              }}
+              aria-label={`Slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
@@ -133,9 +184,8 @@ export default function ExperiencePage() {
         <div className="step-into-content">
           <h2 className="step-into-heading">
             ONENESS FESTIVAL IS NOT SOMETHING YOU SIMPLY ATTEND, IT'S <br />
-            SOMETHING YOU STEP INTO.
+            SOMETHING YOU STEP INTO ONENESS WITH EVERYTHING HERE.
           </h2>
-          {/* New Decorative Divider Image (Group 5.png) */}
           <img src={group5} alt="Decorative Divider" className="divider-img-exp" />
           <p className="step-into-para">
             Over the course of the festival, you are invited into a carefully curated journey of movement, music, stillness, and connection. From immersive workshops and ceremonies to vibrant performances and shared moments in nature, each element is designed to bring you closer to yourself and those around you. This is a space where expression is free, presence is felt, and connection becomes real. Whether you come to explore, to release, or to simply be, the experience meets you where you are, and gently invites you deeper.
@@ -145,39 +195,61 @@ export default function ExperiencePage() {
 
       {/* ── CARDS SECTION ── */}
       <section className="cards-section">
-        <div className="cards-container">
-          {visibleIndices.map((cardIdx) => {
-            const card = cards[cardIdx];
-            const isFirst = cardIdx === startIndex;
-            const isSecond = cardIdx === (startIndex + 1) % cards.length;
+        <div className="cards-slider-outer">
+          <button
+            type="button"
+            className="carousel-side-arrow arrow-left"
+            onClick={handlePrev}
+            aria-label="Previous cards"
+          >
+            <span>‹</span>
+          </button>
 
-            return (
-              <div 
-                key={cardIdx} 
-                className={`card-item mobile-visible ${isFirst ? 'mobile-first' : ''} ${isSecond ? 'mobile-second' : ''}`}
-              >
-                <img className="direct-card-img" src={card.img} alt={card.title} />
-                <h3 className="card-item-title">{card.title}</h3>
-                <p className="card-item-desc">{card.description}</p>
-                <div className="card-item-btn-wrap">
-                  <Link 
-                    to={card.link} 
-                    className="card-explore-btn"
-                  >
-                    {card.btnText}
-                  </Link>
+          <div className="cards-container">
+            {visibleIndices.map((cardIdx) => {
+              const card = cards[cardIdx];
+              return (
+                <div
+                  key={cardIdx}
+                  className="card-item"
+                >
+                  <img className="direct-card-img" src={card.img} alt={card.title} />
+                  <h3 className="card-item-title">{card.title}</h3>
+                  <p className="card-item-desc">{card.description}</p>
+                  <div className="card-item-btn-wrap">
+                    <Link
+                      to={card.link}
+                      className="card-explore-btn"
+                    >
+                      {card.btnText}
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
- 
-        {cards.length > 1 && (
-          <div className="nav-arrows">
-            <div className="nav-arrow arrow-left" onClick={handlePrev}><span>‹</span></div>
-            <div className="nav-arrow arrow-right" onClick={handleNext}><span>›</span></div>
+              );
+            })}
           </div>
-        )}
+
+          <button
+            type="button"
+            className="carousel-side-arrow arrow-right"
+            onClick={handleNext}
+            aria-label="Next cards"
+          >
+            <span>›</span>
+          </button>
+        </div>
+
+        {/* Carousel Dots */}
+        <div className="cards-carousel-dots">
+          {cards.map((_, index) => (
+            <span
+              key={index}
+              className={`cards-dot ${startIndex === index ? 'active' : ''}`}
+              onClick={() => setStartIndex(index)}
+              aria-label={`Go to card ${index + 1}`}
+            />
+          ))}
+        </div>
       </section>
       <svg width="0" height="0" style={{ position: 'absolute' }}>
         <defs>

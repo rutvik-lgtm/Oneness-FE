@@ -13,6 +13,7 @@ const TourRegistration = () => {
     email: '',
     phone: '',
     tourId: '',
+    numberOfDays: '',
     specialNotes: ''
   });
 
@@ -60,8 +61,8 @@ const TourRegistration = () => {
       const data = await res.json();
       if (data.success) {
         setBookingDetails(data.data);
-        // If there are special notes, we can also log a contact inquiry
-        if (formData.specialNotes) {
+        // If there are special notes or numberOfDays, we can also log a contact inquiry
+        if (formData.specialNotes || formData.numberOfDays) {
           await fetch(`${API_URL}/inquiries`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -70,7 +71,7 @@ const TourRegistration = () => {
               fullName: formData.fullName,
               email: formData.email,
               phone: formData.phone,
-              details: `Tour Special Notes: ${formData.specialNotes} (Tour Booking ID: ${data.data._id})`
+              details: `Days interested: ${formData.numberOfDays || 'Not specified'}. Notes: ${formData.specialNotes || 'None'} (Tour Booking ID: ${data.data._id})`
             })
           });
         }
@@ -210,6 +211,20 @@ const TourRegistration = () => {
                         </option>
                       ))}
                     </select>
+                  </div>
+
+                  <div className="reg-group">
+                    <label htmlFor="numberOfDays">No. of days you are interested in holiday</label>
+                    <input 
+                      id="numberOfDays"
+                      name="numberOfDays"
+                      type="number" 
+                      min="1"
+                      max="60"
+                      value={formData.numberOfDays}
+                      onChange={handleChange}
+                      placeholder="e.g. 3, 5, 7" 
+                    />
                   </div>
 
                   <div className="reg-group">

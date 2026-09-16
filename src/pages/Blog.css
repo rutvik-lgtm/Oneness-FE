@@ -1,6 +1,7 @@
 /* Blog Page Styles */
 .blog-page {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   /* Fallback if fonts are not loaded globally */
 }
 
@@ -74,30 +75,32 @@
 
 .blog-hero-content h2 {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
+  color: #ffffff !important;
   margin-bottom: 0.5rem;
-  font-family: Roboto Serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   /* Assuming serif font from design */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .blog-hero-content h1 {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: var(--title-weight, 700);
   margin: 0;
   margin-top: 2rem;
   color: #F8B133;
   letter-spacing: 2px;
   /* Golden yellow */
   text-transform: uppercase;
-  font-family: 'Irish Grover';
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Section Headers */
 
 .yeaar{
-  font-family: 'Irish Grover';
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   
 }
 
@@ -109,19 +112,19 @@
 
 .section-header h3 {
   font-size: 1.2rem;
-  font-family: 'Irish Grover';
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   color: #000000;
   /* Brownish color */
   margin: 0;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
 }
 
 .section-header h2 {
-  font-family: 'Irish Grover';
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 2rem;
   color: #000000;
   margin: 0.5rem 0;
-  font-weight: 800;
+  font-weight: var(--title-weight, 700);
 }
 
 .section-header2 {
@@ -132,19 +135,19 @@
 
 .section-header2 h3 {
   font-size: 1.2rem;
-  font-family: 'Irish Grover';
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   color: #be410c;
   /* Brownish color */
   margin: 0;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
 }
 
 .section-header2 h2 {
-  font-family: 'Irish Grover';
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 2rem;
   color: #be410c;
   margin: 0.5rem 0;
-  font-weight: 800;
+  font-weight: var(--title-weight, 700);
 }
 
 .flourish-icon {
@@ -224,9 +227,9 @@
 }
 
 .blog-title {
-  font-family: Roboto Serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   /* margin: 0 0 1rem; */
   color: #1a1a1a;
   line-height: 1.4;
@@ -244,7 +247,7 @@
   color: #D94838;
   /* Red link */
   text-decoration: none;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   font-size: 0.9rem;
   align-self: flex-start;
 }
@@ -269,8 +272,8 @@
   width: 290px;
   height: 60px;
   font-size: 1.05rem;
-  font-weight: 700;
-  font-family: 'Irish Grover', 'Inter', sans-serif;
+  font-weight: var(--title-weight, 700);
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -367,7 +370,7 @@
   .media-grid-top,
   .media-grid-bottom {
     grid-template-columns: 1fr;
-  }
+}
 
   .did-icon{
   width: 75%;
@@ -377,9 +380,9 @@
 
   .blog-hero-content h2 {
     font-size: 1.8rem;
-  }
+}
 
   .blog-hero-content h1 {
     font-size: 2.5rem;
-  }
+}
 }

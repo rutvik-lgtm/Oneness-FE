@@ -56,9 +56,9 @@
 }
 
 .tickets-titlet {
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(26px, 3.5vw, 40px);
-  font-weight: 900;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 2px;
   margin: 0 0 16px;
   text-transform: uppercase;
@@ -74,10 +74,10 @@
 }
 
 .tickets-subtitlet {
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(14px, 1.2vw, 16px);
   line-height: 1.6;
-  font-weight: 500;
+  font-weight: var(--title-weight, 700);
   max-width: 800px;
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.9);
@@ -136,9 +136,9 @@
 
 /* Ticket typography (Normal Card) */
 .ticket-typet {
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: #61556e;
@@ -146,18 +146,18 @@
 }
 
 .ticket-pricet {
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 40px;
-  font-weight: 800;
+  font-weight: var(--title-weight, 700);
   color: #1a1622;
   margin-bottom: 12px;
   letter-spacing: 0.5px;
 }
 
 .ticket-desct {
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: var(--title-weight, 700);
   color: #716680;
 }
 
@@ -182,9 +182,9 @@
   transform: translateX(-50%);
   /* background-color: #f7ab36; */
   color: #1a1510;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 11px;
-  font-weight: 800;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1px;
   padding: 4px 18px;
   /* border-radius: 20px; */
@@ -247,9 +247,9 @@
 
 .tickets-button-text {
   color: #ffffff;
-  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 19px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 2px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -312,51 +312,51 @@
 @media (max-width: 1100px) {
   .tickets-gridt {
     gap: 20px;
-  }
+}
 
   .ticket-cardt {
     width: 290px;
     height: 205px;
-  }
+}
 
   .ticket-cardt.popular-cardt {
     height: 220px;
-  }
+}
 
   .ticket-pricet {
     font-size: 34px;
-  }
+}
 
   .tickets-krishna-imgt {
     width: 240px;
     right: 20px;
-  }
+}
 }
 
 @media (max-width: 990px) {
   .tickets-sectiont {
     padding-bottom: 220px;
     /* Make room for Krishna overlapping bottom */
-  }
+}
 
   .tickets-gridt {
     flex-direction: column;
     gap: 30px;
-  }
+}
 
   .ticket-cardt,
   .ticket-cardt.popular-cardt {
     width: 340px;
     height: 240px;
-  }
+}
 
   .ticket-cardt.popular-cardt {
     height: 257px;
-  }
+}
 
   .ticket-pricet {
     font-size: 42px;
-  }
+}
 
   .tickets-krishna-imgt {
     width: 200px;
@@ -364,59 +364,59 @@
     left: auto;
     transform: none;
     bottom: -10px;
-  }
+}
 
   .tickets-sectiont:hover .tickets-krishna-imgt {
     transform: translateY(-5px);
-  }
+}
 }
 
 @media (max-width: 520px) {
   .tickets-sectiont {
     padding: 60px 15px 200px;
-  }
+}
 
   .ticket-cardt,
   .ticket-cardt.popular-cardt {
     width: 290px;
     height: 205px;
-  }
+}
 
   .ticket-cardt.popular-cardt {
     height: 220px;
-  }
+}
 
   .ticket-pricet {
     font-size: 34px;
-  }
+}
 
   .tickets-book-buttont {
     width: 100%;
     max-width: 320px;
     height: 44px;
     clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
-  }
+}
 
   .tickets-book-buttont-inner {
     clip-path: polygon(0 0, calc(100% - 9.5px) 0, 100% 9.5px, 100% 100%, 9.5px 100%, 0 calc(100% - 9.5px));
     padding: 0 10px;
     gap: 8px;
-  }
+}
 
   .tickets-button-flower-icon {
     width: 13px;
     height: 13px;
-  }
+}
 
   .tickets-button-text {
     font-size: 13.5px;
     letter-spacing: 0.8px;
-  }
+}
 
   .tickets-krishna-imgt {
     width: 150px;
     right: 15px;
     left: auto;
     transform: none;
-  }
+}
 }

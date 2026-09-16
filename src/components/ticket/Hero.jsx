@@ -2,17 +2,17 @@ import React from 'react';
 import './Hero.css';
 
 // Importing the background image. The user uploaded this specific image for the hero section.
-import heroBg from '../../assets/656fd55f3adb3f02dea92b12ef0c38cb109ad874.png'; 
+import heroBg from '../../assets/656fd55f3adb3f02dea92b12ef0c38cb109ad874.png';
 
 const Hero = () => {
   return (
     <section className="hero-section">
       {/* Background Image */}
-      <div 
-        className="hero-bg-image" 
+      <div
+        className="hero-bg-image"
         style={{ backgroundImage: `url(${heroBg})` }}
       ></div>
-      
+
       {/* Purple Tint Overlay */}
       <div className="hero-overlay"></div>
 
@@ -24,7 +24,6 @@ const Hero = () => {
       <div className="hero-content">
         <h1>The Oneness Festival</h1>
         <h2>2026</h2>
-        <button className="tickets-text-btn">GET YOUR TICKETS</button>
       </div>
     </section>
   );

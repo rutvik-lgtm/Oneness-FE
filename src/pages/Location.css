@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Roboto+Serif:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 .location-page {
   width: 100%;
@@ -65,7 +65,8 @@
 
 .location-hero-title {
   color: #fff;
-  font-family: 'Irish Grover', cursive;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   line-height: 88px;
   /* Based on 84px font size */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -78,14 +79,14 @@
 .location-hero-title .year {
   font-size: 64px;
   /* Scaled down slightly relative to main title if needed, or 84px */
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   letter-spacing: 3px;
 }
 
 .location-hero-title .main-title {
   font-size: 84px;
   /* Exact spec from image */
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   color: #fca72a;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -96,7 +97,7 @@
 .location-hero-title .venue {
   font-size: 64px;
   /* Scaled down slightly, adjust if all should be 84px */
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   letter-spacing: 3px;
 }
 
@@ -118,8 +119,8 @@
 }
 
 .section-heading {
-  font-family: 'Irish Grover', cursive;
-  font-weight: 400;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--title-weight, 700);
   font-size: 39px;
   line-height: 100%;
   letter-spacing: 2px;
@@ -163,7 +164,8 @@
   flex: 1;
   border: none;
   outline: none;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 14px;
   color: #3c4043;
   background: transparent;
@@ -199,10 +201,10 @@
 }
 
 .description-text {
-  font-family: 'Roboto Serif', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 12px;
   color: #231F1F;
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   line-height: 30px;
   letter-spacing: 0px;
   text-align: center;
@@ -240,10 +242,10 @@
 }
 
 .bottom-description-text {
-   font-family: 'Roboto Serif', serif;
+   font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: 12px;
   color: #231F1F;
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   line-height: 30px;
   letter-spacing: 0px;
   text-align: center;
@@ -288,82 +290,82 @@
 @media (max-width: 768px) {
   .location-hero-title {
     line-height: 1.2;
-  }
+}
 
   .location-hero-title .year {
     font-size: 40px;
     line-height: 48px;
-  }
+}
 
   .location-hero-title .main-title {
     font-size: 50px;
     line-height: 56px;
-  }
+}
 
   .location-hero-title .venue {
     font-size: 40px;
     line-height: 48px;
-  }
+}
 
   .location-hero-divider {
     max-width: 90%;
     height: auto;
-  }
+}
 
   .section-heading {
     font-size: 32px;
     /* Adjusted for mobile slightly, or keep 40px */
-  }
+}
 
   .section-divider {
     max-width: 90%;
     height: auto;
-  }
+}
 
   .default-place-card-container {
     top: 20%;
     left: 8%;
     width: 84%;
     max-width: 280px;
-  }
+}
 
   .loc-grid {
     grid-template-columns: 1fr;
-  }
+}
 
   .location-gallery-section {
     padding: 0 20px 80px;
-  }
+}
 }
 
 @media (max-width: 480px) {
   .location-hero {
     padding: 80px 15px;
-  }
+}
 
   .location-hero-title .year {
     font-size: 28px;
-  }
+}
 
   .location-hero-title .main-title {
     font-size: 32px;
-  }
+}
 
   .location-hero-title .venue {
     font-size: 28px;
-  }
+}
 
   .section-heading {
     font-size: 24px;
-  }
+}
 
   .description-text, .bottom-description-text {
     line-height: 22px;
     font-size: 13px;
-  }
+}
 
   .default-place-card-container {
     height: 36px;
     padding: 0 6px;
-  }
+}
 }

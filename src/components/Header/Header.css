@@ -72,7 +72,7 @@
 
 .desktop-nav a.tickets {
   color: #aa3344;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
 }
 
 /* Submenu / Dropdown styling (Desktop) */
@@ -444,17 +444,17 @@
     justify-content: space-between;
     align-items: center;
     gap: 0;
-  }
+}
 
   .logo img {
     height: 50px;
-  }
+}
 
   .desktop-nav {
     display: none;
-  }
+}
 
   .menu-btn {
     display: flex;
-  }
+}
 }

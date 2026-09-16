@@ -44,9 +44,9 @@
 }
 
 .stay-year {
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(24px, 3vw, 34px);
-  font-weight: 900;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 3px;
   margin: 0 0 6px;
   color: #ffffff;
@@ -54,9 +54,9 @@
 }
 
 .stay-title {
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(22px, 3vw, 34px);
-  font-weight: 900;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 2px;
   margin: 0 0 16px;
   text-transform: uppercase;
@@ -72,10 +72,10 @@
 }
 
 .stay-subtitle {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(13px, 1.1vw, 15px);
   line-height: 1.7;
-  font-weight: 400;
+  font-weight: var(--body-weight, 400);
   font-style: italic;
   max-width: 700px;
   margin: 0 auto;
@@ -146,9 +146,9 @@
 
 /* Hotel Name */
 .stay-hotel-name {
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: clamp(16px, 1.4vw, 20px);
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   color: #ffffff;
   margin: 0 0 6px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
@@ -169,7 +169,8 @@
 
 /* Hotel Description/Address */
 .stay-hotel-desc {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: 12px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.8);
@@ -195,9 +196,9 @@
   color: black;
   border: none;
   padding: 14px 20px;
-  font-family: 'Irish Grover', 'Georgia', serif;
+  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: var(--title-weight, 700);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   cursor: pointer;
@@ -231,7 +232,8 @@
 
 /* ===== BOTTOM NOTE ===== */
 .stay-bottom-note {
-  font-family: 'Georgia', serif;
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-weight: var(--body-weight, 400);
   font-size: clamp(12px, 1vw, 14px);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.75);
@@ -270,20 +272,20 @@
     /* Pulls background up on tablet */
     padding: 230px 15px 60px;
     /* Pushes text down on tablet */
-  }
+}
 
   .stay-hotels-grid {
     gap: 30px;
-  }
+}
 
   .stay-hotel-card {
     width: 240px;
-  }
+}
 
   .stay-hotel-frame-wrap {
     width: 200px;
     height: 220px;
-  }
+}
 }
 
 @media (max-width: 768px) {
@@ -292,12 +294,12 @@
     /* Pulls background up on mobile */
     padding: 200px 15px 280px;
     /* Increased bottom padding to push container above camels illustration */
-  }
+}
 
   .stay-bottom-brush {
     bottom: 5px;
     /* Pushed the camels image down to the very bottom on mobile view */
-  }
+}
 
   .stay-hotels-grid {
     flex-direction: row;
@@ -314,7 +316,7 @@
     padding: 0 10px;
     /* Minimized side paddings to maximize card width */
     box-sizing: border-box;
-  }
+}
 
   .stay-hotel-card {
     display: none;
@@ -323,14 +325,14 @@
     /* Super-sized card width to occupy maximum screen area */
     opacity: 0;
     transition: opacity 0.4s ease;
-  }
+}
 
   .stay-hotel-card.mobile-visible {
     display: flex;
     /* Show only the active pair */
     opacity: 1;
     animation: fadeInStay 0.5s ease-out forwards;
-  }
+}
 
   .stay-hotel-frame-wrap {
     width: 175px;
@@ -338,32 +340,32 @@
     height: 185px;
     /* Super-sized frame wrap height */
     margin-bottom: 10px;
-  }
+}
 
   .stay-hotel-img {
     top: 15px;
-  }
+}
 
   .stay-hotel-name {
     font-size: 13.5px;
     margin: 0 0 4px;
     letter-spacing: 0.5px;
-  }
+}
 
   .stay-hotel-stars {
     margin-bottom: 4px;
     gap: 2px;
-  }
+}
 
   .stay-hotel-stars .star {
     font-size: 9px;
-  }
+}
 
   .stay-hotel-desc {
     font-size: 10.5px;
     line-height: 1.3;
     max-width: 100%;
-  }
+}
 
   /* Carousel Navigation Buttons overlaying the edges */
   .stay-carousel-btn {
@@ -390,37 +392,37 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
     padding: 0;
     line-height: 1;
-  }
+}
 
   .stay-carousel-btn:active {
     transform: translateY(-50%) scale(0.9);
     background-color: rgba(247, 171, 54, 0.5);
-  }
+}
 
   .stay-carousel-btn.prev-btn {
     left: -10px;
     /* Overlap slightly on the left edge */
-  }
+}
 
   .stay-carousel-btn.next-btn {
     right: -10px;
     /* Overlap slightly on the right edge */
-  }
+}
 
   .stay-explore-btn {
     font-size: 12px;
     padding: 12px 30px;
-  }
+}
 
   .stay-bottom-note {
     color: #1a1622 !important;
     /* Deep dark charcoal for maximum contrast on the light camel background */
-    font-weight: 700;
+    font-weight: var(--title-weight, 700);
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
     /* Soft white outline shadow for 100% legibility */
     max-width: 600px;
     margin: 15px auto 0;
-  }
+}
 }
 
 /* ===== CAROUSEL INDICATORS & TRANSITIONS ===== */
@@ -438,7 +440,7 @@
     margin-top: 12px;
     margin-bottom: 24px;
     z-index: 10;
-  }
+}
 
   .stay-indicator-dot {
     width: 8px;
@@ -449,26 +451,26 @@
     padding: 0;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+}
 
   .stay-indicator-dot.active {
     background-color: #f7ab36;
     /* Golden indicator color */
     transform: scale(1.3);
     box-shadow: 0 0 8px rgba(247, 171, 54, 0.7);
-  }
+}
 }
 
 @keyframes fadeInStay {
   from {
     opacity: 0;
     transform: translateY(12px);
-  }
+}
 
   to {
     opacity: 1;
     transform: translateY(0);
-  }
+}
 }
 
 @media (max-width: 520px) {
@@ -477,11 +479,11 @@
     /* Pulls background up on small mobile */
     padding: 150px 15px 410px;
     /* Increased bottom padding on small screens */
-  }
+}
 
   .stay-title-divider {
     width: 200px;
-  }
+}
 
   .stay-hotels-grid {
     max-width: 440px;
@@ -490,39 +492,39 @@
     /* Zero side space wastage */
     gap: 6px;
     /* Near-zero gap between cards */
-  }
+}
 
   .stay-hotel-card {
     width: 175px;
     /* Extremely large card width on standard small mobile screen */
-  }
+}
 
   .stay-hotel-frame-wrap {
     width: 150px;
     height: 160px;
-  }
+}
 
   .stay-hotel-img {
     top: 13px;
-  }
+}
 
   /* Adjust arrow button vertical centering and overlay overlap */
   .stay-carousel-btn {
     top: 80px;
     /* Centered relative to new 160px frame height */
-  }
+}
 
   .stay-carousel-btn.prev-btn {
     left: -12px;
-  }
+}
 
   .stay-carousel-btn.next-btn {
     right: -12px;
-  }
+}
 
   .stay-explore-btn {
     font-size: 11px;
     padding: 11px 20px;
     letter-spacing: 1px;
-  }
+}
 }
