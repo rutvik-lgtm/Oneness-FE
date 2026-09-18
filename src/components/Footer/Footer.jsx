@@ -71,8 +71,8 @@ const Footer = () => {
             <div className="contact-details">
               <p>
                 <strong>Email:</strong><br/>
-                <a href="mailto:Rishi@thekalragroup.in">Rishi@thekalragroup.in</a><br/>
-                <a href="mailto:Rahul@thekalragroup.in">Rahul@thekalragroup.in</a><br/>
+                <a href="mailto:rishi@thekalragroup.in">rishi@thekalragroup.in</a><br/>
+                <a href="mailto:rahul@thekalragroup.in">rahul@thekalragroup.in</a><br/>
                 <a href="mailto:yash@kalragroup.in">yash@kalragroup.in</a>
               </p>
               <p>
@@ -113,7 +113,6 @@ const Footer = () => {
             <h3>Blog & Media</h3>
             <ul>
               <li><Link to="/blog">Blog</Link></li>
-              <li><Link to="/gallery">Media</Link></li>
             </ul>
           </div>
 

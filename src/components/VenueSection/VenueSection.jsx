@@ -28,9 +28,9 @@ const VenueSection = () => {
         </div>
 
         {/* Right Image */}
-        <div className="venue-right">
+        {/* <div className="venue-right">
           <img src={venueImage} alt="Oneness Festival Venue" className="venue-image" />
-        </div>
+        </div> */}
       </div>
     </section>
   );

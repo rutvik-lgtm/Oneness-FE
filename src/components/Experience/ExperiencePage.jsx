@@ -55,7 +55,7 @@ export default function ExperiencePage() {
     },
     {
       img: group218,
-      title: 'PROGRAM – Schedule',
+      title: 'SCHEDULE',
       description: 'Workshops, performances, and immersive experiences',
       link: '/explore',
       btnText: 'EXPLORE PROGRAM'
@@ -146,7 +146,7 @@ export default function ExperiencePage() {
             Culture, Music, and Shared Humanity
           </h2>
           <h1 className="exp-hero-title">
-            More information will be revealed soon here.
+            Step into Oneness, with Everything
           </h1>
           <div className="exp-btn-container" style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
             <Link to="/explore" className="exp-btn-white">

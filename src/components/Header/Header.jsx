@@ -84,17 +84,14 @@ const Header = () => {
       path: '/packages',
       submenu: [
         { name: 'Accommodation', path: '/accommodations' },
-        { name: 'Accommodations registration', path: '/accommodation' },
+        { name: 'Accommodations registration', path: '/accommodation-registration' },
         { name: 'Tour packages', path: '/tour-packages' },
         { name: 'Tours registration', path: '/toursregistration' }
       ]
     },
     { 
       name: 'Blog', 
-      path: '/blog',
-      submenu: [
-        { name: 'Gallery', path: '/gallery' }
-      ]
+      path: '/blog'
     },
     { name: 'Get Involved', path: '/get-involved' },
     { name: 'Contact', path: '/contact' },

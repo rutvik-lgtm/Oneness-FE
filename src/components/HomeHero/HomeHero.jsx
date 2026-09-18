@@ -71,7 +71,7 @@ const HomeHero = () => {
         {/* Buttons */}
         <div className="home-hero-buttons">
           <Link to="/tickets" className="btn-magical-world">
-            UNVEIL A MAGICAL WORLD
+            It's a belief; it will be an experience
           </Link>
         </div>
       </div>

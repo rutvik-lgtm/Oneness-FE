@@ -126,7 +126,7 @@
 
 .about-text-wrapper {
   max-width: 800px;
-  text-align: center;
+  text-align: left;
   font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
   font-weight: var(--body-weight, 400);
   color: #4a4a4a;
@@ -367,7 +367,7 @@
   font-size: clamp(1.1rem, 1.4vw, 1.25rem);
   line-height: 1.8;
   color: #ffffff;
-  text-align: center;
+  text-align: left;
   margin: 0;
 }
 

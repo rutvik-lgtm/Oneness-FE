@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './AboutPage.css';
 
-import bgImage from '../../assets/about us/About Page.png';
+import bgImage from '../../assets/exp.png';
 import topMask from '../../assets/about us/Mask group (27).png';
 import bottomMask from '../../assets/about us/Mask group (26).png';
 import flowerIcon from '../../assets/about us/Group 55.png';
@@ -40,9 +40,8 @@ const AboutPage = () => {
         <img src={topMask} alt="Top Torn Edge" className="about-mask-top mask-overlay" />
 
         <div className="about-hero-content">
-          <h1>ABOUT<br />JAIPUR ONENESS<br />FESTIVAL</h1>
-          <p className="about-hero-date">00 January - 00 January<br />2026</p>
-
+          <h1>You’re the loveliest just as on today, because the present, is all we have.</h1>
+          
           {/* Floating Flowers */}
           <img src={flowerIcon} alt="flower" className="about-flower about-flower-1" />
           <img src={flowerIcon} alt="flower" className="about-flower about-flower-2" />
@@ -54,14 +53,6 @@ const AboutPage = () => {
       {/* Intro Text Section */}
       <section className="about-intro">
         <div className="about-text-wrapper">
-          <p>
-            Jaipur Oneness Festival is a cultural and spiritual gathering celebrating oneness and
-            connection in India. It is a space to reconnect with your own essence, experience
-            wholeness within yourself, and explore life from your true self. When we live
-            authentically, others can see us clearly, and we naturally attract people and
-            circumstances that resonate with our path.
-          </p>
-          <img src={flowerIcon} alt="flower" className="about-flower about-flower-3" />
           <p className="about-text-second">
             The festival brings together people who wish to live, move, and relate from their true
             selves, sharing a sense of unity,<br />

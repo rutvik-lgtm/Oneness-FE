@@ -199,9 +199,9 @@
 }
 
 .shift-text {
-  font-family: var(--font-title, 'Cormorant Garamond', Georgia, serif);
+  font-family: 'Roboto-serif';
   font-size: 34px;
-  font-weight: var(--title-weight, 700);
+  font-weight: bold;
   margin-bottom: 15px;
   color: #fff;
   letter-spacing: 0.5px;
@@ -211,19 +211,18 @@
   font-size: 18px;
   margin-bottom: 40px;
   color: #f0f0f0;
-  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
-  font-weight: var(--body-weight, 400);
+  font-family: 'Georgia', serif;
 }
 
 .oneness-title {
   font-size: 72px;
-  font-weight: var(--title-weight, 700);
+  font-weight: 900;
   letter-spacing: 3px;
   margin: 10px 0;
   color: #fff;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-family: 'Irish Grover';
 }
 
 .ornament {
@@ -258,16 +257,15 @@
   line-height: 1.6;
   margin-bottom: 20px;
   color: #eaeaea;
-  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
-  font-weight: var(--body-weight, 400);
+  font-family: 'Georgia', serif;
 }
 
 .connection-text {
   font-size: 22px;
-  font-weight: var(--title-weight, 700);
+  font-weight: bold;
   color: #fff;
   margin-bottom: 35px;
-  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-family: 'Georgia', serif;
 }
 
 .home-hero-buttons {
@@ -280,11 +278,11 @@
   padding: 16px 45px;
   border-radius: 40px;
   border: 1px solid #fff;
-  font-weight: var(--title-weight, 700);
+  font-weight: bold;
   font-size: 18px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-family: 'Irish Grover', 'Georgia', serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);

@@ -345,7 +345,8 @@
 }
 
   .about-us-right {
-    display: none;
+    display: flex;
+    margin-top: 30px;
 }
 }
 

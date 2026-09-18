@@ -285,6 +285,7 @@
   background: transparent;
   transition: background 0.2s, border-color 0.2s;
   letter-spacing: 0.3px;
+  text-align: center;
 }
 
 .tp-package-link:hover {
