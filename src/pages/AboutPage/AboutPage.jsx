@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './AboutPage.css';
 
-import bgImage from '../../assets/exp.png';
+import bgImage from '../../assets/exp page img/about.png';
 import topMask from '../../assets/about us/Mask group (27).png';
 import bottomMask from '../../assets/about us/Mask group (26).png';
 import flowerIcon from '../../assets/about us/Group 55.png';

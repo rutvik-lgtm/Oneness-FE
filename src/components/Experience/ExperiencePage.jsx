@@ -183,8 +183,7 @@ export default function ExperiencePage() {
         <img src={peacockFeather} alt="" className="peacock-feather" />
         <div className="step-into-content">
           <h2 className="step-into-heading">
-            ONENESS FESTIVAL IS NOT SOMETHING YOU SIMPLY ATTEND, IT'S <br />
-            SOMETHING YOU STEP INTO ONENESS WITH EVERYTHING HERE.
+            STEP INTO ONENESS WITH EVERYTHING HERE.
           </h2>
           <img src={group5} alt="Decorative Divider" className="divider-img-exp" />
           <p className="step-into-para">
