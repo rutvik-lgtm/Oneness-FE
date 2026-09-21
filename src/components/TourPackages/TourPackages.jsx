@@ -197,7 +197,7 @@ export default function TourPackages() {
               rel="noopener noreferrer"
               className="tp-package-link"
             >
-              <span className="tp-link-highlight red">Jawai Tour</span> Tour Package
+              <span className="tp-link-highlight red">Jaipur Forts</span> Tour Package
             </a>
 
             <button
