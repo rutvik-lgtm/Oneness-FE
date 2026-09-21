@@ -191,14 +191,14 @@ export default function TourPackages() {
             >
               <span className="tp-link-highlight orange">Ajmer & Pushkar Tour</span> Package
             </a>
-            {/* <a
-              href="/pdfs/jaipur-heritage.pdf"
+            <a
+              href="/pdfs/jawai-tour.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="tp-package-link"
             >
-              <span className="tp-link-highlight red">Jaipur Heritage</span> Tour Package
-            </a> */}
+              <span className="tp-link-highlight red">Jawai Tour</span> Tour Package
+            </a>
 
             <button
               type="button"  
