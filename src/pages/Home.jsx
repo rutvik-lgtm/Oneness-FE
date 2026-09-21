@@ -26,7 +26,7 @@ const Home = () => {
       <BlogSection />
       <TicketsSection />
       <VenueSection />
-      <StaySection />
+      {/* <StaySection /> */}
       <DiscoverJaipur />
       <GallerySection />
     </>
