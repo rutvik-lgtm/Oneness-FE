@@ -1,8 +1,9 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 90vh;
-  min-height: 600px;
+  aspect-ratio: 16 / 8;
+  min-height: 400px;
+  max-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,12 +16,12 @@
 }
 
 .hero-bg-image {
-  background-position: 50%;
+  background-position: center bottom;
   background-size: cover;
   width: 100%;
-  height: 160%;
+  height: 100%;
   position: absolute;
-  top: -378px;
+  top: 0;
   left: 0;
   z-index: 1;
 }
@@ -109,8 +110,9 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    height: 60vh;
-    min-height: 400px;
+    height: auto;
+    min-height: 300px;
+    aspect-ratio: 16 / 10;
   }
 
   .hero-bg-image {
@@ -118,12 +120,16 @@
     height: 100%;
   }
 
+  .hero-content {
+    top: 8%;
+  }
+
   .hero-content h1 {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .hero-content h2 {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .hero-tickets-text {
@@ -131,30 +137,33 @@
   }
 
   .top-brush-edge {
-    height: 100px;
-    /* Adjust top brush height slightly if needed, but keep z-index normal */
+    height: 60px;
   }
 
   .bottom-brush-edge {
     bottom: -3px;
-    /* Pushed down more to hide any gap or artifact line */
-    height: 75px;
+    height: 60px;
     z-index: 10;
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    height: 50vh;
-    min-height: 350px;
+    height: auto;
+    min-height: 250px;
+    aspect-ratio: 16 / 12;
+  }
+
+  .hero-content {
+    top: 5%;
   }
 
   .hero-content h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .hero-content h2 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .hero-tickets-text {
@@ -162,6 +171,6 @@
   }
 
   .brush-edge {
-    height: 80px;
+    height: 45px;
   }
 }

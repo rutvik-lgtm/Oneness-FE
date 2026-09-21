@@ -368,17 +368,33 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .blog-hero {
+    height: auto;
+    min-height: 350px;
+    aspect-ratio: 16 / 10;
+    align-items: center;
+    padding-right: 0;
+    padding: 0 5%;
+  }
+
+  .blog-hero-content {
+    transform: translateY(0);
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
 
   .media-grid-top,
   .media-grid-bottom {
     grid-template-columns: 1fr;
-}
+  }
 
-  .did-icon{
-  width: 75%;
-  height: auto;
-  margin-top: 0.5rem;
-}
+  .did-icon {
+    width: 75%;
+    height: auto;
+    margin-top: 0.5rem;
+  }
 
   .blog-hero-content h2 {
     font-size: 1.8rem;
