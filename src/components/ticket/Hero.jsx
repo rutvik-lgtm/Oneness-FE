@@ -2,7 +2,7 @@ import React from 'react';
 import './Hero.css';
 
 // Importing the background image. The user uploaded this specific image for the hero section.
-import heroBg from '../../assets/656fd55f3adb3f02dea92b12ef0c38cb109ad874.png';
+import heroBg from '../../assets/Ticket page.png';
 
 const Hero = () => {
   return (

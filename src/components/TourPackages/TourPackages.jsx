@@ -21,7 +21,7 @@ import { API_URL } from '../../config';
 import './TourPackages.css';
 
 export default function TourPackages() {
-  const [searchValue, setSearchValue] = useState('Jaipur');
+  const [searchValue, setSearchValue] = useState('Hotel Clarks Amer');
   const [isCustomizeModalOpen, setCustomizeModalOpen] = useState(false);
   const [customizeForm, setCustomizeForm] = useState({
     fullName: '',
@@ -80,7 +80,7 @@ export default function TourPackages() {
       <section className="tp-hero">
         <img src={bgImage} alt="Heritage and Cultural Traditions" className="tp-hero-bg" />
         <div className="tp-hero-overlay" />
-        
+
         <img src={topMask} alt="Top Mask" className="tp-hero-mask-top mask-overlay" />
         <img src={bottomMask} alt="Bottom Mask" className="tp-hero-mask-bottom mask-overlay" />
 
@@ -191,17 +191,17 @@ export default function TourPackages() {
             >
               <span className="tp-link-highlight orange">Ajmer & Pushkar Tour</span> Package
             </a>
-            <a
+            {/* <a
               href="/pdfs/jaipur-heritage.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="tp-package-link"
             >
               <span className="tp-link-highlight red">Jaipur Heritage</span> Tour Package
-            </a>
+            </a> */}
 
             <button
-              type="button"
+              type="button"  
               className="tp-package-link tp-customize-btn"
               onClick={() => setCustomizeModalOpen(true)}
             >
@@ -404,7 +404,7 @@ export default function TourPackages() {
         <div className="tp-venue-map-wrapper">
           <img src={mapFrame} alt="" className="tp-venue-frame" />
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.3825624707!2d75.6504697!3d26.8854479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1716281723456!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.227847953259!2d75.80164!3d26.850616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db611516e8851%3A0xc66579a321287d3a!2sHotel%20Clarks%20Amer!5e0!3m2!1sen!2sin!4v1716281723456!5m2!1sen!2sin"
             className="tp-venue-iframe"
             allowFullScreen=""
             loading="lazy"
@@ -446,11 +446,11 @@ export default function TourPackages() {
       <section className="tp-contact-reserve">
         <div className="tp-contact-container" style={{ backgroundImage: `url(${contactBg})` }}>
           <h2 className="tp-contact-title">CONTACT FOR TOURISM & TOUR PACKAGES</h2>
-          
+
           <p className="tp-contact-description">
             Reach out for more information about festival tours, sightseeing suggestions, or travel assistance in Jaipur.
           </p>
-          
+
           <div className="tp-contact-info-row">
             <a href="mailto:contact@onenessfestival.in" className="tp-contact-pill">
               <span className="pill-label">Mail:</span>
