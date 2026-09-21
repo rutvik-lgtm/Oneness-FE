@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './GalleryPage.css';
 
 // Images
-import heroBg from '../../assets/blog/image 46.png';
+import heroBg from '../../assets/gallry/gallery hero.png';
 import dividerImg from '../../assets/gallry/Group 5 (9).png';
 import topDivider from '../../assets/blog/dvider_20 3 (1).png';
 import bottomDivider from '../../assets/blog/dvider_20 4 (2).png';
@@ -152,10 +152,10 @@ const GalleryPage = () => {
           <img src={topDivider} alt="divider" />
         </div>
         
-        <div className="gallery-hero-content">
+        {/* <div className="gallery-hero-content">
           <h2>The Oneness Festival<br/>2026</h2>
           <h1>GALLERY</h1>
-        </div>
+        </div> */}
 
         <div className="gallery-hero-bottom-divider">
           <img src={bottomDivider} alt="divider" />

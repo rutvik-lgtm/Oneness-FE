@@ -6,7 +6,7 @@ export const DEFAULT_BLOGS = [
     _id: 'burnout-reconnect',
     title: 'Burnout isn’t a personal failure, it’s a sign to reconnect',
     slug: 'burnout-isnt-a-personal-failure-its-a-sign-to-reconnect',
-    author: 'Jaipur Oneness Festival',
+    author: 'Mr. Samarth Kalra.',
     excerpt: 'You know the moment. Staring at a laptop, unable to start, wondering why something that used to feel manageable now feels impossible. Burnout is not a character flaw — it is a sign to reconnect.',
     coverImage: heroBg2,
     createdAt: 'May 16, 2026',
@@ -95,69 +95,6 @@ To rest.
 To reconnect.
 To be met, not just busy.
 To remember that recovery was never meant to happen alone.`,
-    comments: []
-  },
-  {
-    _id: 'meditation-routine',
-    title: 'Meditation & Mindful Living in Modern Times',
-    slug: 'meditation-transform-daily-routine',
-    author: 'Swami Dhyan Saraswati',
-    excerpt: 'Discover simple yet profound ways introducing a daily meditation practice can reduce stress, foster inner peace, and increase clarity.',
-    coverImage: cardImg,
-    createdAt: 'May 10, 2026',
-    content: `Meditation is not about stopping thoughts; it is about recognizing that you are more than your thoughts. In this article, we outline five practical techniques to incorporate meditation into a busy workday, from morning breathwork to evening gratitude logs. Learn how just 10 minutes a day can restructure neural pathways and reduce high cortisol levels.
-
-Take time each morning before looking at screens to simply sit with your breath. Notice the sensations in your body and allow yourself to arrive fully in the present moment.
-
-When thoughts arise, simply observe them without judgment and gently return your awareness to your inhalation and exhalation.`,
-    comments: []
-  },
-  {
-    _id: 'jaipur-culture',
-    title: 'Jaipur Oneness festival: अगले 3 दिन जयपुर में दुनियाभर से जुटेंगे 500 स्पीकर',
-    slug: 'jaipur-oneness-festival-speakers-gather',
-    author: 'The Times of India',
-    excerpt: 'सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत \'मॉर्निंग म्यूजिक नादा बिटवीन साउंड्स एंड साइलेंस\' से होगी...',
-    coverImage: cardImg,
-    createdAt: 'May 04, 2026',
-    content: `Jaipur Oneness festival: अगले 3 दिन जयपुर में दुनियाभर से जुटेंगे 500 स्पीकर, कलाकार और विचारक। सुबह 10 बजे वेदांता फ्रंट लॉन में फेस्टिवल की शुरुआत 'मॉर्निंग म्यूजिक नादा बिटवीन साउंड्स एंड साइलेंस' से होगी, इस सत्र में कर्नाटक संगीत की प्रस्तुति के जरिए ध्वनि और मौन के बीच के संतुलन को प्रस्तुत किया जाएगा।
-
-फेस्टिवल में विभिन्न प्रकार के वर्कशॉप्स, संगीत सभाएं और आत्मिक सत्र आयोजित किए जाएंगे। देश-विदेश से आने वाले अतिथि भारतीय संस्कृति और एकात्मता के संदेश को साझा करेंगे।`,
-    comments: []
-  },
-  {
-    _id: 'sacred-sound',
-    title: 'The Power of Sacred Sound: Nada Yoga and Vibrational Healing',
-    slug: 'sacred-sound-nada-yoga-healing',
-    author: 'Oneness Arts Guild',
-    excerpt: 'Explore the ancient science of sound and how frequency transforms consciousness and heals the nervous system.',
-    coverImage: cardImg,
-    createdAt: 'April 28, 2026',
-    content: `Sound has been recognized across ancient cultures as the primal creative force of the universe. In Nada Yoga, the focus is turned inward to listen to the subtle unstruck sound within.
-
-Through chanting, sacred instruments, and deep listening, sound bypasses the analytical mind to produce profound states of peace and restoration.`,
-    comments: []
-  },
-  {
-    _id: 'conscious-living',
-    title: 'Conscious Community: Moving from Isolation to Belonging',
-    slug: 'conscious-community-isolation-to-belonging',
-    author: 'Jaipur Oneness Team',
-    excerpt: 'Human beings are wired for shared purpose. Here is how creating intentional spaces can reshape modern life.',
-    coverImage: cardImg,
-    createdAt: 'April 20, 2026',
-    content: `Community is not merely geographic proximity; it is shared presence and mutual care. In an increasingly fragmented world, intentional gatherings provide a sanctuary where masks can be dropped and true fellowship experienced.`,
-    comments: []
-  },
-  {
-    _id: 'wisdom-traditions',
-    title: 'Timeless Wisdom: Finding Stillness in a Moving World',
-    slug: 'timeless-wisdom-finding-stillness',
-    author: 'Culture & Heritage Forum',
-    excerpt: 'India’s rich philosophical heritage offers practical tools for navigating 21st-century complexities with equanimity.',
-    coverImage: cardImg,
-    createdAt: 'April 15, 2026',
-    content: `Beneath the rapid currents of modernity lies the timeless wisdom of the sages. By anchoring ourselves in enduring truths of interconnectedness and selfless service, we navigate modern dilemmas with grace and resilience.`,
     comments: []
   }
 ];

@@ -277,6 +277,8 @@ export default function ExplorePage() {
         <div className="schedule-mandala-blue mandala-right"></div>
         <div className="section-container">
           <div className="day-tabs-container">
+            <button className="day-tab" onClick={() => scrollToSection(thursdayRef)}>Day 1</button>
+            <button className="day-tab active" onClick={() => scrollToSection(fridayRef)}>Day 2</button>
             <div className="day-date-label">FRIDAY, 6<sup>th</sup> DECEMBER</div>
           </div>
 

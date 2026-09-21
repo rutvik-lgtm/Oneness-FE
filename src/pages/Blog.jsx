@@ -4,7 +4,7 @@ import './Blog.css';
 import { API_URL } from '../config';
 
 // Images
-import heroBg from '../assets/blog/image 46.png';
+import heroBg from '../assets/gallry/gallery hero.png';
 import topDivider from '../assets/blog/dvider_20 3 (1).png';
 import bottomDivider from '../assets/blog/dvider_20 4 (2).png';
 import flourishImg from '../assets/blog/Group 79 (2).png';

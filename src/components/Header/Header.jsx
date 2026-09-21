@@ -91,7 +91,10 @@ const Header = () => {
     },
     { 
       name: 'Blog', 
-      path: '/blog'
+      path: '/blog',
+      submenu: [
+        { name: 'Gallery', path: '/gallery' }
+      ]
     },
     { name: 'Get Involved', path: '/get-involved' },
     { name: 'Contact', path: '/contact' },
