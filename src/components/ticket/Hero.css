@@ -62,10 +62,13 @@
 }
 
 .hero-content {
-  position: relative;
+  position: absolute;
+  top: 15%;
+  left: 37%;
   z-index: 4;
   color: #ffffff !important;
   padding: 0 20px;
+  text-align: center;
 }
 
 .hero-content h1 {
